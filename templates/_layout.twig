@@ -5,23 +5,27 @@
 		<title>{{ siteName }}</title>
 		<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-		{% do craft.app.view.registerCssFile('@web/styles.css') %}
+		{% do craft.app.view.registerCssFile('@web/assets/css/styles.css') %}
 	</head>
 	<body>
 		<header>
 			<a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
-			<nav>
-				<ul>
-					<li>
-            <a href="{{ url('/') }}">Home</a>
+      {# Get the first segment of the current URI: #}
+      {% set navSegment = craft.app.request.getSegment(1) %}
+
+      <nav>
+        <ul>
+          <li>
+            <a href="{{ url('/') }}" class="{{ navSegment is empty ? 'active' : 'inactive' }}">Home</a>
           </li>
-					<li>
-            <a href="{{ url('blog') }}">Blog</a></li>
-					<li>
-            <a href="{{ url('about') }}">About</a>
+          <li>
+            <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
           </li>
-				</ul>
-			</nav>
+          <li>
+            <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
+          </li>
+        </ul>
+      </nav>
 		</header>
 		<main>
 			{% block content %}
