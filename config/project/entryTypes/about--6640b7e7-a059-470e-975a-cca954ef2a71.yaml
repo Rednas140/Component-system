@@ -1,0 +1,53 @@
+color: null
+fieldLayouts:
+  6019014b-d947-4588-974f-b33468610aa2:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-15T22:00:08+00:00'
+            elementCondition: null
+            fieldUid: 9eb362d7-38b1-4629-94d8-b4fc5afe4732 # Image
+            handle: profileImage
+            includeInCards: false
+            instructions: null
+            label: 'Profile Image'
+            providesThumbs: true
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8dd11a54-9636-4ab6-bdbe-327d53cf0182
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-15T22:00:08+00:00'
+            elementCondition: null
+            fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
+            handle: bio
+            includeInCards: false
+            instructions: null
+            label: Bio
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6a5e1441-69ac-4830-8ac7-7d224a786f63
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 5d4e31c1-82e2-46c0-bf1f-07a688dda923
+        userCondition: null
+handle: about
+hasTitleField: false
+icon: ''
+name: About
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

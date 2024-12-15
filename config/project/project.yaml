@@ -1,4 +1,4 @@
-dateModified: 1734298365
+dateModified: 1734300010
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -17,11 +17,13 @@ meta:
     9eb362d7-38b1-4629-94d8-b4fc5afe4732: Image # Image
     9f381a3d-9b95-4fe7-ac00-4ce93e702502: Text # Text
     4707d10b-316d-4459-bece-739dbd4ca1b8: Blog # Blog
+    6640b7e7-a059-470e-975a-cca954ef2a71: About # About
     8348fd5e-83b6-4372-9f85-b1cb8ce6d097: Topics # Topics
     99380ab5-8e60-40c1-8607-a42c87cde8d9: 'Post Content' # Post Content
     3470150a-8a81-44d3-bb85-60b7b3706ffd: 'Post Categories' # Post Categories
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
     d1d53c05-ac89-431b-bcdf-02282fb17b27: Image # Image
+    d9b03df9-aa83-4468-9ca5-03ad8b7f32e4: About # About
     d41991e3-1d36-435e-8954-7cb343967f11: Text # Text
     ebcb3ddb-d136-47be-974b-87155e593ce2: 'Component system' # Component system
     f8c047f7-bb68-4342-9686-536cd8d38909: Post # Post
