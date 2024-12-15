@@ -22,6 +22,6 @@ siteSettings:
   ebcb3ddb-d136-47be-974b-87155e593ce2: # Component system
     enabledByDefault: true
     hasUrls: true
-    template: singles/_entry.twig
+    template: _singles/about.twig
     uriFormat: about
 type: single

@@ -1,4 +1,4 @@
-dateModified: 1734300010
+dateModified: 1734300562
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -13,6 +13,7 @@ fs:
     url: '@uploads'
 meta:
   __names__:
+    04d3913c-b661-4350-b02e-d58a7684a0cd: siteInfo # siteInfo
     7ba054cd-05ba-42a7-8af3-c9e518519b9f: 'Component system' # Component system
     9eb362d7-38b1-4629-94d8-b4fc5afe4732: Image # Image
     9f381a3d-9b95-4fe7-ac00-4ce93e702502: Text # Text
