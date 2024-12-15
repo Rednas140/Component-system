@@ -1,0 +1,8 @@
+baseUrl: $PRIMARY_SITE_URL
+handle: default
+hasUrls: true
+language: en-US
+name: 'Component system'
+primary: true
+siteGroup: 7ba054cd-05ba-42a7-8af3-c9e518519b9f # Component system
+sortOrder: 1

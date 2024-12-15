@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: postContent
+instructions: null
+name: 'Post Content'
+searchable: true
+settings:
+  createButtonLabel: 'Add block'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - 9f381a3d-9b95-4fe7-ac00-4ce93e702502 # Text
+    - d1d53c05-ac89-431b-bcdf-02282fb17b27 # Image
+  includeTableView: false
+  maxEntries: null
+  minEntries: 1
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

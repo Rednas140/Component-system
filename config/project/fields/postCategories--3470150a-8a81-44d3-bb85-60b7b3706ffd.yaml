@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: postCategories
+instructions: null
+name: 'Post Categories'
+searchable: true
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: false
+  source: 'group:8348fd5e-83b6-4372-9f85-b1cb8ce6d097' # Topics
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Categories
