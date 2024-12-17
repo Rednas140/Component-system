@@ -1,16 +1,25 @@
-color: cyan
+color: blue
 fieldLayouts:
-  e6d5cc57-3347-4162-9f5f-aecfc63cfa0c:
+  ef9b93d6-6449-4ae6-a50a-8f5774660c1d:
     tabs:
       -
         elementCondition: null
         elements:
           -
+            dateAdded: '2024-12-17T20:24:39+00:00'
+            dismissible: false
+            elementCondition: null
+            style: warning
+            tip: 'Editting any of these, will change the meta data of this page.'
+            type: craft\fieldlayoutelements\Tip
+            uid: c1ca7aa4-7c99-4b24-a216-4dd572c318a5
+            userCondition: null
+          -
             autocapitalize: true
             autocomplete: false
             autocorrect: true
             class: null
-            dateAdded: '2024-12-17T19:45:13+00:00'
+            dateAdded: '2024-12-17T19:22:39+00:00'
             disabled: false
             elementCondition: null
             id: null
@@ -31,14 +40,36 @@ fieldLayouts:
             tip: null
             title: null
             type: craft\fieldlayoutelements\entries\EntryTitleField
-            uid: 39a11ebf-8874-4617-b60b-368c4878332d
+            uid: 06f5473b-4929-4dc5-beed-1668aa5ea8d6
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-17T19:46:36+00:00'
+            dateAdded: '2024-12-17T19:24:03+00:00'
             elementCondition: null
             fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
+            handle: description
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 437a8321-576b-427b-9bb2-4ab15d86f04e
+            userCondition: null
+            warning: null
+            width: 100
+        name: Meta
+        uid: 828165e5-b9e9-4d74-bba3-7798bc1347fe
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-17T20:43:34+00:00'
+            elementCondition: null
+            fieldUid: 21a3aa8c-eb70-4ab1-ba66-1cb8ebe047f1 # Components
             handle: null
             includeInCards: false
             instructions: null
@@ -47,17 +78,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: e78a619d-37d1-44e5-90b2-ca3dc22e8ad3
+            uid: 7409d867-323c-4af3-8e9a-8b3f20f1db86
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 2d11890c-bf52-4743-a707-965bd05f868b
+        uid: 9725ffac-57f3-4a15-9616-d0a3eb2c0291
         userCondition: null
-handle: text
+handle: page
 hasTitleField: true
-icon: text
-name: Text
+icon: circle-info
+name: 'Default page'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

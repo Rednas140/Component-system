@@ -2,9 +2,9 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   - 82c6d396-89e5-4844-8742-535861bfab2f # Default page
-handle: homepage
+handle: pages
 maxAuthors: 1
-name: Homepage
+name: 'Pagina''s'
 previewTargets:
   -
     __assoc__:
@@ -23,5 +23,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: null
-    uriFormat: __home__
-type: single
+    uriFormat: '{slug}'
+type: channel

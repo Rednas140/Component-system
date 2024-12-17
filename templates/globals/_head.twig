@@ -1,0 +1,9 @@
+<head>
+    <meta charset="utf-8"/>
+    {% set urlSegment = craft.app.request.getSegment(1) %}
+
+    <title>{{ urlSegment is not empty ? urlSegment ~ " |" }} {{siteName }}</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    {% do craft.app.view.registerCssFile('@web/assets/css/styles.css') %}
+</head>

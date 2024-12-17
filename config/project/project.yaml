@@ -1,4 +1,4 @@
-dateModified: 1734464855
+dateModified: 1734474095
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -13,15 +13,26 @@ fs:
     url: '@uploads'
 meta:
   __names__:
-    3bac29b9-0eea-404e-b5dc-6f278cee619a: Text # Text
+    1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
     3d6a182b-ed5a-4f35-acaf-b3198a90b978: Homepage # Homepage
-    04d3913c-b661-4350-b02e-d58a7684a0cd: siteInfo # siteInfo
+    04d3913c-b661-4350-b02e-d58a7684a0cd: 'Site info' # Site info
+    4ee13b07-ca8d-40af-bdaf-e2ef8d23fb9c: Image # Image
+    5bf9caf9-f260-4d1c-8b41-803bb96db4f4: Content # Content
+    5d8c2f92-7b95-4091-a7e6-0f738ac422a8: 'Repeating content' # Repeating content
     7ba054cd-05ba-42a7-8af3-c9e518519b9f: 'Component system' # Component system
-    82c6d396-89e5-4844-8742-535861bfab2f: Home # Home
+    21a3aa8c-eb70-4ab1-ba66-1cb8ebe047f1: Components # Components
+    52b3db2e-4152-4686-a155-7d3c88321540: 'Single image' # Single image
+    82c6d396-89e5-4844-8742-535861bfab2f: 'Default page' # Default page
+    83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
+    2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
+    4692c9e7-d943-495a-bc3e-fc25a9b7562b: 'Pagina''s' # Pagina's
     8348fd5e-83b6-4372-9f85-b1cb8ce6d097: Topics # Topics
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
+    d226be6d-c259-45eb-9677-5e17bc4fd573: 'Content and Image' # Content and Image
     d41991e3-1d36-435e-8954-7cb343967f11: Text # Text
+    e41bd20a-b255-451f-b938-8365c8d59b5a: Heading # Heading
     ebcb3ddb-d136-47be-974b-87155e593ce2: 'Component system' # Component system
+    ff9d2595-7e12-499c-ab83-9eb1af4a6414: 'Short text (64 char)' # Short text (64 char)
 system:
   edition: solo
   live: true

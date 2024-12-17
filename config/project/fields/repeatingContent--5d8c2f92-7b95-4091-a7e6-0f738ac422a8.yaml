@@ -1,0 +1,23 @@
+columnSuffix: null
+handle: repeatingContent
+instructions: null
+name: 'Repeating content'
+searchable: true
+settings:
+  createButtonLabel: 'New content'
+  defaultIndexViewMode: cards
+  entryTypes:
+    - e41bd20a-b255-451f-b938-8365c8d59b5a # Heading
+    - 83efbabb-609e-4d20-8fd6-17ee0c5bfce6 # Text
+    - 4ee13b07-ca8d-40af-bdaf-e2ef8d23fb9c # Image
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix
