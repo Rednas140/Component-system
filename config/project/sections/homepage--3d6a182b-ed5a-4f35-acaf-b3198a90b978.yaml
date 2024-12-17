@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - f8c047f7-bb68-4342-9686-536cd8d38909 # Post
-handle: blog
+  - 82c6d396-89e5-4844-8742-535861bfab2f # Home
+handle: homepage
 maxAuthors: 1
-name: Blog
+name: Homepage
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   ebcb3ddb-d136-47be-974b-87155e593ce2: # Component system
     enabledByDefault: true
     hasUrls: true
-    template: blog/_entry.twig
-    uriFormat: 'blog/{slug}'
-type: channel
+    template: null
+    uriFormat: __home__
+type: single
