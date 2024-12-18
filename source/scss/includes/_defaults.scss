@@ -1,0 +1,10 @@
+@use "../includes/mixins" as *;
+
+body{
+    font-family: "Noto sans";
+    @include p-body;
+}
+
+h1 {
+    @include h1;
+}
