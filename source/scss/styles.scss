@@ -1,5 +1,5 @@
-@use "includes/reset";
-@use "includes/fonts";
-@use "includes/defaults";
+@use "base/reset";
+@use "base/fonts";
+@use "base/base";
 
-@use "globals/skiplink";
+@use "components/skiplink";

@@ -1,5 +1,5 @@
 @use "sass:math";
-@use "vars";
+@use "variables";
 
 // Function for converting a px based font-size to rem.
 @function toRem($size) {
