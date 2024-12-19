@@ -1,9 +1,22 @@
 // This file is for setting up the default styling of the page, you shouldn't need to change anything here!
 @use '../abstracts' as *;
 
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
 body{
-    font-family: "Noto sans";
+    display: flex;
+    flex-direction: column;
     @include p-body;
+}
+
+main{
+    flex: 1;
 }
 
 h1 {

@@ -1,36 +1,43 @@
 @use "sass:math";
-@use "variables";
+@use "variables" as *;
 
 // Function for converting a px based font-size to rem.
 @function toRem($size) {
     @return math.div($size, 16px) * 1rem;
 }
 
+// setting the standard typography styling
 @mixin h1{
     font-size: toRem(96px);
+    font-family: $primaryFont;
 }
 
 @mixin h2{
     font-size: toRem(60px);
+    font-family: $primaryFont;
 }
 
 @mixin h3{
     font-size: toRem(48px);
+    font-family: $primaryFont;
 }
 
 @mixin h4{
     font-size: toRem(34px);
+    font-family: $primaryFont;
 }
 
 @mixin h5{
     font-size: toRem(24px);
+    font-family: $primaryFont;
 }
 
 @mixin h6{
     font-size: toRem(20px);
+    font-family: $primaryFont;
 }
 
 @mixin p-body{
     font-size: toRem(16px);
+    font-family: $primaryFont;
 }
-
