@@ -2,11 +2,11 @@
 {% set navigationItems = navigation.navigationItems %}
 
 {% if navigationItems is not empty %}
-    <header class="g-nav">
+    <header class="g-nav container">
         <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
         <nav class="g-nav-main" id="main-menu">
-            <button aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
-            <ul>
+            <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
+            <ul class="display-none--mobileOnly">
                 {% for item in navigationItems %}
                     {% set navigationClass = '' %}
                     {% if navigationSegment is same as item.slug %}
