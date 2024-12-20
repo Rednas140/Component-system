@@ -19,6 +19,18 @@ main{
     flex: 1;
 }
 
+section{
+    padding: 24px 0;
+
+    @include breakpointUp(md){
+        padding: 32xp 0;
+    }
+
+    @include breakpointUp(lg){
+        padding: 48px 0;
+    }
+}
+
 h1 {
     @include h1;
 }

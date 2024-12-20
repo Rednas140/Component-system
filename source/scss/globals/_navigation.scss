@@ -1,6 +1,8 @@
 @use '../abstracts' as *;
 
 .g-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    background-color: $neutral-500;
 }

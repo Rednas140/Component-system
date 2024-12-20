@@ -1,16 +1,22 @@
-<header class="g-nav">
-    <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+{% set navigationSegment = craft.app.request.getSegment(1) %}
+{% set navigationItems = navigation.navigationItems %}
 
-    {% set navSegment = craft.app.request.getSegment(1) %}
-    <nav class="g-nav-main" id="main-menu">
-        <button aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
-        <ul>
-            <li>
-                <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
-            </li>
-            <li>
-                <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+{% if navigationItems is not empty %}
+    <header class="g-nav">
+        <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+        <nav class="g-nav-main" id="main-menu">
+            <button aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
+            <ul>
+                {% for item in navigationItems %}
+                    {% set navigationClass = '' %}
+                    {% if navigationSegment is same as item.slug %}
+                        {% set navigationClass = navigationClass ~ " g-nav-main-item--active" %}
+                    {% endif %}
+                    <li>
+                        <a href="{{ item.getUrl() }}" class="g-nav-main-item{{ navigationClass }}">{{ item.title }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+{% endif %}

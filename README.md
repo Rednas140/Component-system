@@ -6,14 +6,14 @@ Based on Sass using a BEM based naming convention
 Template for naming convention
 [Identifier]-[Block]-[Element]--[Modifier]
 
-#### Identifier
+### Identifier
 - A letter that identifies it use, g for globals, c for components, and so on.
 
-#### Block
+### Block
 - A standalone entity that is meaningful on its own, a component name, buttons, and so on.
 
-#### Element
+### Element
 - A part of a block that has no standalone meaning and is semantically tied to its block
 
-#### Modifier
+### Modifier
 - A flag on a block or element. Used to change appearance or behavior.

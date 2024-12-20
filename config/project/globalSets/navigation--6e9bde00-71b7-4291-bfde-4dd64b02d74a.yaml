@@ -1,0 +1,28 @@
+fieldLayouts:
+  f01fb797-0e58-44a9-b181-4727f0fe62d7:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-20T20:22:53+00:00'
+            elementCondition: null
+            fieldUid: 60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f # Entries
+            handle: navigationItems
+            includeInCards: false
+            instructions: null
+            label: 'Navigation items'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 7e987a1a-3495-4356-9554-d9bcc87c6c89
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Navigation items'
+        uid: 8d353bab-c7c0-4e75-a355-5c5bab1aca32
+        userCondition: null
+handle: navigation
+name: Navigation
+sortOrder: 2

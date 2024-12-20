@@ -1,4 +1,4 @@
-dateModified: 1734475853
+dateModified: 1734726173
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -19,9 +19,11 @@ meta:
     4ee13b07-ca8d-40af-bdaf-e2ef8d23fb9c: Image # Image
     5bf9caf9-f260-4d1c-8b41-803bb96db4f4: Content # Content
     5d8c2f92-7b95-4091-a7e6-0f738ac422a8: 'Repeating content' # Repeating content
+    6e9bde00-71b7-4291-bfde-4dd64b02d74a: Navigation # Navigation
     7ba054cd-05ba-42a7-8af3-c9e518519b9f: 'Component system' # Component system
     21a3aa8c-eb70-4ab1-ba66-1cb8ebe047f1: Components # Components
     52b3db2e-4152-4686-a155-7d3c88321540: 'Single image' # Single image
+    60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f: Entries # Entries
     82c6d396-89e5-4844-8742-535861bfab2f: 'Default page' # Default page
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
     2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
