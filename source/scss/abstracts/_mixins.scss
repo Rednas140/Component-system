@@ -45,86 +45,110 @@ $breakpoints: (
 
 // setting the standard typography styling
 @mixin h1{
+    margin-bottom: toRem(16px);
     font-size: toRem(32px);
     line-height: 1.2;
     font-family: $primaryFont;
+    color: $baseBlack;
 
     @include breakpointUp(md){
+        margin-bottom: toRem(18px);
         font-size: toRem(36px);
     }
 
     @include breakpointUp(lg){
+        margin-bottom: toRem(24px);
         font-size: toRem(48px);
     }
 }
 
 @mixin h2{
+    margin-bottom: toRem(14px);
     font-size: toRem(28px);
     line-height: 1.2;
     font-family: $primaryFont;
+    color: $baseBlack;
 
     @include breakpointUp(md){
+        margin-bottom: toRem(16px);
         font-size: toRem(32px);
     }
 
     @include breakpointUp(lg){
+        margin-bottom: toRem(20px);
         font-size: toRem(40px);
     }
 }
 
 @mixin h3{
+    margin-bottom: toRem(12px);
     font-size: toRem(24px);
     line-height: 1.4;
     font-family: $primaryFont;
+    color: $baseBlack;
 
     @include breakpointUp(md){
+        margin-bottom: toRem(14px);
         font-size: toRem(28px);
     }
 
     @include breakpointUp(lg){
+        margin-bottom: toRem(16px);
         font-size: toRem(32px);
     }
 }
 
 @mixin h4{
+    margin-bottom: toRem(10px);
     font-size: toRem(20px);
     line-height: 1.4;
     font-family: $primaryFont;
+    color: $baseBlack;
 
     @include breakpointUp(md){
+        margin-bottom: toRem(12px);
         font-size: toRem(24px);
     }
 
     @include breakpointUp(lg){
+        margin-bottom: toRem(14px);
         font-size: toRem(28px);
     }
 }
 
 @mixin h5{
-    font-size: toRem(28px);
+    margin-bottom: toRem(9px);
+    font-size: toRem(18px);
     line-height: 1.4;
     font-family: $primaryFont;
+    color: $baseBlack;
 
     @include breakpointUp(md){
+        margin-bottom: toRem(10px);
         font-size: toRem(20px);
     }
 
     @include breakpointUp(lg){
+        margin-bottom: toRem(12px);
         font-size: toRem(24px);
     }
 }
 
 @mixin h6{
+    margin-bottom: toRem(8px);
     font-size: toRem(16px);
     line-height: 1.4;
     font-family: $primaryFont;
     font-weight: bold;
+    color: $baseBlack;
 
     @include breakpointUp(md){
+        margin-bottom: toRem(9px);
         font-size: toRem(18px);
     }
 
     @include breakpointUp(lg){
+        margin-bottom: toRem(10px);
         font-size: toRem(20px);
     }
 }
@@ -133,11 +157,13 @@ $breakpoints: (
     font-size: toRem(16px);
     font-family: $primaryFont;
     line-height: 1.5;
+    color: $baseBlack;
 }
 
 @mixin p-small{
     font-size: toRem(12px);
     line-height: 1.5;
+    color: $baseBlack;
 
     @include breakpointUp(md){
         font-size: toRem(14px);

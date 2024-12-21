@@ -5,6 +5,22 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
+            dateAdded: '2024-12-21T14:12:51+00:00'
+            elementCondition: null
+            fieldUid: ff9d2595-7e12-499c-ab83-9eb1af4a6414 # Short text (64 char)
+            handle: siteName
+            includeInCards: false
+            instructions: null
+            label: 'Site name'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: da6abab2-9701-4351-b850-afadd5122383
+            userCondition: null
+            warning: null
+            width: 100
+          -
             dateAdded: '2024-12-15T22:07:55+00:00'
             elementCondition: null
             fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
@@ -17,6 +33,22 @@ fieldLayouts:
             tip: null
             type: craft\fieldlayoutelements\CustomField
             uid: 19f5bf58-8d35-4dc3-849f-64055d28d0e3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-21T14:14:10+00:00'
+            elementCondition: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: siteLogo
+            includeInCards: false
+            instructions: null
+            label: 'Website logo'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c23aab1b-fdf4-47c5-93ca-26bac344c6b6
             userCondition: null
             warning: null
             width: 100

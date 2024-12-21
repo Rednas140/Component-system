@@ -5,8 +5,7 @@
     {% if entry is defined %}
         {% for block in entry.components.all() %}
             {% set componentType = block.type %}
-
-            {% include 'components/'~componentType~'.twig' %}
+                {% include 'components/'~componentType~'.twig' ignore missing %}
         {% else %}
         {% endfor %}
     {% endif %}

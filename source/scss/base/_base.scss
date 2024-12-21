@@ -5,13 +5,10 @@
     box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-}
-
 body{
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     @include p-body;
 }
 
@@ -20,14 +17,14 @@ main{
 }
 
 section{
-    padding: 24px 0;
+    padding: toRem(24px) 0;
 
     @include breakpointUp(md){
-        padding: 32xp 0;
+        padding: toRem(32px) 0;
     }
 
     @include breakpointUp(lg){
-        padding: 48px 0;
+        padding: toRem(48px) 0;
     }
 }
 
@@ -63,8 +60,13 @@ blockquote, i{
     font-style: italic;
 }
 
-b{
+b, strong{
     font-weight: bold;
+}
+
+img{
+    height: auto;
+    width: 100%;
 }
 
 .sr-only {

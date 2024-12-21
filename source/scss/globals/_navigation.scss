@@ -1,19 +1,47 @@
 @use '../abstracts' as *;
 
 .g-nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: toRem(16px);
-    padding-bottom: toRem(16px);
+    &-content{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding-top: toRem(16px);
+        padding-bottom: toRem(16px);
 
-    @include breakpointUp(md){
-        padding-top: toRem(20px);
-        padding-bottom: toRem(20px);
-    }
+        @include breakpointUp(md){
+            padding-top: toRem(20px);
+            padding-bottom: toRem(20px);
+        }
 
-    @include breakpointUp(lg){
-        padding-top: toRem(24px);
-        padding-bottom: toRem(24px);
+        @include breakpointUp(lg){
+            padding-top: toRem(24px);
+            padding-bottom: toRem(24px);
+        }
+
+        &-main{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            ul{
+                list-style: none;
+            }
+
+            &-item{
+                color: $primaryColor;
+
+                &:hover, &:focus{
+                    color: $primaryColorHover;
+                }
+
+                &--active{
+                    color: $secondaryColor;
+
+                    &:hover, &:focus{
+                        color: $secondaryColorHover;
+                    }
+                }
+            }
+        }
     }
 }

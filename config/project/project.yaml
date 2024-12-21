@@ -1,4 +1,4 @@
-dateModified: 1734726173
+dateModified: 1734799216
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -15,6 +15,7 @@ meta:
   __names__:
     1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
     3d6a182b-ed5a-4f35-acaf-b3198a90b978: Homepage # Homepage
+    4bdb03d2-eaa1-424b-a4c4-ba9cce470fee: Content # Content
     04d3913c-b661-4350-b02e-d58a7684a0cd: 'Site info' # Site info
     4ee13b07-ca8d-40af-bdaf-e2ef8d23fb9c: Image # Image
     5bf9caf9-f260-4d1c-8b41-803bb96db4f4: Content # Content
@@ -28,13 +29,19 @@ meta:
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
     2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
     4692c9e7-d943-495a-bc3e-fc25a9b7562b: 'Pagina''s' # Pagina's
-    8348fd5e-83b6-4372-9f85-b1cb8ce6d097: Topics # Topics
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
+    ad8a61a7-42a4-4769-b526-6a5fca60ce28: Simple # Simple
     d226be6d-c259-45eb-9677-5e17bc4fd573: 'Content and Image' # Content and Image
     d41991e3-1d36-435e-8954-7cb343967f11: Text # Text
-    e41bd20a-b255-451f-b938-8365c8d59b5a: Heading # Heading
+    e41bd20a-b255-451f-b938-8365c8d59b5a: Quote # Quote
+    e85b9150-15ea-4f7f-bb34-676ca47a09b4: WYSIWYG # WYSIWYG
     ebcb3ddb-d136-47be-974b-87155e593ce2: 'Component system' # Component system
     ff9d2595-7e12-499c-ab83-9eb1af4a6414: 'Short text (64 char)' # Short text (64 char)
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
 system:
   edition: solo
   live: true

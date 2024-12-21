@@ -60,7 +60,7 @@ handle: contentAndImage
 hasTitleField: false
 icon: pager
 name: 'Content and Image'
-showSlugField: true
+showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null
 slugTranslationMethod: site

@@ -7,7 +7,7 @@ Template for naming convention
 [Identifier]-[Block]-[Element]--[Modifier]
 
 ### Identifier
-- A letter that identifies it use, g for globals, c for components, and so on.
+- A letter that identifies it use, g for globals, c for components, p for partials, and so on.
 
 ### Block
 - A standalone entity that is meaningful on its own, a component name, buttons, and so on.

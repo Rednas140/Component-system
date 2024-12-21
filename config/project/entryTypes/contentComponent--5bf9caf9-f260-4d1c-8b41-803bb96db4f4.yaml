@@ -24,7 +24,7 @@ fieldLayouts:
         name: Content
         uid: 1111bbdb-b66a-48e9-a421-23928766f960
         userCondition: null
-handle: contentFlexible
+handle: contentComponent
 hasTitleField: false
 icon: input-text
 name: Content

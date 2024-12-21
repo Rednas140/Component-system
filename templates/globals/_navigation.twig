@@ -1,22 +1,37 @@
 {% set navigationSegment = craft.app.request.getSegment(1) %}
 {% set navigationItems = navigation.navigationItems %}
 
+{% set navigationLogo = siteInfo.siteLogo %}
+
+
 {% if navigationItems is not empty %}
-    <header class="g-nav container">
-        <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
-        <nav class="g-nav-main" id="main-menu">
-            <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
-            <ul class="display-none--mobileOnly">
-                {% for item in navigationItems %}
-                    {% set navigationClass = '' %}
-                    {% if navigationSegment is same as item.slug %}
-                        {% set navigationClass = navigationClass ~ " g-nav-main-item--active" %}
+    <header class="g-nav">
+        <div class="container">
+            <div class="g-nav-content">
+                <a class="g-nav-content-logo" href="{{ siteUrl }}">
+                    {% if navigationLogo is not empty %}
+                        {{ navigationLogo.one().getImg() }}
+                    {% elseif siteInfo.siteName %}
+                        {{ siteInfo.siteName }}
+                    {% else %}
+                        {{ site }}
                     {% endif %}
-                    <li>
-                        <a href="{{ item.getUrl() }}" class="g-nav-main-item{{ navigationClass }}">{{ item.title }}</a>
-                    </li>
-                {% endfor %}
-            </ul>
-        </nav>
+                </a>
+                <nav class="g-nav-content-main" id="main-menu">
+                    <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
+                    <ul class="display-none--mobileOnly">
+                        {% for item in navigationItems %}
+                            {% set navigationClass = '' %}
+                            {% if navigationSegment is same as item.slug %}
+                                {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
+                            {% endif %}
+                            <li>
+                                <a href="{{ item.getUrl() }}" class="g-nav-content-main-item{{ navigationClass }}">{{ item.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </header>
 {% endif %}

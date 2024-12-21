@@ -1,3 +1,4 @@
+// Neutral color swatch
 $neutral-950: #161616;
 $neutral-900: #2d2d2d;
 $neutral-800: #454545;
@@ -10,7 +11,39 @@ $neutral-200: #d0d0d0;
 $neutral-100: #e8e8e8;
 $neutral-50: #fefefe;
 
+// Auburn color swatch
+$auburn-950: #150507;
+$auburn-900: #2a090e;
+$auburn-800: #53131d;
+$auburn-700: #7d1c2b;
+$auburn-600: #a62639;
+$auburn-500: #d02f47;
+$auburn-400: #d9596c;
+$auburn-300: #e38291;
+$auburn-200: #ecacb6;
+$auburn-100: #f6d5da;
+$auburn-50: #faeaed;
+
+// cerulean color swatch
+$cerulean-950: #051014;
+$cerulean-900: #0B2028;
+$cerulean-800: #173F4F;
+$cerulean-700: #235E76;
+$cerulean-600: #317B9B;
+$cerulean-500: #3D9AC2;
+$cerulean-400: #64AECE;
+$cerulean-300: #8BC2DA;
+$cerulean-200: #B1D7E7;
+$cerulean-100: #D8EBF3;
+$cerulean-50: #EBF5F9;
+
+// baseColors
 $baseBlack: $neutral-950;
 $baseWhite: $neutral-50;
+$primaryColor: $auburn-600;
+$primaryColorHover: $auburn-700;
+
+$secondaryColor: $cerulean-600;
+$secondaryColorHover: $cerulean-700;
 
 $primaryFont: 'Noto sans', sans-serif;

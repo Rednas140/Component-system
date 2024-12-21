@@ -6,9 +6,9 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-17T22:03:09+00:00'
+            dateAdded: '2024-12-21T16:12:37+00:00'
             elementCondition: null
-            fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
+            fieldUid: e85b9150-15ea-4f7f-bb34-676ca47a09b4 # WYSIWYG
             handle: null
             includeInCards: false
             instructions: null
@@ -17,7 +17,7 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: d2717496-07a9-4bef-97cf-c155c77cc2c1
+            uid: 4523bbb3-87ae-4066-82c4-bec6fccc48f0
             userCondition: null
             warning: null
             width: 100

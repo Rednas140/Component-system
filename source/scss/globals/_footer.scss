@@ -1,6 +1,16 @@
 @use "../abstracts" as *;
 
 footer{
+    display: flex;
+    flex-direction: column;
+    padding: 1.5em 1em;
     background-color:  $baseBlack;
-    color: $baseWhite;
+
+    @include breakpointUp(lg){
+        flex-direction: row;
+    }
+
+    p{
+        color: $baseWhite;
+    }
 }
