@@ -1,7 +1,35 @@
+{# Registering the asset files to be used in head #}
+{{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
+{{ craft.app.view.registerJsFile('@web/assets/js/components/' ~ block.type.handle ~ '.js') }}
+
+{# Setting the variables#}
+{% set text = block.text %}
+{% set image = block.singleImage %}
+{% set placement = block.placementSelect %}
+{% set class = '' %}
+
+{% if placement is not empty %}
+    {% set class = ' c-contentAndImage-content--' ~ placement.value %}
+{% endif %}
+
 <section class="c-contentAndImage">
     <div class="container">
         <div class="row justify-content-center">
-            <h1>shee</h1>
+            <div class="col">
+                <div class="c-contentAndImage-content{{ class }}">
+                    {% if text is not empty %}
+                        <div class="c-contentAndImage-content-text">
+                            {{ text }}
+                        </div>
+                    {% endif %}
+                    {% if image is not empty %}
+                        <div class="c-contentAndImage-content-img">
+                            {{ image.one().getImg() }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
         </div>
     </div>
 </section>
+

@@ -1,0 +1,33 @@
+@use "../abstracts" as *;
+
+.c-contentAndImage{
+  &-content{
+    display: flex;
+    flex-direction: row;
+
+    >*{
+      display: flex;
+      flex-basis: 50%;
+    }
+
+    &-text{
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+    }
+
+    &-img{
+      contain: size;
+      align-items: flex-start;
+      justify-content: center;
+
+      img{
+        max-height: 100%;
+        max-width: 100%;
+        height: auto;
+        width: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}

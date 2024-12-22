@@ -37,13 +37,25 @@ $cerulean-200: #B1D7E7;
 $cerulean-100: #D8EBF3;
 $cerulean-50: #EBF5F9;
 
-// baseColors
+// base colors
 $baseBlack: $neutral-950;
 $baseWhite: $neutral-50;
+
+// primary colors
 $primaryColor: $auburn-600;
 $primaryColorHover: $auburn-700;
 
+// secondary colors
 $secondaryColor: $cerulean-600;
 $secondaryColorHover: $cerulean-700;
 
+// font setting
 $primaryFont: 'Noto sans', sans-serif;
+
+// border radii
+$border-radius-none: 0;
+$border-radius-sm: 4px;
+$border-radius-md: 8px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-full: 50%;

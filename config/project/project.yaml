@@ -1,4 +1,4 @@
-dateModified: 1734799216
+dateModified: 1734888913
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -29,6 +29,7 @@ meta:
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
     2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
     4692c9e7-d943-495a-bc3e-fc25a9b7562b: 'Pagina''s' # Pagina's
+    5598c2b6-4544-4e71-a91a-309f14feb2b4: 'Public Schema' # Public Schema
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
     ad8a61a7-42a4-4769-b526-6a5fca60ce28: Simple # Simple
     d226be6d-c259-45eb-9677-5e17bc4fd573: 'Content and Image' # Content and Image

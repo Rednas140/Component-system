@@ -10,15 +10,13 @@
 
   @include breakpointUp(sm){
     min-width: 240px;
-    min-width: 240px;
   }
 
   cite{
     display: block;
     margin-top: 0.5em;
-    @include p-small;
     font-style: normal;
-    color: $neutral-800;
+    @include p-small($primaryFont, $neutral-800);
 
     &:before{
       content: "-  ";
