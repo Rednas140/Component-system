@@ -1,10 +1,10 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 82c6d396-89e5-4844-8742-535861bfab2f # Section | Default
-handle: pages
+  - d88fb071-a241-4a66-b038-2bdf25155e17 # Section | Projects
+handle: projects
 maxAuthors: 1
-name: 'Pagina''s'
+name: Projects
 previewTargets:
   -
     __assoc__:
@@ -22,6 +22,6 @@ siteSettings:
   ebcb3ddb-d136-47be-974b-87155e593ce2: # Component system
     enabledByDefault: true
     hasUrls: true
-    template: index.twig
-    uriFormat: '{slug}'
+    template: null
+    uriFormat: 'projecten/{slug}'
 type: channel

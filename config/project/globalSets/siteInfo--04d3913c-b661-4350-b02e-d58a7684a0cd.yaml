@@ -52,6 +52,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2024-12-24T14:53:15+00:00'
+            elementCondition: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: siteIcon
+            includeInCards: false
+            instructions: null
+            label: 'Website icon'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6ebb23d3-cdf5-49e6-8507-e5e01caf88c4
+            userCondition: null
+            warning: null
+            width: 100
         name: Settings
         uid: ca06da0a-d582-49bf-a2fb-ab91f1192fbc
         userCondition: null

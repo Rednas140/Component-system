@@ -60,6 +60,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2024-12-27T17:22:25+00:00'
+            elementCondition: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: highlightedImage
+            includeInCards: false
+            instructions: null
+            label: 'Highlighted image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 3160c500-7b93-4b26-9bce-6a8c8c19c23b
+            userCondition: null
+            warning: null
+            width: 100
         name: Meta
         uid: 828165e5-b9e9-4d74-bba3-7798bc1347fe
         userCondition: null
@@ -85,10 +101,10 @@ fieldLayouts:
         name: Content
         uid: 9725ffac-57f3-4a15-9616-d0a3eb2c0291
         userCondition: null
-handle: page
+handle: sectionDefault
 hasTitleField: true
 icon: circle-info
-name: 'Default page'
+name: 'Section | Default'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

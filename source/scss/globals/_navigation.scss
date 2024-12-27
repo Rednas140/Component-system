@@ -18,6 +18,12 @@
             padding-bottom: toRem(24px);
         }
 
+        &-logo{
+            img{
+                max-height: toRem(64px);
+            }
+        }
+
         &-main{
             display: flex;
             flex-direction: row;

@@ -8,6 +8,7 @@
   },
   "require-dev": {
     "craftcms/generator": "^2.0.0",
+    "phpunit/phpunit": "^9",
     "yiisoft/yii2-shell": "^2.0.3"
   },
   "config": {
@@ -24,6 +25,10 @@
   "scripts": {
     "post-root-package-install": [
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
+    ],
+    "sass-watch": [
+      "sass -w source/scss:web/assets/css -s compressed",
+      "phpunit"
     ]
   },
   "repositories": [

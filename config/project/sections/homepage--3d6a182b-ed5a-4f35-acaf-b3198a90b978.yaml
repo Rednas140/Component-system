@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 82c6d396-89e5-4844-8742-535861bfab2f # Default page
+  - 82c6d396-89e5-4844-8742-535861bfab2f # Section | Default
 handle: homepage
 maxAuthors: 1
 name: Homepage

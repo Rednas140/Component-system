@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  03a7777f-c57d-4f73-8d58-c5aa956d4c1d:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-12-24T15:58:15+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7d93896b-e7d2-4908-8793-d70fe1b226f3
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-24T16:02:26+00:00'
+            elementCondition: null
+            fieldUid: 60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f # Entries
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bc7154df-066d-4e88-9c1e-58a0a18598b3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 849c4840-28b5-4bed-8aa3-65d3c0755fc2
+        userCondition: null
+handle: cards
+hasTitleField: true
+icon: cards
+name: Cards
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

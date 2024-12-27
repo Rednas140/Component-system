@@ -1,10 +1,24 @@
 <head>
     <meta charset="utf-8"/>
     {% set urlSegment = craft.app.request.getSegment(1) %}
+    {% set name = siteInfo.siteName %}
 
-    <title>{{ urlSegment is not empty ? urlSegment ~ " |" }} {{siteName }}</title>
+    {% if name is empty %}
+        {% set name = siteName %}
+    {% endif %}
+
+    {# setting the icon of the website #}
+    {% set icon = siteInfo.siteIcon %}
+
+    {% if icon is empty %}
+        {% set icon = siteInfo.siteLogo %}
+    {% endif %}
+
+    <title>{{ urlSegment is not empty ? urlSegment ~ " | " }}{{ name }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
+    {% if icon is not empty %}
+        <link rel="icon" type="image" href="{{ icon.one().getUrl() }}">
+    {% endif %}
     {% do craft.app.view.registerCssFile('@web/assets/css/bootstrap-grid.min.css') %}
     {% do craft.app.view.registerCssFile('@web/assets/css/styles.css') %}
 

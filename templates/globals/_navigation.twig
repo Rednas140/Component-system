@@ -3,34 +3,34 @@
 
 {% set navigationLogo = siteInfo.siteLogo %}
 
-{% if navigationItems is not empty %}
-    <header class="g-nav">
-        <div class="container">
-            <div class="g-nav-content">
-                <a class="g-nav-content-logo" href="{{ siteUrl }}">
-                    {% if navigationLogo is not empty %}
-                        {{ navigationLogo.one().getImg() }}
-                    {% elseif siteInfo.siteName %}
-                        {{ siteInfo.siteName }}
-                    {% else %}
-                        {{ site }}
-                    {% endif %}
-                </a>
-                <nav class="g-nav-content-main" id="main-menu">
-                    <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
-                    <ul class="display-none--mobileOnly">
-                        {% for item in navigationItems %}
-                            {% set navigationClass = '' %}
-                            {% if navigationSegment is same as item.slug %}
-                                {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
-                            {% endif %}
-                            <li>
-                                <a href="{{ item.getUrl() }}" class="g-nav-content-main-item{{ navigationClass }}">{{ item.title }}</a>
-                            </li>
-                        {% endfor %}
-                    </ul>
-                </nav>
-            </div>
+<header class="g-nav">
+    <div class="container">
+        <div class="g-nav-content">
+            <a class="g-nav-content-logo" href="{{ siteUrl }}">
+                {% if navigationLogo is not empty %}
+                    {{ navigationLogo.one().getImg() }}
+                {% elseif siteInfo.siteName %}
+                    {{ siteInfo.siteName }}
+                {% else %}
+                    {{ site }}
+                {% endif %}
+            </a>
+            {% if navigationItems is not empty %}
+            <nav class="g-nav-content-main" id="main-menu">
+                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
+                <ul class="display-none--mobileOnly">
+                    {% for item in navigationItems %}
+                        {% set navigationClass = '' %}
+                        {% if navigationSegment is same as item.slug %}
+                            {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
+                        {% endif %}
+                        <li>
+                            <a href="{{ item.getUrl() }}" class="g-nav-content-main-item{{ navigationClass }}">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
         </div>
-    </header>
-{% endif %}
+    </div>
+</header>
