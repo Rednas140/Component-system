@@ -1,0 +1,39 @@
+@use "../abstracts" as *;
+
+.c-header{
+  padding: toRem(24px) 0;
+
+  @include breakpointUp(md){
+    padding: toRem(32px) 0;
+  }
+
+  @include breakpointUp(lg){
+    padding: toRem(48px) 0;
+  }
+
+  &-content{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    margin-bottom: 32px;
+    row-gap: 16px;
+
+    @include breakpointUp(lg){
+      margin-bottom: 0;
+    }
+  }
+
+  &-img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img{
+      max-height: 480px;
+      width: auto;
+      border-radius: $border-radius-lg;
+    }
+  }
+}

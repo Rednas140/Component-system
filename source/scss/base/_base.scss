@@ -16,18 +16,6 @@ main{
     flex: 1;
 }
 
-section{
-    padding: toRem(24px) 0;
-
-    @include breakpointUp(md){
-        padding: toRem(32px) 0;
-    }
-
-    @include breakpointUp(lg){
-        padding: toRem(48px) 0;
-    }
-}
-
 h1 {
     @include h1;
 }
@@ -66,7 +54,7 @@ b, strong{
 
 img{
     height: auto;
-    width: 100%;
+    max-width: 100%;
 }
 
 .sr-only {

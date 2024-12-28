@@ -45,7 +45,7 @@ $breakpoints: (
 
 
 // setting the standard typography styling
-@mixin h1($font: $primaryFont, $color: $baseBlack){
+@mixin h1($color: $baseBlack, $font: $primaryFont){
     margin-bottom: toRem(16px);
     font-size: toRem(32px);
     line-height: 1.2;
@@ -63,7 +63,7 @@ $breakpoints: (
     }
 }
 
-@mixin h2($font: $primaryFont, $color: $baseBlack){
+@mixin h2($color: $baseBlack, $font: $primaryFont){
     margin-bottom: toRem(14px);
     font-size: toRem(28px);
     line-height: 1.2;
@@ -81,7 +81,7 @@ $breakpoints: (
     }
 }
 
-@mixin h3($font: $primaryFont, $color: $baseBlack){
+@mixin h3($color: $baseBlack, $font: $primaryFont){
     margin-bottom: toRem(12px);
     font-size: toRem(24px);
     line-height: 1.4;
@@ -99,7 +99,7 @@ $breakpoints: (
     }
 }
 
-@mixin h4($font: $primaryFont, $color: $baseBlack){
+@mixin h4($color: $baseBlack, $font: $primaryFont){
     margin-bottom: toRem(10px);
     font-size: toRem(20px);
     line-height: 1.4;
@@ -117,7 +117,7 @@ $breakpoints: (
     }
 }
 
-@mixin h5($font: $primaryFont, $color: $baseBlack){
+@mixin h5($color: $baseBlack, $font: $primaryFont){
     margin-bottom: toRem(9px);
     font-size: toRem(18px);
     line-height: 1.4;
@@ -135,7 +135,7 @@ $breakpoints: (
     }
 }
 
-@mixin h6($font: $primaryFont, $color: $baseBlack){
+@mixin h6($color: $baseBlack, $font: $primaryFont){
     margin-bottom: toRem(8px);
     font-size: toRem(16px);
     line-height: 1.4;
@@ -154,18 +154,29 @@ $breakpoints: (
     }
 }
 
-@mixin p-body($font: $primaryFont, $color: $baseBlack){
+@mixin p-large($color: $baseBlack, $font: $primaryFont) {
+    font-size: toRem(18px);
+    font-family: $font;
+    line-height: 1.5;
+    color: $color;
+
+    @include breakpointUp(md) {
+        font-size: toRem(20px);
+    }
+}
+
+@mixin p-body($color: $baseBlack, $font: $primaryFont){
     font-size: toRem(16px);
     font-family: $font;
     line-height: 1.5;
     color: $color;
 }
 
-@mixin p-small($font: $primaryFont, $color: $baseBlack){
+@mixin p-small($color: $baseBlack, $font: $primaryFont){
     font-size: toRem(12px);
     font-family: $font;
     line-height: 1.5;
-    color: $baseBlack;
+    color: $color;
 
     @include breakpointUp(md){
         font-size: toRem(14px);

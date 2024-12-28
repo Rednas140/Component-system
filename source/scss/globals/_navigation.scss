@@ -19,6 +19,9 @@
         }
 
         &-logo{
+            display: flex;
+            align-items: center;
+
             img{
                 max-height: toRem(64px);
             }
@@ -31,22 +34,14 @@
 
             ul{
                 list-style: none;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                column-gap: toRem(24px);
             }
 
             &-item{
-                color: $primaryColor;
-
-                &:hover, &:focus{
-                    color: $primaryColorHover;
-                }
-
-                &--active{
-                    color: $secondaryColor;
-
-                    &:hover, &:focus{
-                        color: $secondaryColorHover;
-                    }
-                }
+                @include p-large($primaryColor);
             }
         }
     }

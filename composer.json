@@ -27,8 +27,8 @@
       "@php -r \"file_exists('.env') || copy('.env.example.dev', '.env');\""
     ],
     "sass-watch": [
-      "sass -w source/scss:web/assets/css -s compressed",
-      "phpunit"
+      "Composer\\Config::disableProcessTimeout",
+      "sass -w source/scss:web/assets/css -s compressed"
     ]
   },
   "repositories": [
