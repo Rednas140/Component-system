@@ -11,6 +11,7 @@
 		</main>
     {% include "globals/_footer" %}
 
+	{{ craft.app.view.registerJsFile('@web/assets/js/main.js') }}
     {{ endBody() }}
 	</body>
 </html>

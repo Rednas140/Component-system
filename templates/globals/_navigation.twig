@@ -16,9 +16,12 @@
                 {% endif %}
             </a>
             {% if navigationItems is not empty %}
-            <nav class="g-nav-content-main" id="main-menu">
-                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle">Menu</button>
-                <ul class="display-none--mobileOnly">
+            <nav class="g-nav-content-main" id="main-menu-toggle">
+                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle" aria-label="Navigatie toggle">
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul id="main-menu-nav" aria-hidden="true">
                     {% for item in navigationItems %}
                         {% set navigationClass = '' %}
                         {% if navigationSegment is same as item.slug %}
