@@ -3,7 +3,7 @@
 
 {% set navigationLogo = siteInfo.siteLogo %}
 
-<header class="g-nav">
+<header class="g-nav" id="main-menu">
     <div class="container">
         <div class="g-nav-content">
             <a class="g-nav-content-logo" href="{{ siteUrl }}">
@@ -16,12 +16,14 @@
                 {% endif %}
             </a>
             {% if navigationItems is not empty %}
-            <nav class="g-nav-content-main" id="main-menu-toggle">
-                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu" id="menu-toggle" aria-label="Navigatie toggle">
-                    <span></span>
-                    <span></span>
+                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu-nav" id="main-menu-toggle" aria-label="Navigation toggle">
+                    <span class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                    </span>
                 </button>
-                <ul id="main-menu-nav" aria-hidden="true">
+                <nav id="main-menu-nav" class="g-nav-content-main">
+                <ul aria-hidden="true" class="container">
                     {% for item in navigationItems %}
                         {% set navigationClass = '' %}
                         {% if navigationSegment is same as item.slug %}

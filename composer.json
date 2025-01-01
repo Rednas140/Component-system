@@ -28,7 +28,7 @@
     ],
     "sass-watch": [
       "Composer\\Config::disableProcessTimeout",
-      "sass -w source/scss:web/assets/css -s compressed"
+      "sass -w src/scss:web/assets/css -s compressed"
     ]
   },
   "repositories": [

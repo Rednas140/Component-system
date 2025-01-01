@@ -1,6 +1,6 @@
 {# Registering the asset files to be used in head #}
 {{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
-{{ craft.app.view.registerJsFile('@web/assets/js/components/' ~ block.type.handle ~ '.js') }}
+{{ craft.app.view.registerJsFile('@web/assets/js/components/' ~ block.type.handle ~ '.min.js') }}
 
 {# Setting the variables#}
 {% set text = block.text %}

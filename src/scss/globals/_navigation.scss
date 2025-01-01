@@ -1,6 +1,9 @@
 @use '../abstracts' as *;
 
 .g-nav{
+    position: relative;
+    background-color: $primaryColor;
+
     &-content{
         display: flex;
         flex-direction: row;
@@ -27,12 +30,15 @@
             }
         }
 
-        &-main{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+        #main-menu-toggle{
+            position: relative;
+            width: 50px;
+            height: 50px;
+            cursor: pointer;
+            background: none;
+            border: none;
 
-            #main-menu-toggle{
+            .toggle-btn{
                 margin: auto;
                 position: absolute;
                 top: 0;
@@ -42,29 +48,36 @@
                 width: 22px;
                 height: 12px;
 
-                span{
+                span {
                     position: absolute;
                     display: block;
                     width: 100%;
                     height: 2px;
-                    background-color: var(--bar-bg, #000);
+                    background-color: $baseWhite;
                     border-radius: 1px;
                     transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 
                     &:first-of-type {
                         top: 0;
+                        width: 26px;
                     }
                     &:last-of-type {
                         bottom: 0;
+                        width: 12px;
                     }
                 }
+            }
 
-                &[aria-expanded="true"]{
+            &[aria-expanded="true"]{
+                .toggle-btn {
                     span {
+                        width: 22px;
+
                         &:first-of-type {
                             transform: rotate(45deg);
                             top: 5px;
                         }
+
                         &:last-of-type {
                             transform: rotate(-45deg);
                             bottom: 5px;
@@ -72,25 +85,69 @@
                     }
                 }
             }
+        }
+
+
+        &-main{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            display: none;
+            height: 100vh;
+            width: 100%;
+            flex-direction: row;
+            align-items: flex-start;
+            background-color: $baseWhite;
+
+            @include breakpointUp(lg){
+                position: static;
+                display: flex;
+                align-items: center;
+                width: auto;
+                height: auto;
+                background: none;
+            }
 
             ul{
-                display: none;
+                display: flex;
+                flex-direction: column;
                 list-style: none;
+                flex-wrap: wrap;
+                width: 100%;
+                padding-bottom: 32px;
 
                 @include breakpointUp(lg){
-                    display: flex;
                     flex-direction: row;
-                    flex-wrap: wrap;
-                    column-gap: toRem(24px);
+                    column-gap: 24px;
+                    width: auto;
+                    padding: 0;
+                }
+
+                @include breakpointDown(lg){
+                    li:first-of-type{
+                        a{
+                            padding-top: 32px;
+                        }
+                    }
                 }
             }
 
-            .open{
+            &--open{
                 display: flex;
             }
 
             &-item{
+                display: block;
+                padding: 16px 0;
+                width: 100%;
+                text-decoration: none;
                 @include p-large($primaryColor);
+
+                @include breakpointUp(lg){
+                    padding: 0;
+                    width: auto;
+                    color: $baseWhite;
+                }
             }
         }
     }
