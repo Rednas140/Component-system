@@ -1,0 +1,25 @@
+.c-contentAndImage-content {
+  display: flex;
+  flex-direction: row;
+}
+.c-contentAndImage-content > * {
+  display: flex;
+  flex-basis: 50%;
+}
+.c-contentAndImage-content-text {
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.c-contentAndImage-content-img {
+  contain: size;
+  align-items: flex-start;
+  justify-content: center;
+}
+.c-contentAndImage-content-img img {
+  max-height: 100%;
+  max-width: 100%;
+  height: auto;
+  width: auto;
+  object-fit: contain;
+}

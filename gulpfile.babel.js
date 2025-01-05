@@ -1,59 +1,48 @@
-const { gulp, watch, series, src, dest, parallel} = require('gulp');
-const babel = require('gulp-babel');
-const uglify = require('gulp-uglify');
-const rename = require('gulp-rename');
-const dartSass = require('sass');
-const gulpSass = require('gulp-sass');
+import gulp from "gulp";
+const { watch, src, dest } = gulp;
+import babel from "gulp-babel";
+import uglify from "gulp-uglify";
+import rename from "gulp-rename";
+import prefix from "gulp-autoprefixer";
+import * as dartSass from "sass";
+import gulpSass from "gulp-sass";
 const sass = gulpSass(dartSass);
+import minify from "gulp-minify-css"
 
 function clean(cb) {
     // body omitted
     cb();
 }
 
-function scss(path){
-    return gulp.src(path)
+function scss(){
+    return src('./src/scss/**/**/*.scss')
         .pipe(sass({style: 'compressed'}).on('error', sass.logError))
-        .pipe(gulp.dest('web/assets/css'));
+        .pipe(prefix('last 2 versions'))
+        .pipe(minify())
+        .pipe(dest('./web/assets/css'));
 }
 
-function javascript (path){
-    return src(path)
+function javascript (filePath){
+    return src(filePath, { allowEmpty: true })
         .pipe(babel())
         .pipe(uglify())
         .pipe(rename({ extname: '.min.js' }))
         .pipe(dest('web/assets/js'));
 }
-function sassWatcher(){
-    const scssWatch = watch('src/scss/**/**/*.scss');
 
-    scssWatch.on('change', function(path, stats) {
-        console.log(`File ${path} was changed`);
+// watches for JS and CSS files
+export const watchSrc = ()=>{
+   const scssWatch = watch('./src/scss/**/**/*.scss');
+   const jsWatch = watch('./src/js/**/*.js');
+
+    jsWatch.on('all', function (event, filePath){
+        console.log(`JS File changed: ${filePath}`);
+        javascript(filePath);
     });
 
-    scssWatch.on('add', function(path, stats) {
-        console.log(`File ${path} was added`);
+    scssWatch.on('all', function (event, filePath){
+        console.log(`SCSS File changed: ${filePath}`);
+        scss();
     });
+};
 
-    scssWatch.on('unlink', function(path, stats) {
-        console.log(`File ${path} was removed`);
-    });
-}
-
-function jsWatcher(){
-    const jsWatch = watch('src/scss/**/**/*.scss');
-
-    jsWatch.on('change', function(path, stats) {
-        console.log(`File ${path} was changed`);
-    });
-
-    jsWatch.on('add', function(path, stats) {
-        console.log(`File ${path} was added`);
-    });
-
-    jsWatch.on('unlink', function(path, stats) {
-        console.log(`File ${path} was removed`);
-    });
-}
-
-exports.default = parallel(sassWatcher, jsWatcher);

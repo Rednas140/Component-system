@@ -1,0 +1,69 @@
+color: null
+fieldLayouts:
+  1dd91363-9541-4c09-beca-745613b26366:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-01-05T17:50:41+00:00'
+            elementCondition: null
+            fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
+            handle: questionTitle
+            includeInCards: false
+            instructions: null
+            label: Title
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: eeef3e22-e12c-4cf3-98c6-495e6be5c5b7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-05T17:36:08+00:00'
+            elementCondition: null
+            fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
+            handle: questionText
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6d7073c9-7c49-4efd-9d9d-67a7662b540b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-05T17:36:08+00:00'
+            elementCondition: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: questionImage
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: f723dce5-6aab-4d0e-a33f-8c7beb3d5955
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 52cbc527-8507-44e9-8203-b876d36a88eb
+        userCondition: null
+handle: questionContent
+hasTitleField: false
+icon: null
+name: Content
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

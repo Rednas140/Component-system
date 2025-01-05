@@ -1,0 +1,44 @@
+fieldLayouts:
+  3d1c83d9-5177-4f07-9126-7010a2c41744:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-01-05T17:37:19+00:00'
+            elementCondition: null
+            fieldUid: ce9f9922-72e9-4bc6-8d6c-bae47f7bbe86 # Start block
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9c19ebdb-5bf3-41c1-bc5f-e3bf18676cca
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-05T17:38:27+00:00'
+            elementCondition: null
+            fieldUid: 4d4d2c21-8079-42b3-8bf6-c30a14bb0d99 # Question 1
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bb09cacb-a42c-496f-867d-9d05e188b851
+            userCondition: null
+            warning: null
+            width: 100
+        name: Quiz
+        uid: ef515f2e-cd82-4651-a88a-6f8031e8d6cf
+        userCondition: null
+handle: placeholders
+name: Placeholders
+sortOrder: 3
