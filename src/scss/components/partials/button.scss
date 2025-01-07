@@ -1,0 +1,17 @@
+@use "../../abstracts" as *;
+
+.p-btn{
+  padding: 8px 16px;
+  border-radius: $border-radius-xl;
+  color: $baseWhite;
+  background-color: $primaryColor;
+  text-decoration: none;
+
+  @include breakpointUp(lg){
+  }
+
+  &:hover, &:focus{
+    color: $baseWhite;
+    background-color: $primaryColorHover;
+  }
+}

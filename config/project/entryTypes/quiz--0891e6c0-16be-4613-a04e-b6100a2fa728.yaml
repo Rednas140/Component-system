@@ -1,0 +1,30 @@
+color: null
+fieldLayouts:
+  dbfdcdac-a4a3-40e0-970a-ed50375b74e3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-01-05T17:46:00+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Content from this quiz gets automatically loaded from Globals'
+            type: craft\fieldlayoutelements\Tip
+            uid: def3f8b5-2d6f-43e3-9b01-53daa986ab9a
+            userCondition: null
+        name: Content
+        uid: 47b11f3b-e67d-4522-bed7-2c21cd0b67e8
+        userCondition: null
+handle: quiz
+hasTitleField: false
+icon: vial
+name: Quiz
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

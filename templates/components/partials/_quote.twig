@@ -1,0 +1,12 @@
+{{ craft.app.view.registerCssFile('@web/assets/css/components/partials/quote.css') }}
+
+{# Includes require a quoteText variable #}
+{% if quoteText %}
+    <blockquote class="p-quote">
+        {{ quoteText }}
+
+        {% if quoteCite is not empty %}
+            <cite>{{ quoteCite }}</cite>
+        {% endif %}
+    </blockquote>
+{% endif %}

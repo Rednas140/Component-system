@@ -1,0 +1,85 @@
+color: null
+fieldLayouts:
+  f06c6ebb-5dd2-4ea2-bccb-bb0c8b6c6e32:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-12-22T17:35:13+00:00'
+            elementCondition: null
+            fieldUid: e85b9150-15ea-4f7f-bb34-676ca47a09b4 # WYSIWYG
+            handle: text
+            includeInCards: false
+            instructions: null
+            label: Text
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: e5288b9a-7f3c-450c-a7f7-74d9425cd387
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-17T22:19:22+00:00'
+            elementCondition: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Image
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: db83f071-fa0b-4fab-934e-be1770cf6d3b
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-24T15:12:23+00:00'
+            elementCondition: null
+            fieldUid: 6a1751b0-f1f9-494a-977b-131a2591ac49 # Adress
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 06c7a919-cf83-45e4-b1ff-a6cb823fd4e2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-12-17T22:19:22+00:00'
+            elementCondition: null
+            fieldUid: 1c9f361d-ab73-429f-be7c-a1b9c8df83d9 # Placement Select
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: 'Image placement select'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 33f01f84-874b-455b-a415-8be50bba568a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: c817184d-d9ff-427d-8ea1-42dc4d0a9926
+        userCondition: null
+handle: contentAndImage
+hasTitleField: false
+icon: pager
+name: 'Content and Image'
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

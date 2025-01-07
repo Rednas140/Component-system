@@ -1,0 +1,167 @@
+@use "variables" as *;
+@use "function" as *;
+@use "sass:map";
+
+// Breakpoints Map
+$breakpoints: (
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px,
+);
+
+// Breakpoint up Mixin
+@mixin breakpointUp($size) {
+    $min-width: map.get($breakpoints, $size);
+    @if $min-width {
+        @media (min-width: $min-width) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint '#{$size}' not found in \$breakpoints map.";
+    }
+}
+
+// Breakpoint up Mixin
+@mixin breakpointDown($size) {
+    $max-width: map.get($breakpoints, $size);
+    @if $max-width {
+        @media (max-width: $max-width) {
+            @content;
+        }
+    } @else {
+        @error "Breakpoint '#{$size}' not found in \$breakpoints map.";
+    }
+}
+
+// used to include a color changing svg
+@mixin pseudoSVG($url, $color) {
+    // to use an after with a colored svg;
+    background-color: $color;
+    -webkit-mask: url($url) center/contain no-repeat;
+    mask: url($url) center/contain no-repeat;
+}
+
+
+// setting the standard typography styling
+@mixin h1($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(32px);
+    line-height: 1.2;
+    font-family: $font;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(36px);
+    }
+
+    @include breakpointUp(lg){
+        font-size: toRem(48px);
+    }
+}
+
+@mixin h2($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(28px);
+    line-height: 1.2;
+    font-family: $font;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(32px);
+    }
+
+    @include breakpointUp(lg){
+        font-size: toRem(40px);
+    }
+}
+
+@mixin h3($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(24px);
+    line-height: 1.4;
+    font-family: $font;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(28px);
+    }
+
+    @include breakpointUp(lg){
+        font-size: toRem(32px);
+    }
+}
+
+@mixin h4($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(20px);
+    line-height: 1.4;
+    font-family: $font;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(24px);
+    }
+
+    @include breakpointUp(lg){
+        margin-bottom: toRem(14px);
+        font-size: toRem(28px);
+    }
+}
+
+@mixin h5($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(18px);
+    line-height: 1.4;
+    font-family: $font;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(20px);
+    }
+
+    @include breakpointUp(lg){
+        font-size: toRem(24px);
+    }
+}
+
+@mixin h6($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(16px);
+    line-height: 1.4;
+    font-family: $font;
+    font-weight: bold;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(18px);
+    }
+
+    @include breakpointUp(lg){
+        font-size: toRem(20px);
+    }
+}
+
+@mixin p-large($color: $baseBlack, $font: $primaryFont) {
+    font-size: toRem(18px);
+    font-family: $font;
+    line-height: 1.5;
+    color: $color;
+
+    @include breakpointUp(md) {
+        font-size: toRem(20px);
+    }
+}
+
+@mixin p-body($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(16px);
+    font-family: $font;
+    line-height: 1.5;
+    color: $color;
+}
+
+@mixin p-small($color: $baseBlack, $font: $primaryFont){
+    font-size: toRem(12px);
+    font-family: $font;
+    line-height: 1.5;
+    color: $color;
+
+    @include breakpointUp(md){
+        font-size: toRem(14px);
+    }
+}

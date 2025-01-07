@@ -1,0 +1,29 @@
+@use "../abstracts" as *;
+
+.c-contentComponent{
+  &-content{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 0;
+    row-gap: 8px;
+
+    @include breakpointUp(md){
+      row-gap: 12px;
+    }
+
+    @include breakpointUp(lg){
+      row-gap: 16px;
+    }
+
+    > *{
+      align-self: flex-start;
+    }
+
+    &-img{
+      img{
+        max-height: toRem(256px);
+        width: auto;
+      }
+    }
+  }
+}

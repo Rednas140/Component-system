@@ -1,0 +1,33 @@
+columnSuffix: null
+handle: headingSelect
+instructions: null
+name: 'Heading Select'
+searchable: true
+settings:
+  customOptions: false
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Variant 1'
+        -
+          - value
+          - '1'
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Variant 2'
+        -
+          - value
+          - '2'
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

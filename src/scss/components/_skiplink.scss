@@ -1,0 +1,21 @@
+.g-skiplink{
+    display: inline-block;
+    opacity: 0;
+    position: fixed;
+    left: 20px;
+    top: 20px;
+    z-index: -1;
+    padding: 15px 25px;
+    border: 2px solid #f00;
+    border-radius: 0!important;
+    color: #fff;
+    background-color: #f00;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:focus {
+        z-index: 999999999;
+        opacity: 1;
+    }
+}

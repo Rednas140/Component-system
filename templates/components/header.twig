@@ -1,0 +1,51 @@
+{# Registering the asset files to be used in head #}
+{{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
+
+
+{# Setting the variables#}
+{% set title = block.title %}
+{% set description = block.description %}
+{% set image = block.headerImage %}
+{% set button = block.button %}
+{% set placement = block.headingSelect %}
+
+{% set headingLevel = "h2" %}
+
+{% if loop.index == 1 %}
+    {% set headingLevel = "h1" %}
+{% endif %}
+
+<header class="c-header">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col">
+                <div class="c-header-content">
+                    {% if title is not empty %}
+                        {% tag headingLevel with {
+                            class: 'c-header-content__title',
+                        }%}
+                            {{ title }}
+                        {% endtag %}
+                    {% endif %}
+                    {% if description is not empty %}
+                        <p class="c-header-content__description">{{ description }}</p>
+                    {% endif %}
+                    {% if button is not empty %}
+                        {% include 'components/partials/_button.twig' with {
+                            buttonLabel: button.label,
+                            buttonTarget: button.target,
+                            buttonLink: button.value
+                        } only %}
+                    {% endif %}
+                </div>
+            </div>
+            {% if image is not empty %}
+                <div class="col-lg-6">
+                    <div class="c-header-img">
+                        {{ image.one().getImg() }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</header>

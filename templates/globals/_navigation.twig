@@ -1,18 +1,41 @@
-<header>
-    <a class="home" href="{{ siteUrl }}">{{ siteName }}</a>
+{% set navigationSegment = craft.app.request.getSegment(1) %}
+{% set navigationItems = navigation.navigationItems %}
 
-    {% set navSegment = craft.app.request.getSegment(1) %}
-    <nav>
-        <ul>
-            <li>
-            <a href="{{ url('/') }}" class="{{ navSegment is empty ? 'active' : 'inactive' }}">Home</a>
-            </li>
-            <li>
-                <a href="{{ url('blog') }}" class="{{ navSegment == 'blog' ? 'active' : 'inactive' }}">Blog</a>
-            </li>
-            <li>
-                <a href="{{ url('about') }}" class="{{ navSegment == 'about' ? 'active' : 'inactive' }}">About</a>
-            </li>
-        </ul>
-    </nav>
+{% set navigationLogo = siteInfo.siteLogo %}
+
+<header class="g-nav" id="main-menu">
+    <div class="container">
+        <div class="g-nav-content">
+            <a class="g-nav-content-logo" href="{{ siteUrl }}">
+                {% if navigationLogo is not empty %}
+                    {{ navigationLogo.one().getImg() }}
+                {% elseif siteInfo.siteName %}
+                    {{ siteInfo.siteName }}
+                {% else %}
+                    {{ site }}
+                {% endif %}
+            </a>
+            {% if navigationItems is not empty %}
+                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu-nav" id="main-menu-toggle" aria-label="Navigation toggle">
+                    <span class="toggle-btn">
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+                <nav id="main-menu-nav" class="g-nav-content-main">
+                <ul aria-hidden="true" class="container">
+                    {% for item in navigationItems %}
+                        {% set navigationClass = '' %}
+                        {% if navigationSegment is same as item.slug %}
+                            {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
+                        {% endif %}
+                        <li>
+                            <a href="{{ item.getUrl() }}" class="g-nav-content-main-item{{ navigationClass }}">{{ item.title }}</a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+            {% endif %}
+        </div>
+    </div>
 </header>

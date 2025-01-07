@@ -1,0 +1,22 @@
+{{ craft.app.view.registerCssFile('@web/assets/css/components/partials/button.css') }}
+
+{# To Include:
+    {% include 'components/partials/_button.twig' with {
+        buttonLabel: button.label,
+        buttonTarget: button.target,
+        buttonLink: button.value
+    } only %}
+#}
+
+{# Includes require a quoteText variable #}
+{% if buttonLink %}
+    {% if buttonTarget|default is empty %}
+        {% set buttonTarget = "_self" %}
+    {% endif %}
+
+    {% if buttonLabel|default is empty %}
+        {% set buttonLabel = buttonLink %}
+    {% endif %}
+
+    <a class="p-btn" href="{{ buttonLink }}" target="{{ buttonTarget }}">{{ buttonLabel }}</a>
+{% endif %}

@@ -1,0 +1,148 @@
+@use "../abstracts" as *;
+
+.c-quiz{
+  .col-12{
+    padding: 0;
+  }
+
+  &-block{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: $secondaryColor;
+
+    @include breakpointUp(lg){
+      flex-direction: row;
+      min-height: 516px;
+    }
+
+    img{
+      object-fit: cover;
+      width: 100%;
+
+      @include breakpointUp(lg){
+        flex-basis: 40%;
+        width: 40%;
+      }
+    }
+
+    &-progress{
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 10px 15px;
+      background-color: $primaryColor;
+      @include p-body($baseBlack);
+    }
+
+    &-content{
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      row-gap: 20px;
+      flex-grow: 1;
+      width: auto;
+      padding: 40px 15px;
+
+      @include breakpointUp(lg){
+        padding: 50px 30px 40px 30px;
+      }
+
+
+      h2, label, input[type="radio"], p{
+        color: $baseWhite;
+      }
+
+      fieldset {
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+      }
+
+      &-radio {
+        input[type="radio"]{
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+          pointer-events: none;
+        }
+
+        label{
+          position: relative;
+          display: flex;
+          align-items: center;
+          column-gap: 18px;
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:before{
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 20px;
+            background-color: transparent;
+            border: solid $baseWhite 2px;
+          }
+
+          &:after{
+            content: '';
+            display: inline-block;
+            position: absolute;
+            width: 10px; /* Smaller than the outer circle */
+            height: 10px;
+            top: 7px;
+            left: 5px;
+            border-radius: 50%;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+          }
+        }
+
+        input[type="radio"]:checked + label {
+          &:after{
+            background-color: $baseWhite;
+          }
+        }
+      }
+
+      &-textInput{
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        width: 100%;
+
+        @include breakpointUp(lg){
+          width: 533px;
+        }
+
+        label{
+          @include p-large($baseBlack);
+        }
+
+        input[type="text"]{
+          height: 60px;
+          width: 100%;
+          padding: 14px 16px;
+        }
+      }
+
+      &-btnWrap {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: auto;
+        gap: 20px 0;
+
+        @include breakpointUp(lg){
+          flex-direction: row;
+          gap: 0 20px;
+          width: auto;
+        }
+      }
+    }
+  }
+}

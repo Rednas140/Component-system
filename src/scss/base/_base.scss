@@ -1,0 +1,86 @@
+// This file is for setting up the default styling of the page, you shouldn't need to change anything here!
+@use '../abstracts' as *;
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    @include p-body;
+}
+
+main{
+    flex: 1;
+}
+
+h1 {
+    @include h1;
+}
+
+h2{
+    @include h2;
+}
+
+h3{
+    @include h3;
+}
+
+h4{
+    @include h4;
+}
+
+h5{
+    @include h5;
+}
+
+h6{
+    @include h6;
+}
+
+p{
+    @include p-body;
+}
+
+blockquote, i{
+    font-style: italic;
+}
+
+b, strong{
+    font-weight: bold;
+}
+
+img{
+    height: auto;
+    max-width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.display-none{
+    display: none;
+
+    &--desktopOnly{
+        @include breakpointUp(lg){
+            display: none;
+        }
+    }
+
+    &--mobileOnly{
+        @include breakpointDown(lg){
+            display: none;
+        }
+    }
+}

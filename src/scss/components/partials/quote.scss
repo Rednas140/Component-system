@@ -1,0 +1,25 @@
+@use "../../abstracts" as *;
+
+.p-quote{
+  border-left: 4px solid $auburn-100;
+  margin: 1em 0;
+  padding: 0.5em 1em;
+  min-width: 100%;
+  background-color: $auburn-50;
+  border-radius: 4px;
+
+  @include breakpointUp(sm){
+    min-width: 240px;
+  }
+
+  cite{
+    display: block;
+    margin-top: 0.5em;
+    font-style: normal;
+    @include p-small($primaryFont, $neutral-800);
+
+    &:before{
+      content: "-  ";
+    }
+  }
+}

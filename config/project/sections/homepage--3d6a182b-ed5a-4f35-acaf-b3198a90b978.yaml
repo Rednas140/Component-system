@@ -1,7 +1,7 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 82c6d396-89e5-4844-8742-535861bfab2f # Home
+  - 82c6d396-89e5-4844-8742-535861bfab2f # Section | Default
 handle: homepage
 maxAuthors: 1
 name: Homepage
@@ -22,6 +22,6 @@ siteSettings:
   ebcb3ddb-d136-47be-974b-87155e593ce2: # Component system
     enabledByDefault: true
     hasUrls: true
-    template: null
+    template: index.twig
     uriFormat: __home__
 type: single
