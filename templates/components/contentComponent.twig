@@ -13,27 +13,36 @@
                     {% for content in blockContent %}
                         {% set blockType = content.type.handle %}
 
-                        {% if blockType == 'text' %}
-                            <div class="c-contentComponent-content-text">
-                                {{ content.wysiwyg | raw }}
-                            </div>
-                        {% elseif blockType == 'image' %}
-                            {% set image = content.singleImage.one() %}
+                        {% switch blockType %}
+                            {% case 'text' %}
+                                <div class="c-contentComponent-content-text">
+                                    {{ content.wysiwyg | raw }}
+                                </div>
 
-                            <div class="c-contentComponent-content-img">
-                                {{ image.getImg() }}
-                            </div>
-                        {% elseif blockType == 'quote' %}
-                            {% include 'components/partials/_quote.twig' with {
-                                quoteText: content.quote,
-                                quoteCite: content.cite
+                            {% case 'image' %}
+                                {% set image = content.singleImage.one()|default %}
 
-                            } %}
-                        {% else %}
-                            <div class="c-contentComponent-content-unsupported">
-                                <p>Unsupported block type: <code>{{ blockType }}</code></p>
-                            </div>
-                        {% endif %}
+                                {% if image is not empty %}
+                                    <div class="c-contentComponent-content-img">
+                                        {{ image.getImg() }}
+                                    </div>
+                                {% else %}
+                                    <div class="c-contentComponent-content-img">
+                                        <p>Image not found</p>
+                                    </div>
+                                {% endif %}
+
+                            {% case 'quote' %}
+                                {% include 'components/partials/_quote.twig' with {
+                                    quoteText: content.quote,
+                                    quoteCite: content.cite
+                                } %}
+
+                            {% default %}
+                                <div class="c-contentComponent-content-unsupported">
+                                    <p>Unsupported block type: <code>{{ blockType }}</code></p>
+                                </div>
+                        {% endswitch %}
                     {% else %}
                         <div class="c-contentComponent-content-empty">
                             <p>This component has no content!</p>

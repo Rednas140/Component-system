@@ -1,4 +1,4 @@
-dateModified: 1736099491
+dateModified: 1737153499
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -17,7 +17,6 @@ meta:
     1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
     3d6a182b-ed5a-4f35-acaf-b3198a90b978: Homepage # Homepage
     4bdb03d2-eaa1-424b-a4c4-ba9cce470fee: Content # Content
-    4d4d2c21-8079-42b3-8bf6-c30a14bb0d99: 'Question 1' # Question 1
     04d3913c-b661-4350-b02e-d58a7684a0cd: 'Site info' # Site info
     4ee13b07-ca8d-40af-bdaf-e2ef8d23fb9c: Image # Image
     5bf9caf9-f260-4d1c-8b41-803bb96db4f4: Content # Content
@@ -30,16 +29,13 @@ meta:
     60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f: Entries # Entries
     82c6d396-89e5-4844-8742-535861bfab2f: 'Section | Default' # Section | Default
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
-    0891e6c0-16be-4613-a04e-b6100a2fa728: Quiz # Quiz
     2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
     4692c9e7-d943-495a-bc3e-fc25a9b7562b: 'Pagina''s' # Pagina's
     5598c2b6-4544-4e71-a91a-309f14feb2b4: 'Public Schema' # Public Schema
     59361b08-51c9-40f9-80b8-f7186c1983a7: Cards # Cards
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
     ad8a61a7-42a4-4769-b526-6a5fca60ce28: Simple # Simple
-    b4069dd7-5aa4-45d6-949b-9597f08f7c96: Content # Content
     c7a1d56d-af64-4e45-bb5f-c20f732f24b8: Placeholders # Placeholders
-    ce9f9922-72e9-4bc6-8d6c-bae47f7bbe86: 'Start block' # Start block
     d1a92616-4ce6-4484-9adc-b2a0972434ec: Button # Button
     d88fb071-a241-4a66-b038-2bdf25155e17: 'Section | Projects' # Section | Projects
     d226be6d-c259-45eb-9677-5e17bc4fd573: 'Content and Image' # Content and Image

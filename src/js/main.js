@@ -7,7 +7,7 @@ function mobileNavigation(){
     const openMenu = () => {
         trapFocus(menu)
         menuNav.setAttribute("aria-hidden", "false");
-        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-expanded", "true");
         menuNav.classList.add("g-nav-content-main--open");
     };
 

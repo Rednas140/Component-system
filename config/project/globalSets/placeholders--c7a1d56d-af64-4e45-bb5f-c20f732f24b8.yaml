@@ -1,43 +1,27 @@
 fieldLayouts:
-  3d1c83d9-5177-4f07-9126-7010a2c41744:
+  59e9d47e-fb14-46ef-bb8b-138a5182824b:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-01-05T17:37:19+00:00'
+            dateAdded: '2025-01-17T22:38:19+00:00'
             elementCondition: null
-            fieldUid: ce9f9922-72e9-4bc6-8d6c-bae47f7bbe86 # Start block
-            handle: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: cardImage
             includeInCards: false
             instructions: null
-            label: null
+            label: 'Card image'
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 9c19ebdb-5bf3-41c1-bc5f-e3bf18676cca
+            uid: b8320161-5519-4359-b2d7-fe0cd6688212
             userCondition: null
             warning: null
             width: 100
-          -
-            dateAdded: '2025-01-05T17:38:27+00:00'
-            elementCondition: null
-            fieldUid: 4d4d2c21-8079-42b3-8bf6-c30a14bb0d99 # Question 1
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: bb09cacb-a42c-496f-867d-9d05e188b851
-            userCondition: null
-            warning: null
-            width: 100
-        name: Quiz
-        uid: ef515f2e-cd82-4651-a88a-6f8031e8d6cf
+        name: Placeholder
+        uid: 7aff61e6-31d7-4a7b-b7d4-271504058191
         userCondition: null
 handle: placeholders
 name: Placeholders
