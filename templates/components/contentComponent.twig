@@ -1,15 +1,16 @@
 {# Registering the asset files to be used in head #}
 {{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
-{{ craft.app.view.registerJsFile('@web/assets/js/components/' ~ block.type.handle ~ '.min.js') }}
 
 {# Setting the variables#}
 {% set text = block.text %}
 {% set image = block.singleImage %}
+{% set coverOrContain = block.coverOrContain %}
 {% set placement = block.placementSelect %}
-{% set class = '' %}
+{% set classText = '' %}
+{% set classImage = '' %}
+{% set classCover = '' %}
 
-{% if placement is not empty %}
-    {% set class = '' %}
+{% if image is not empty and placement is not empty %}
     {% switch placement.value %}
         {% case 'right' %}
             {% set classText = 'col-md-6' %}
@@ -27,6 +28,12 @@
             {% set classText = 'col-md-6' %}
             {% set classImage = 'col-md-6' %}
     {% endswitch %}
+
+    {% if coverOrContain is not empty %}
+        {% if coverOrContain == true %}
+            {% set classCover = 'c-contentAndImage-img--contain' %}
+        {% endif %}
+    {% endif %}
 {% endif %}
 
 {% if image is empty %}
@@ -45,9 +52,9 @@
             </div>
             {% if image is not empty %}
                 <div class="{{ classImage }}">
-                        <div class="c-contentAndImage-img">
-                            {{ image.one().getImg() }}
-                        </div>
+                    <div class="c-contentAndImage-img{{ classCover ? ' ' ~ classCover }}">
+                        {{ image.one().getImg() }}
+                    </div>
                 </div>
             {% endif %}
         </div>

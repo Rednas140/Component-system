@@ -10,5 +10,11 @@
       object-fit: cover;
       border-radius: $border-radius-xl;
     }
+
+    &--contain{
+      img {
+        width: auto;
+      }
+    }
   }
 }

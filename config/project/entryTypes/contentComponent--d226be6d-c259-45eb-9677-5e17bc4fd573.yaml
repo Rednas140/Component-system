@@ -64,6 +64,33 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-01-26T22:45:20+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\RelationalFieldConditionRule
+                  elementId: null
+                  fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+                  layoutElementUid: db83f071-fa0b-4fab-934e-be1770cf6d3b
+                  operator: notempty
+                  uid: edd0d43e-6945-4404-bfb7-a19443d9cb85
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 43958353-e7e6-4154-8fb0-787eebe8832c # Cover full width or contain image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c242ec06-61fe-4dbd-a47f-72547c23aa14
+            userCondition: null
+            warning: null
+            width: 100
         name: Content
         uid: c817184d-d9ff-427d-8ea1-42dc4d0a9926
         userCondition: null

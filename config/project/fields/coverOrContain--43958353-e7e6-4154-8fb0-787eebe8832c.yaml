@@ -1,0 +1,12 @@
+columnSuffix: null
+handle: coverOrContain
+instructions: null
+name: 'Cover full width or contain image'
+searchable: false
+settings:
+  default: false
+  offLabel: 'Cover full width'
+  onLabel: 'Contain image'
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Lightswitch
