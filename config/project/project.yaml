@@ -1,4 +1,4 @@
-dateModified: 1737153499
+dateModified: 1737931165
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -19,7 +19,6 @@ meta:
     4bdb03d2-eaa1-424b-a4c4-ba9cce470fee: Content # Content
     04d3913c-b661-4350-b02e-d58a7684a0cd: 'Site info' # Site info
     4ee13b07-ca8d-40af-bdaf-e2ef8d23fb9c: Image # Image
-    5bf9caf9-f260-4d1c-8b41-803bb96db4f4: Content # Content
     5d8c2f92-7b95-4091-a7e6-0f738ac422a8: 'Repeating content' # Repeating content
     6a1751b0-f1f9-494a-977b-131a2591ac49: Adress # Adress
     6e9bde00-71b7-4291-bfde-4dd64b02d74a: Navigation # Navigation
@@ -38,7 +37,7 @@ meta:
     c7a1d56d-af64-4e45-bb5f-c20f732f24b8: Placeholders # Placeholders
     d1a92616-4ce6-4484-9adc-b2a0972434ec: Button # Button
     d88fb071-a241-4a66-b038-2bdf25155e17: 'Section | Projects' # Section | Projects
-    d226be6d-c259-45eb-9677-5e17bc4fd573: 'Content and Image' # Content and Image
+    d226be6d-c259-45eb-9677-5e17bc4fd573: Content # Content
     d966c555-3b5e-4954-8210-b70f5eedb9e4: Header # Header
     d41991e3-1d36-435e-8954-7cb343967f11: Text # Text
     e41bd20a-b255-451f-b938-8365c8d59b5a: Quote # Quote
@@ -50,6 +49,10 @@ plugins:
     edition: standard
     enabled: true
     schemaVersion: 3.0.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
 system:
   edition: solo
   live: true

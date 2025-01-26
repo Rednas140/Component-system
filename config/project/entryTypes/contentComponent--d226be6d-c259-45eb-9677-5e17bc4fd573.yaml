@@ -38,24 +38,19 @@ fieldLayouts:
             warning: null
             width: 100
           -
-            dateAdded: '2024-12-24T15:12:23+00:00'
-            elementCondition: null
-            fieldUid: 6a1751b0-f1f9-494a-977b-131a2591ac49 # Adress
-            handle: null
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: 06c7a919-cf83-45e4-b1ff-a6cb823fd4e2
-            userCondition: null
-            warning: null
-            width: 100
-          -
             dateAdded: '2024-12-17T22:19:22+00:00'
-            elementCondition: null
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\RelationalFieldConditionRule
+                  elementId: null
+                  fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+                  layoutElementUid: db83f071-fa0b-4fab-934e-be1770cf6d3b
+                  operator: notempty
+                  uid: d9a0e6cc-798f-4981-a693-6a928e2f466c
+              elementType: craft\elements\Entry
+              fieldContext: global
             fieldUid: 1c9f361d-ab73-429f-be7c-a1b9c8df83d9 # Placement Select
             handle: null
             includeInCards: false
@@ -72,10 +67,10 @@ fieldLayouts:
         name: Content
         uid: c817184d-d9ff-427d-8ea1-42dc4d0a9926
         userCondition: null
-handle: contentAndImage
+handle: contentComponent
 hasTitleField: false
 icon: pager
-name: 'Content and Image'
+name: Content
 showSlugField: false
 showStatusField: true
 slugTranslationKeyFormat: null

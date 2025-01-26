@@ -1,55 +1,55 @@
 {# Registering the asset files to be used in head #}
 {{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
+{{ craft.app.view.registerJsFile('@web/assets/js/components/' ~ block.type.handle ~ '.min.js') }}
 
 {# Setting the variables#}
-{% set blockContent = block.repeatingContent %}
+{% set text = block.text %}
+{% set image = block.singleImage %}
+{% set placement = block.placementSelect %}
+{% set class = '' %}
 
+{% if placement is not empty %}
+    {% set class = '' %}
+    {% switch placement.value %}
+        {% case 'right' %}
+            {% set classText = 'col-md-6' %}
+            {% set classImage = 'col-md-6' %}
+        {% case 'left' %}
+            {% set classText = 'col-md-6 order-2' %}
+            {% set classImage = 'col-md-6 order-1' %}
+        {% case 'bottom' %}
+            {% set classText = 'col-md-12 mb-4' %}
+            {% set classImage = 'col-md-12' %}
+        {% case 'top' %}
+            {% set classText = 'col-md-12 order-2' %}
+            {% set classImage = 'col-md-12 order-1 mb-4' %}
+        {% default %}
+            {% set classText = 'col-md-6' %}
+            {% set classImage = 'col-md-6' %}
+    {% endswitch %}
+{% endif %}
 
-<section class="c-contentComponent">
+{% if image is empty %}
+    {% set classText = 'col-md-10' %}
+{% endif %}
+
+<section class="c-contentAndImage">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-                <div class="c-contentComponent-content">
-                    {% for content in blockContent %}
-                        {% set blockType = content.type.handle %}
-
-                        {% switch blockType %}
-                            {% case 'text' %}
-                                <div class="c-contentComponent-content-text">
-                                    {{ content.wysiwyg | raw }}
-                                </div>
-
-                            {% case 'image' %}
-                                {% set image = content.singleImage.one()|default %}
-
-                                {% if image is not empty %}
-                                    <div class="c-contentComponent-content-img">
-                                        {{ image.getImg() }}
-                                    </div>
-                                {% else %}
-                                    <div class="c-contentComponent-content-img">
-                                        <p>Image not found</p>
-                                    </div>
-                                {% endif %}
-
-                            {% case 'quote' %}
-                                {% include 'components/partials/_quote.twig' with {
-                                    quoteText: content.quote,
-                                    quoteCite: content.cite
-                                } %}
-
-                            {% default %}
-                                <div class="c-contentComponent-content-unsupported">
-                                    <p>Unsupported block type: <code>{{ blockType }}</code></p>
-                                </div>
-                        {% endswitch %}
-                    {% else %}
-                        <div class="c-contentComponent-content-empty">
-                            <p>This component has no content!</p>
-                        </div>
-                    {% endfor %}
-                </div>
+        <div class="row justify-center">
+            <div class="{{ classText }}">
+                {% if text is not empty %}
+                    <div class="g-content c-contentAndImage-content-text">
+                        {{ text }}
+                    </div>
+                {% endif %}
             </div>
+            {% if image is not empty %}
+                <div class="{{ classImage }}">
+                        <div class="c-contentAndImage-img">
+                            {{ image.one().getImg() }}
+                        </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>
