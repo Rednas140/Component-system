@@ -11,21 +11,6 @@
     padding: toRem(48px) 0;
   }
 
-  &-content{
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    height: 100%;
-    margin-bottom: 32px;
-    row-gap: 16px;
-
-    @include breakpointUp(lg){
-      margin-bottom: 0;
-      justify-content: center;
-    }
-  }
-
   &-img{
     display: flex;
     justify-content: center;

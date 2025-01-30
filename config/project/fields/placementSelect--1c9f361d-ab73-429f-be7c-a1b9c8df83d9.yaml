@@ -10,21 +10,10 @@ settings:
       __assoc__:
         -
           - label
-          - Right
+          - Top
         -
           - value
-          - right
-        -
-          - default
-          - '1'
-    -
-      __assoc__:
-        -
-          - label
-          - Left
-        -
-          - value
-          - left
+          - top
         -
           - default
           - ''
@@ -43,10 +32,21 @@ settings:
       __assoc__:
         -
           - label
-          - Top
+          - Right
         -
           - value
-          - top
+          - right
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - Left
+        -
+          - value
+          - left
         -
           - default
           - ''

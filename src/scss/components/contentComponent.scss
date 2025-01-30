@@ -1,27 +1,18 @@
 @use "../abstracts" as *;
 
-.c-contentComponent{
-  &-content{
-    display: flex;
-    flex-direction: column;
-    flex-grow: 0;
-    row-gap: 8px;
-
-    @include breakpointUp(md){
-      row-gap: 12px;
+.c-contentAndImage{
+  &-img{
+    img{
+      max-height: 596px;
+      max-width: 100%;
+      height: auto;
+      width: 100%;
+      object-fit: cover;
+      border-radius: $border-radius-xl;
     }
 
-    @include breakpointUp(lg){
-      row-gap: 16px;
-    }
-
-    > *{
-      align-self: flex-start;
-    }
-
-    &-img{
-      img{
-        max-height: toRem(256px);
+    &--contain{
+      img {
         width: auto;
       }
     }

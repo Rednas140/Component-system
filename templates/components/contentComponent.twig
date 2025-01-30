@@ -2,45 +2,61 @@
 {{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
 
 {# Setting the variables#}
-{% set blockContent = block.repeatingContent %}
+{% set text = block.text %}
+{% set image = block.singleImage %}
+{% set coverOrContain = block.coverOrContain %}
+{% set placement = block.placementSelect %}
+{% set classText = '' %}
+{% set classImage = '' %}
+{% set classCover = '' %}
 
+{% if image is not empty and placement is not empty %}
+    {% switch placement.value %}
+        {% case 'right' %}
+            {% set classText = 'col-md-6' %}
+            {% set classImage = 'col-md-6' %}
+        {% case 'left' %}
+            {% set classText = 'col-md-6 order-2' %}
+            {% set classImage = 'col-md-6 order-1' %}
+        {% case 'bottom' %}
+            {% set classText = 'col-md-12 mb-4' %}
+            {% set classImage = 'col-md-12' %}
+        {% case 'top' %}
+            {% set classText = 'col-md-12 order-2' %}
+            {% set classImage = 'col-md-12 order-1 mb-4' %}
+        {% default %}
+            {% set classText = 'col-md-6' %}
+            {% set classImage = 'col-md-6' %}
+    {% endswitch %}
 
-<section class="c-contentComponent">
+    {% if coverOrContain is not empty %}
+        {% if coverOrContain == true %}
+            {% set classCover = 'c-contentAndImage-img--contain' %}
+        {% endif %}
+    {% endif %}
+{% endif %}
+
+{% if image is empty %}
+    {% set classText = 'col-md-10' %}
+{% endif %}
+
+<section class="c-contentAndImage">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-                <div class="c-contentComponent-content">
-                    {% for content in blockContent %}
-                        {% set blockType = content.type.handle %}
-
-                        {% if blockType == 'text' %}
-                            <div class="c-contentComponent-content-text">
-                                {{ content.wysiwyg | raw }}
-                            </div>
-                        {% elseif blockType == 'image' %}
-                            {% set image = content.singleImage.one() %}
-
-                            <div class="c-contentComponent-content-img">
-                                {{ image.getImg() }}
-                            </div>
-                        {% elseif blockType == 'quote' %}
-                            {% include 'components/partials/_quote.twig' with {
-                                quoteText: content.quote,
-                                quoteCite: content.cite
-
-                            } %}
-                        {% else %}
-                            <div class="c-contentComponent-content-unsupported">
-                                <p>Unsupported block type: <code>{{ blockType }}</code></p>
-                            </div>
-                        {% endif %}
-                    {% else %}
-                        <div class="c-contentComponent-content-empty">
-                            <p>This component has no content!</p>
-                        </div>
-                    {% endfor %}
-                </div>
+        <div class="row justify-center">
+            <div class="{{ classText }}">
+                {% if text is not empty %}
+                    <div class="g-content c-contentAndImage-content-text">
+                        {{ text }}
+                    </div>
+                {% endif %}
             </div>
+            {% if image is not empty %}
+                <div class="{{ classImage }}">
+                    <div class="c-contentAndImage-img{{ classCover ? ' ' ~ classCover }}">
+                        {{ image.one().getImg() }}
+                    </div>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>

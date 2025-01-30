@@ -148,6 +148,11 @@
                     width: auto;
                     color: $baseWhite;
                 }
+
+                &:hover, &:focus{
+                    color: $baseWhite;
+                    text-decoration: underline;
+                }
             }
         }
     }

@@ -1,0 +1,31 @@
+{# Registering the asset files to be used in head #}
+{{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
+{{ craft.app.view.registerJsFile('@web/assets/js/components/' ~ block.type.handle ~ '.min.js') }}
+
+{# Setting the variables#}
+{% set text = block.text %}
+{% set images = block.multipleImages %}
+
+<section class="c-slider" aria-label="Image Slider">
+    <div class="c-slider__wrapper">
+        <button class="c-slider-control c-slider-control--prev" aria-label="Previous Slide">
+            &#10094;
+        </button>
+
+        <div class="c-slider-track" role="region" aria-live="polite">
+            {% for image in images %}
+                <div class="c-slider-track-slide" data-index="0" aria-hidden="false">
+                    {{ image.getImg() }}
+                </div>
+            {% endfor %}
+        </div>
+
+        <button class="c-slider-control c-slider-control--next" aria-label="Next Slide">
+            &#10095;
+        </button>
+    </div>
+
+    <div class="c-slider-indicators">
+        <button class="c-slider-indicators-index" aria-label="Go to slide 1" data-index="0" aria-current="true"></button>
+    </div>
+</section>

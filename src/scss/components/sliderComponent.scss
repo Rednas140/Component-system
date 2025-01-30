@@ -1,0 +1,79 @@
+@use "../abstracts" as *;
+
+.c-slider {
+  position: relative;
+  max-width: 600px;
+  margin: auto;
+  overflow: hidden;
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+
+  &-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+
+    &-slide {
+      min-width: 100%;
+      transition: opacity 0.5s ease-in-out;
+      opacity: 0;
+      &[aria-hidden="false"] {
+        opacity: 1;
+      }
+
+      img {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+  }
+
+  &-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background-color: transparent;
+    color: $primaryColorHover;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+
+    &--prev {
+      left: 1rem;
+    }
+
+    &--next {
+      right: 1rem;
+    }
+
+    &:hover, &:focus {
+      color: $primaryColorHover;
+    }
+  }
+
+  &-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+
+    &-index {
+      width: 1rem;
+      height: 1rem;
+      background-color: #ccc;
+      border: none;
+      border-radius: 50%;
+      margin: 0 0.5rem;
+      cursor: pointer;
+
+      &[aria-current="true"] {
+        background-color: #333;
+      }
+    }
+  }
+}

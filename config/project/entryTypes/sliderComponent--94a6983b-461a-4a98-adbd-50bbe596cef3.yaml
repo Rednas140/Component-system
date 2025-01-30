@@ -1,31 +1,61 @@
 color: null
 fieldLayouts:
-  1dd91363-9541-4c09-beca-745613b26366:
+  77e48136-5667-45f8-92b7-26990bf42a26:
     tabs:
       -
         elementCondition: null
         elements:
           -
-            dateAdded: '2025-01-05T17:50:41+00:00'
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-01-26T23:08:03+00:00'
+            disabled: false
             elementCondition: null
-            fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
-            handle: questionTitle
+            id: null
             includeInCards: false
+            inputType: null
             instructions: null
-            label: Title
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
             providesThumbs: false
-            required: false
+            readonly: false
+            required: true
+            size: null
+            step: null
             tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: eeef3e22-e12c-4cf3-98c6-495e6be5c5b7
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 506220a0-a2a7-4ba9-a001-608709930493
             userCondition: null
             warning: null
             width: 100
           -
-            dateAdded: '2025-01-05T17:36:08+00:00'
+            dateAdded: '2025-01-26T23:11:47+00:00'
             elementCondition: null
             fieldUid: d41991e3-1d36-435e-8954-7cb343967f11 # Text
-            handle: questionText
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Description
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 853937fe-817e-4503-965e-6edfb4ed3f8a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-01-26T23:11:47+00:00'
+            elementCondition: null
+            fieldUid: bf7362e6-3c1a-4896-a50f-df8a628fb09f # Multiple images
+            handle: null
             includeInCards: false
             instructions: null
             label: null
@@ -33,33 +63,17 @@ fieldLayouts:
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 6d7073c9-7c49-4efd-9d9d-67a7662b540b
-            userCondition: null
-            warning: null
-            width: 100
-          -
-            dateAdded: '2025-01-05T17:36:08+00:00'
-            elementCondition: null
-            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
-            handle: questionImage
-            includeInCards: false
-            instructions: null
-            label: null
-            providesThumbs: false
-            required: false
-            tip: null
-            type: craft\fieldlayoutelements\CustomField
-            uid: f723dce5-6aab-4d0e-a33f-8c7beb3d5955
+            uid: c4bb90f0-ee4b-419f-99f1-61c47d5ec141
             userCondition: null
             warning: null
             width: 100
         name: Content
-        uid: 52cbc527-8507-44e9-8203-b876d36a88eb
+        uid: f1ad1db5-3d11-4a98-a714-326202fe25b5
         userCondition: null
-handle: questionContent
-hasTitleField: false
-icon: null
-name: Content
+handle: sliderComponent
+hasTitleField: true
+icon: images
+name: 'Slider Component'
 showSlugField: true
 showStatusField: true
 slugTranslationKeyFormat: null

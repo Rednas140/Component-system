@@ -19,16 +19,14 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
-                <div class="c-header-content">
+                <div class="g-content c-header-content">
                     {% if title is not empty %}
-                        {% tag headingLevel with {
-                            class: 'c-header-content__title',
-                        }%}
+                        {% tag headingLevel %}
                             {{ title }}
                         {% endtag %}
                     {% endif %}
                     {% if description is not empty %}
-                        <p class="c-header-content__description">{{ description }}</p>
+                        <p>{{ description }}</p>
                     {% endif %}
                     {% if button is not empty %}
                         {% include 'components/partials/_button.twig' with {

@@ -8,9 +8,8 @@ settings:
   defaultIndexViewMode: cards
   entryTypes:
     - d966c555-3b5e-4954-8210-b70f5eedb9e4 # Header
-    - 5bf9caf9-f260-4d1c-8b41-803bb96db4f4 # Content
-    - d226be6d-c259-45eb-9677-5e17bc4fd573 # Content and Image
-    - 0891e6c0-16be-4613-a04e-b6100a2fa728 # Quiz
+    - d226be6d-c259-45eb-9677-5e17bc4fd573 # Content
+    - 94a6983b-461a-4a98-adbd-50bbe596cef3 # Slider Component
   includeTableView: false
   maxEntries: null
   minEntries: null
