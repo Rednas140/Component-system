@@ -24,17 +24,40 @@
                     </span>
                 </button>
                 <nav id="main-menu-nav" class="g-nav-content-main">
-                    <ul aria-hidden="true">
+                    <ul>
                         {% for item in navigationItems %}
                             {% set navigationClass = '' %}
                             {% if item.button is not empty %}
-
+                                {% set hasDropdown = false %}
                                 {% if navigationSegment is same as item.button.value %}
                                     {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
                                 {% endif %}
-                                <li>
+                                {% if item.dropdownLinks is not empty %}
+                                    {% for link in item.dropdownLinks %}
+                                        {% if link.button is not empty %}
+                                            {% set hasDropdown = true %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                                <li {% if hasDropdown %}class="g-nav-content-main-dropdown" {% endif %}>
                                     <a href="{{ item.button.getUrl() }}"
-                                       class="g-nav-content-main-item{{ navigationClass }}">{{ item.button.label }}</a>
+                                       class="g-nav-content-main-item{{ navigationClass }}{{ hasDropdown ? " g-nav-content-main-dropdown-toggle" : "" }}"
+                                            {% if hasDropdown %}
+                                                aria-haspopup="true"
+                                                aria-expanded="false"
+                                            {% endif %}
+                                    >
+                                        {{ item.button.label }}
+                                    </a>
+                                    {% if hasDropdown %}
+                                        <ul class="g-nav-content-main-dropdown-menu" aria-label="{{ item.button.label }}">
+                                            {% for link in item.dropdownLinks %}
+                                                <li>
+                                                    <a href="{{ link.button.value }}">{{ link.button.label }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
                                 </li>
                             {% endif %}
                         {% endfor %}

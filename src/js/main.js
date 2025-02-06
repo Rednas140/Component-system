@@ -1,4 +1,4 @@
-function mobileNavigation(){
+function mobileNavigation() {
     const menu = document.getElementById("main-menu")
     const menuToggle = document.getElementById("main-menu-toggle")
     const menuNav = document.getElementById("main-menu-nav")
@@ -43,6 +43,7 @@ function mobileNavigation(){
     });
 
 }
+
 function trapFocus(container) {
     const focusableSelectors = 'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
     const focusableElements = container.querySelectorAll(focusableSelectors);
@@ -68,4 +69,60 @@ function trapFocus(container) {
     });
 }
 
+function dropdownNavigation() {
+    document.querySelectorAll('.g-nav-content-main-dropdown').forEach(dropdown => {
+        const toggle = dropdown.querySelector('.g-nav-content-main-dropdown-toggle');
+        const menu = dropdown.querySelector('.g-nav-content-main-dropdown-menu');
+
+        function openMenu() {
+            menu.classList.add('active');
+            toggle.setAttribute('aria-expanded', 'true');
+        }
+
+        function closeMenu() {
+            menu.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        }
+
+        toggle.addEventListener('click', function (event) {
+            event.preventDefault();
+            if (menu.classList.contains('active')) {
+                closeMenu();
+            } else {
+                closeAllMenus();
+                openMenu();
+            }
+        });
+
+        toggle.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowDown') {
+                event.preventDefault();
+                openMenu();
+                menu.querySelector('a').focus();
+            }
+        });
+
+        menu.addEventListener('keydown', function (event) {
+            if (event.key === 'Escape') {
+                closeMenu();
+                toggle.focus();
+            }
+        });
+
+        document.addEventListener('click', function (event) {
+            if (!dropdown.contains(event.target)) {
+                closeMenu();
+            }
+        });
+
+        function closeAllMenus() {
+            document.querySelectorAll('.g-nav-content-main-dropdown-menu.active').forEach(activeMenu => {
+                activeMenu.classList.remove('active');
+                activeMenu.previousElementSibling.setAttribute('aria-expanded', 'false');
+            });
+        }
+    });
+}
+
 mobileNavigation();
+dropdownNavigation();

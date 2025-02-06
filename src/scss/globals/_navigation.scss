@@ -109,7 +109,7 @@
         background: none;
       }
 
-      ul {
+      > ul {
         display: flex;
         flex-direction: column;
         list-style: none;
@@ -154,6 +154,18 @@
         &:hover, &:focus {
           color: $baseBlack;
           text-decoration: underline;
+        }
+      }
+
+      &-dropdown {
+        &-menu {
+          display: none;
+          position: absolute;
+          background: $baseWhite;
+
+          &.active{
+            display: block;
+          }
         }
       }
     }
