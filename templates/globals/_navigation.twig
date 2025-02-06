@@ -16,25 +16,30 @@
                 {% endif %}
             </a>
             {% if navigationItems is not empty %}
-                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu-nav" id="main-menu-toggle" aria-label="Navigation toggle">
+                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu-nav"
+                        id="main-menu-toggle" aria-label="Navigation toggle">
                     <span class="toggle-btn">
                         <span></span>
                         <span></span>
                     </span>
                 </button>
                 <nav id="main-menu-nav" class="g-nav-content-main">
-                <ul aria-hidden="true" class="container">
-                    {% for item in navigationItems %}
-                        {% set navigationClass = '' %}
-                        {% if navigationSegment is same as item.slug %}
-                            {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
-                        {% endif %}
-                        <li>
-                            <a href="{{ item.getUrl() }}" class="g-nav-content-main-item{{ navigationClass }}">{{ item.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav>
+                    <ul aria-hidden="true">
+                        {% for item in navigationItems %}
+                            {% set navigationClass = '' %}
+                            {% if item.button is not empty %}
+
+                                {% if navigationSegment is same as item.button.value %}
+                                    {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
+                                {% endif %}
+                                <li>
+                                    <a href="{{ item.button.getUrl() }}"
+                                       class="g-nav-content-main-item{{ navigationClass }}">{{ item.button.label }}</a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
             {% endif %}
         </div>
     </div>

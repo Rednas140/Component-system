@@ -1,4 +1,4 @@
-dateModified: 1737933295
+dateModified: 1738879510
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -15,6 +15,7 @@ meta:
   __names__:
     00f08d20-e207-4959-a41a-d024f6321e4b: Projects # Projects
     1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
+    3c68136a-3e05-4392-9e63-23236680201f: 'Dropdown items' # Dropdown items
     3d6a182b-ed5a-4f35-acaf-b3198a90b978: Homepage # Homepage
     4bdb03d2-eaa1-424b-a4c4-ba9cce470fee: Content # Content
     04d3913c-b661-4350-b02e-d58a7684a0cd: 'Site info' # Site info
@@ -24,6 +25,7 @@ meta:
     6e9bde00-71b7-4291-bfde-4dd64b02d74a: Navigation # Navigation
     7ba054cd-05ba-42a7-8af3-c9e518519b9f: 'Component system' # Component system
     21a3aa8c-eb70-4ab1-ba66-1cb8ebe047f1: Components # Components
+    50c0c964-8043-401d-9559-d368791c5b01: 'Navigation Items' # Navigation Items
     52b3db2e-4152-4686-a155-7d3c88321540: 'Single image' # Single image
     60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f: Entries # Entries
     82c6d396-89e5-4844-8742-535861bfab2f: 'Section | Default' # Section | Default
@@ -36,6 +38,8 @@ meta:
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
     43958353-e7e6-4154-8fb0-787eebe8832c: 'Cover full width or contain image' # Cover full width or contain image
     ad8a61a7-42a4-4769-b526-6a5fca60ce28: Simple # Simple
+    b01a70ef-5a76-405b-bf5f-b01a6da6e482: 'Navigation Item' # Navigation Item
+    b6c6fdef-e6d2-4b8e-ae48-a7bab743c2cb: 'Dropdown Links' # Dropdown Links
     bf7362e6-3c1a-4896-a50f-df8a628fb09f: 'Multiple images' # Multiple images
     c7a1d56d-af64-4e45-bb5f-c20f732f24b8: Placeholders # Placeholders
     d1a92616-4ce6-4484-9adc-b2a0972434ec: Button # Button

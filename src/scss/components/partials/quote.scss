@@ -16,7 +16,7 @@
     display: block;
     margin-top: 0.5em;
     font-style: normal;
-    @include p-small($primaryFont, $neutral-800);
+    @include p-small($bodyFont, $neutral-800);
 
     &:before{
       content: "-  ";

@@ -5,18 +5,18 @@ fieldLayouts:
         elementCondition: null
         elements:
           -
-            dateAdded: '2024-12-20T20:22:53+00:00'
+            dateAdded: '2025-02-06T21:59:53+00:00'
             elementCondition: null
-            fieldUid: 60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f # Entries
-            handle: navigationItems
+            fieldUid: 50c0c964-8043-401d-9559-d368791c5b01 # Navigation Items
+            handle: null
             includeInCards: false
             instructions: null
-            label: 'Navigation items'
+            label: null
             providesThumbs: false
             required: false
             tip: null
             type: craft\fieldlayoutelements\CustomField
-            uid: 7e987a1a-3495-4356-9554-d9bcc87c6c89
+            uid: 3f40e624-a8d6-44a8-8556-c91fb28c7dda
             userCondition: null
             warning: null
             width: 100

@@ -1,0 +1,64 @@
+color: null
+fieldLayouts:
+  14abf8ef-bc26-4dda-b8a6-d2ac03b1d411:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-02-06T22:03:28+00:00'
+            elementCondition: null
+            fieldUid: d1a92616-4ce6-4484-9adc-b2a0972434ec # Button
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: Link
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 30b31f32-9df0-4a02-8612-8e775925f5f5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-02-06T22:03:28+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\TextFieldConditionRule
+                  fieldUid: d1a92616-4ce6-4484-9adc-b2a0972434ec # Button
+                  layoutElementUid: 30b31f32-9df0-4a02-8612-8e775925f5f5
+                  operator: notempty
+                  uid: 36fb40c6-f2da-45cf-9bfe-33e41a346ad3
+                  value: ''
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: b6c6fdef-e6d2-4b8e-ae48-a7bab743c2cb # Dropdown Links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 67f4dc10-ec2b-4b09-b9b6-f47c74b7cb21
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: e52dbe75-bfa3-4c1c-98b0-4b7807c58c2c
+        userCondition: null
+handle: navigationItem
+hasTitleField: false
+icon: link
+name: 'Navigation Item'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

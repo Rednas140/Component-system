@@ -2,7 +2,7 @@
 
 .g-nav {
   position: relative;
-  background-color: $primaryColor;
+  background-color: $baseWhite;
 
   &-content {
     display: flex;
@@ -26,7 +26,8 @@
       align-items: center;
 
       img {
-        max-height: toRem(64px);
+        height: toRem(72px);
+        width: auto;
       }
     }
 
@@ -53,7 +54,7 @@
           display: block;
           width: 100%;
           height: 2px;
-          background-color: $baseWhite;
+          background-color: $baseBlack;
           border-radius: 1px;
           transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
 
@@ -88,7 +89,6 @@
       }
     }
 
-
     &-main {
       position: absolute;
       top: 100%;
@@ -115,7 +115,6 @@
         list-style: none;
         flex-wrap: wrap;
         width: 100%;
-        padding-bottom: 32px;
 
         @include breakpoint-lg {
           flex-direction: row;
@@ -129,7 +128,7 @@
             padding-top: 32px;
 
             @include breakpoint-lg {
-              padding-top: 0;
+              padding-top: toRem(24px);
             }
           }
         }
@@ -141,19 +140,19 @@
 
       &-item {
         display: block;
-        padding: 16px 0;
+        padding: toRem(16px) 0;
         width: 100%;
         text-decoration: none;
-        @include p-large($primaryColor);
+        @include p-large;
 
         @include breakpoint-lg {
-          padding: 0;
+          padding: toRem(24px) toRem(8px);
           width: auto;
-          color: $baseWhite;
+          color: $baseBlack;
         }
 
         &:hover, &:focus {
-          color: $baseWhite;
+          color: $baseBlack;
           text-decoration: underline;
         }
       }
