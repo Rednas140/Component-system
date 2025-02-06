@@ -1,11 +1,11 @@
 @use "../../abstracts" as *;
 
 .p-quote{
-  border-left: 4px solid $auburn-100;
+  border-left: 4px solid $bubblefishRed-100;
   margin: 1em 0;
   padding: 0.5em 1em;
   min-width: 100%;
-  background-color: $auburn-50;
+  background-color: $bubblefishRed-50;
   border-radius: 4px;
 
   @include breakpoint-sm{
