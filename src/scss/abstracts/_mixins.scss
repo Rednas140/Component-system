@@ -2,36 +2,48 @@
 @use "function" as *;
 @use "sass:map";
 
-// Breakpoints Map
-$breakpoints: (
-        sm: 576px,
-        md: 768px,
-        lg: 992px,
-        xl: 1200px,
-        xxl: 1400px,
-);
-
-// Breakpoint up Mixin
-@mixin breakpointUp($size) {
-    $min-width: map.get($breakpoints, $size);
-    @if $min-width {
-        @media (min-width: $min-width) {
-            @content;
-        }
-    } @else {
-        @error "Breakpoint '#{$size}' not found in \$breakpoints map.";
+/**
+Breakpoints
+*/
+// Small devices
+@mixin breakpoint-sm {
+    @media (min-width: 576px ) {
+        @content;
     }
 }
 
-// Breakpoint up Mixin
-@mixin breakpointDown($size) {
-    $max-width: map.get($breakpoints, $size);
-    @if $max-width {
-        @media (max-width: $max-width) {
-            @content;
-        }
-    } @else {
-        @error "Breakpoint '#{$size}' not found in \$breakpoints map.";
+// Medium devices
+@mixin breakpoint-md {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+// Large devices
+@mixin breakpoint-lg {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+// Extra large devices
+@mixin breakpoint-xl {
+    @media (min-width: 1200px) {
+        @content;
+    }
+}
+
+// Larger devices: xxl
+@mixin breakpoint-xxl {
+    @media (min-width: 1400px) {
+        @content;
+    }
+}
+
+// Even Larger devices: xxl
+@mixin breakpoint-xxxl {
+    @media (min-width: 1600px) {
+        @content;
     }
 }
 
@@ -52,12 +64,12 @@ $breakpoints: (
     font-family: $font;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(36px);
         margin-bottom: toRem(18px);
     }
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         font-size: toRem(48px);
         margin-bottom: toRem(24px);
     }
@@ -70,12 +82,12 @@ $breakpoints: (
     font-family: $font;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(32px);
         margin-bottom: toRem(16px);
     }
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         font-size: toRem(40px);
         margin-bottom: toRem(20px);
     }
@@ -88,12 +100,12 @@ $breakpoints: (
     font-family: $font;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(28px);
         margin-bottom: toRem(14px);
     }
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         font-size: toRem(32px);
         margin-bottom: toRem(16px);
     }
@@ -106,12 +118,12 @@ $breakpoints: (
     font-family: $font;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(24px);
         margin-bottom: toRem(12px);
     }
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         font-size: toRem(28px);
         margin-bottom: toRem(14px);
     }
@@ -124,13 +136,13 @@ $breakpoints: (
     font-family: $font;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(20px);
         margin-bottom: toRem(10px);
 
     }
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         font-size: toRem(24px);
         margin-bottom: toRem(12px);
 
@@ -145,12 +157,12 @@ $breakpoints: (
     font-weight: bold;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(18px);
         margin-bottom: toRem(9px);
     }
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         font-size: toRem(20px);
         margin-bottom: toRem(10px);
     }
@@ -162,7 +174,7 @@ $breakpoints: (
     line-height: 1.5;
     color: $color;
 
-    @include breakpointUp(md) {
+    @include breakpoint-md {
         font-size: toRem(20px);
     }
 }
@@ -180,7 +192,7 @@ $breakpoints: (
     line-height: 1.5;
     color: $color;
 
-    @include breakpointUp(md){
+    @include breakpoint-md{
         font-size: toRem(14px);
     }
 }

@@ -73,14 +73,16 @@ img{
     display: none;
 
     &--desktopOnly{
-        @include breakpointUp(lg){
+        @include breakpoint-lg{
             display: none;
         }
     }
 
     &--mobileOnly{
-        @include breakpointDown(lg){
-            display: none;
+        display: none;
+
+        @include breakpoint-lg{
+            display: unset;
         }
     }
 }
@@ -93,7 +95,7 @@ img{
     height: 100%;
     margin-bottom: 32px;
 
-    @include breakpointUp(lg) {
+    @include breakpoint-lg {
         margin-bottom: 0;
         justify-content: center;
     }
@@ -101,7 +103,7 @@ img{
     > *:not(:last-child, h1, h2, h3, h4, h5, h6) {
         margin-bottom: 8px;
 
-        @include breakpointUp(lg) {
+        @include breakpoint-lg {
             margin-bottom: 16px;
 
         }

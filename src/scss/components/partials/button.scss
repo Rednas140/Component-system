@@ -7,7 +7,7 @@
   background-color: $primaryColor;
   text-decoration: none;
 
-  @include breakpointUp(lg){
+  @include breakpoint-lg{
   }
 
   &:hover, &:focus{

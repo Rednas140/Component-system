@@ -6,7 +6,7 @@ footer{
     padding: 1.5em 1em;
     background-color:  $baseBlack;
 
-    @include breakpointUp(lg){
+    @include breakpoint-lg{
         flex-direction: row;
     }
 
