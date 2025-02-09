@@ -1,5 +1,5 @@
 name: component-system
-type: backdrop
+type: craftcms
 docroot: web
 php_version: "8.2"
 webserver_type: nginx-fpm
@@ -278,5 +278,3 @@ corepack_enable: false
 # information on the commands that can be extended and the tasks you can define
 # for them. Example:
 #hooks:
-#  post-import-db:
-#    - exec: drush cc all

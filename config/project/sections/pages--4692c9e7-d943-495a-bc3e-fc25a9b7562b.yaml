@@ -1,7 +1,8 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - 82c6d396-89e5-4844-8742-535861bfab2f # Section | Default
+  -
+    uid: 82c6d396-89e5-4844-8742-535861bfab2f # Section | Default
 handle: pages
 maxAuthors: 1
 name: 'Pagina''s'
@@ -24,4 +25,7 @@ siteSettings:
     hasUrls: true
     template: index.twig
     uriFormat: '{slug}'
-type: channel
+structure:
+  maxLevels: null
+  uid: 48765443-5c2a-4f52-a169-ae73c8cddf58
+type: structure

@@ -8,6 +8,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     padding-top: toRem(16px);
     padding-bottom: toRem(16px);
 
@@ -115,22 +116,13 @@
         list-style: none;
         flex-wrap: wrap;
         width: 100%;
+        padding: 0 32px;
 
         @include breakpoint-lg {
           flex-direction: row;
           column-gap: 24px;
           width: auto;
           padding: 0;
-        }
-
-        li:first-of-type {
-          a {
-            padding-top: 32px;
-
-            @include breakpoint-lg {
-              padding-top: toRem(24px);
-            }
-          }
         }
       }
 
@@ -139,11 +131,63 @@
       }
 
       &-item {
+        position: relative;
         display: block;
         padding: toRem(16px) 0;
         width: 100%;
         text-decoration: none;
         @include p-large;
+
+        &-bubble{
+          position: absolute;
+          display: block;
+          opacity: 0;
+
+          &--1{
+            right: 6px;
+            top: 6px;
+            width: 5px;
+            height: 5px;
+            border-radius: $border-radius-full;
+            background-color: $primaryColor;
+            transition: ease-out 300ms;
+            transition-delay: 200ms;
+          }
+
+          &--2{
+            right: 12px;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            border-radius: $border-radius-full;
+            background-color: $primaryColor;
+            transition: ease-out 300ms;
+            transition-delay: 100ms;
+          }
+
+          &--3{
+            right: 0;
+            top: 26px;
+            width: 8px;
+            height: 8px;
+            border-radius: $border-radius-full;
+            background-color: $primaryColor;
+            transition: ease-out 300ms;
+          }
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          bottom: 12px;
+          left: 0;
+          display: block;
+          height: 2px;
+          width: 0;
+          background-color: transparent;
+          transition: ease-out 300ms;
+          border-radius: $border-radius-lg;
+        }
 
         @include breakpoint-lg {
           padding: toRem(24px) toRem(8px);
@@ -153,17 +197,69 @@
 
         &:hover, &:focus {
           color: $baseBlack;
-          text-decoration: underline;
+          &:before{
+            width: 100%;
+            background-color: $baseBlack;
+          }
+
+          .g-nav-content-main-item-bubble{
+            opacity: 1;
+          }
         }
       }
 
       &-dropdown {
+        &-toggle {
+          &:after {
+            content: '';
+            position: relative;
+            top: 4px;
+            display: inline-block;
+            height: 20px;
+            width: 24px;
+            margin-left: 8px;
+            @include pseudoSVG("../images/chevron-icon.svg", $baseBlack)
+          }
+        }
+
         &-menu {
           display: none;
-          position: absolute;
+          padding: toRem(10px) toRem(20px);
+          border-radius: $border-radius-md;
           background: $baseWhite;
+          list-style: none;
+          animation: growDown 300ms ease-in-out forwards;
+          transform-origin: top center;
 
-          &.active{
+          @keyframes growDown {
+            0% {
+              transform: scaleY(0)
+            }
+            80% {
+              transform: scaleY(1.1)
+            }
+            100% {
+              transform: scaleY(1)
+            }
+          }
+
+          @include breakpoint-lg{
+            position: absolute;
+            box-shadow: $box-shadow;
+          }
+
+          a{
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            @include p-large();
+
+            &:hover, &:focus{
+              text-decoration: underline;
+            }
+          }
+
+          &.active {
             display: block;
           }
         }

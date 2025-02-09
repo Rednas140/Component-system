@@ -17,6 +17,7 @@ function clean(cb) {
 
 function scss() {
     return src('./src/scss/**/**/*.scss')
+        .pipe(plumber())
         .pipe(sass({ style: 'compressed' }))
         .pipe(plumber())
         .pipe(prefix('last 2 versions'))
@@ -26,6 +27,7 @@ function scss() {
 
 function javascript() {
     return src('./src/js/**/*.js')
+        .pipe(plumber())
         .pipe(babel())
         .pipe(uglify())
         .pipe(rename({ extname: '.min.js' }))

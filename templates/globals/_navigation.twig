@@ -46,11 +46,16 @@
                                                 aria-haspopup="true"
                                                 aria-expanded="false"
                                             {% endif %}
-                                    >
-                                        {{ item.button.label }}
+                                    ><span aria-hidden="true"
+                                           class="g-nav-content-main-item-bubble g-nav-content-main-item-bubble--1"></span><span
+                                                aria-hidden="true"
+                                                class="g-nav-content-main-item-bubble g-nav-content-main-item-bubble--2"></span><span
+                                                aria-hidden="true"
+                                                class="g-nav-content-main-item-bubble g-nav-content-main-item-bubble--3"></span>{{ item.button.label }}
                                     </a>
                                     {% if hasDropdown %}
-                                        <ul class="g-nav-content-main-dropdown-menu" aria-label="{{ item.button.label }}">
+                                        <ul class="g-nav-content-main-dropdown-menu"
+                                            aria-label="{{ item.button.label }}">
                                             {% for link in item.dropdownLinks %}
                                                 <li>
                                                     <a href="{{ link.button.value }}">{{ link.button.label }}</a>
