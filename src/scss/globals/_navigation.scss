@@ -127,6 +127,18 @@
         }
       }
 
+      .p-btn{
+        margin-left: 0;
+
+        @include breakpoint-lg{
+          margin-left: 40px;
+        }
+
+        @include breakpoint-xl{
+          margin-left: 70px;
+        }
+      }
+
       &--open {
         display: flex;
       }

@@ -41,7 +41,11 @@
                                 {% endif %}
                                 <li {% if hasDropdown %}class="g-nav-content-main-dropdown" {% endif %}>
                                     {% if hasDropdown == false and loop.index == navigationItems|length  %}
-                                        <a class="g-btn" href="{{ item.button.getUrl() }}">{{ item.button.label }}</a>
+                                        {% include 'components/partials/_button.twig' with {
+                                            buttonLabel: item.button.label,
+                                            buttonTarget: item.button.target,
+                                            buttonLink: item.button.value
+                                        } only %}
                                     {% else %}
                                         <a href="{{ item.button.getUrl() }}"
                                            class="g-nav-content-main-item{{ navigationClass }}{{ hasDropdown ? " g-nav-content-main-dropdown-toggle" : "" }}"
