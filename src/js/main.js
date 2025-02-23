@@ -1,7 +1,8 @@
 function mobileNavigation() {
-    const menu = document.getElementById("main-menu")
-    const menuToggle = document.getElementById("main-menu-toggle")
-    const menuNav = document.getElementById("main-menu-nav")
+    const menu = document.getElementById("main-menu");
+    const menuToggle = document.getElementById("main-menu-toggle");
+    const menuNav = document.getElementById("main-menu-nav");
+    const body = document.body;
 
     // Function to open the menu
     const openMenu = () => {
@@ -9,6 +10,7 @@ function mobileNavigation() {
         menuNav.setAttribute("aria-hidden", "false");
         menuToggle.setAttribute("aria-expanded", "true");
         menuNav.classList.add("g-nav-content-main--open");
+        body.classList.add("no-scroll");
     };
 
     // Function to close the menu
@@ -16,6 +18,7 @@ function mobileNavigation() {
         menuNav.setAttribute("aria-hidden", "true");
         menuToggle.setAttribute("aria-expanded", "false");
         menuNav.classList.remove("g-nav-content-main--open");
+        body.classList.remove("no-scroll");
     };
 
     // Toggle menu visibility on button click

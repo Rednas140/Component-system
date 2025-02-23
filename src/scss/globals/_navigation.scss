@@ -96,6 +96,7 @@
       left: 0;
       display: none;
       height: 100vh;
+      height: calc(100vh - 100%);
       width: 100%;
       flex-direction: row;
       align-items: flex-start;

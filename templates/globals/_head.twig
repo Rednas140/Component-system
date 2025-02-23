@@ -14,7 +14,7 @@
         {% set icon = siteInfo.siteLogo %}
     {% endif %}
 
-    <title>{{ urlSegment is not empty ? urlSegment ~ " | " }}{{ name }}</title>
+    <title>{{ urlSegment is not empty ? entry.title ~ " | " }}{{ name }}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     {% if icon is not empty %}
         <link rel="icon" type="image" href="{{ icon.one().getUrl() }}">
