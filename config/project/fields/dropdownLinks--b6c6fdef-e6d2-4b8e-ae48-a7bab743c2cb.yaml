@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: dropdownLinks
+instructions: null
+name: 'Dropdown Links'
+searchable: false
+settings:
+  createButtonLabel: null
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - 3c68136a-3e05-4392-9e63-23236680201f # Dropdown items
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

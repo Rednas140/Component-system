@@ -16,25 +16,66 @@
                 {% endif %}
             </a>
             {% if navigationItems is not empty %}
-                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu-nav" id="main-menu-toggle" aria-label="Navigation toggle">
+                <button class="display-none--desktopOnly" aria-expanded="false" aria-controls="main-menu-nav"
+                        id="main-menu-toggle" aria-label="Navigation toggle">
                     <span class="toggle-btn">
                         <span></span>
                         <span></span>
                     </span>
                 </button>
                 <nav id="main-menu-nav" class="g-nav-content-main">
-                <ul aria-hidden="true" class="container">
-                    {% for item in navigationItems %}
-                        {% set navigationClass = '' %}
-                        {% if navigationSegment is same as item.slug %}
-                            {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
-                        {% endif %}
-                        <li>
-                            <a href="{{ item.getUrl() }}" class="g-nav-content-main-item{{ navigationClass }}">{{ item.title }}</a>
-                        </li>
-                    {% endfor %}
-                </ul>
-            </nav>
+                    <ul>
+                        {% for item in navigationItems %}
+                            {% set navigationClass = '' %}
+                            {% if item.button is not empty %}
+                                {% set hasDropdown = false %}
+                                {% if navigationSegment is same as item.button.value %}
+                                    {% set navigationClass = navigationClass ~ " g-nav-content-main-item--active" %}
+                                {% endif %}
+                                {% if item.dropdownLinks is not empty %}
+                                    {% for link in item.dropdownLinks %}
+                                        {% if link.button is not empty %}
+                                            {% set hasDropdown = true %}
+                                        {% endif %}
+                                    {% endfor %}
+                                {% endif %}
+                                <li {% if hasDropdown %}class="g-nav-content-main-dropdown" {% endif %}>
+                                    {% if hasDropdown == false and loop.index == navigationItems|length  %}
+                                        {% include 'components/partials/_button.twig' with {
+                                            buttonLabel: item.button.label,
+                                            buttonTarget: item.button.target,
+                                            buttonLink: item.button.value
+                                        } only %}
+                                    {% else %}
+                                        <a href="{{ item.button.getUrl() }}"
+                                           class="g-nav-content-main-item{{ navigationClass }}{{ hasDropdown ? " g-nav-content-main-dropdown-toggle" : "" }}"
+                                                {% if hasDropdown %}
+                                                    aria-haspopup="true"
+                                                    aria-expanded="false"
+                                                {% endif %}
+                                        ><span aria-hidden="true"
+                                               class="g-nav-content-main-item-bubble g-nav-content-main-item-bubble--1"></span><span
+                                                    aria-hidden="true"
+                                                    class="g-nav-content-main-item-bubble g-nav-content-main-item-bubble--2"></span><span
+                                                    aria-hidden="true"
+                                                    class="g-nav-content-main-item-bubble g-nav-content-main-item-bubble--3"></span>{{ item.button.label }}
+                                        </a>
+                                    {% endif %}
+                                    {% if hasDropdown %}
+                                        <ul class="g-nav-content-main-dropdown-menu"
+                                            aria-label="{{ item.button.label }}">
+                                            {% for link in item.dropdownLinks %}
+                                                <li>
+                                                    <a href="{{ link.button.value }}">{{ link.button.label }}</a>
+                                                </li>
+                                            {% endfor %}
+                                        </ul>
+                                    {% endif %}
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </nav>
             {% endif %}
         </div>
     </div>

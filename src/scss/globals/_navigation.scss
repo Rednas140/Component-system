@@ -1,159 +1,283 @@
 @use '../abstracts' as *;
 
-.g-nav{
-    position: relative;
-    background-color: $primaryColor;
+.g-nav {
+  position: relative;
+  background-color: $baseWhite;
 
-    &-content{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        padding-top: toRem(16px);
-        padding-bottom: toRem(16px);
+  &-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: toRem(16px);
+    padding-bottom: toRem(16px);
 
-        @include breakpointUp(md){
-            padding-top: toRem(20px);
-            padding-bottom: toRem(20px);
-        }
-
-        @include breakpointUp(lg){
-            padding-top: toRem(24px);
-            padding-bottom: toRem(24px);
-        }
-
-        &-logo{
-            display: flex;
-            align-items: center;
-
-            img{
-                max-height: toRem(64px);
-            }
-        }
-
-        #main-menu-toggle{
-            position: relative;
-            width: 50px;
-            height: 50px;
-            cursor: pointer;
-            background: none;
-            border: none;
-
-            .toggle-btn{
-                margin: auto;
-                position: absolute;
-                top: 0;
-                right: 0;
-                left: 0;
-                bottom: 0;
-                width: 22px;
-                height: 12px;
-
-                span {
-                    position: absolute;
-                    display: block;
-                    width: 100%;
-                    height: 2px;
-                    background-color: $baseWhite;
-                    border-radius: 1px;
-                    transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
-
-                    &:first-of-type {
-                        top: 0;
-                        width: 26px;
-                    }
-                    &:last-of-type {
-                        bottom: 0;
-                        width: 12px;
-                    }
-                }
-            }
-
-            &[aria-expanded="true"]{
-                .toggle-btn {
-                    span {
-                        width: 22px;
-
-                        &:first-of-type {
-                            transform: rotate(45deg);
-                            top: 5px;
-                        }
-
-                        &:last-of-type {
-                            transform: rotate(-45deg);
-                            bottom: 5px;
-                        }
-                    }
-                }
-            }
-        }
-
-
-        &-main{
-            position: absolute;
-            top: 100%;
-            left: 0;
-            display: none;
-            height: 100vh;
-            width: 100%;
-            flex-direction: row;
-            align-items: flex-start;
-            background-color: $baseWhite;
-
-            @include breakpointUp(lg){
-                position: static;
-                display: flex;
-                align-items: center;
-                width: auto;
-                height: auto;
-                background: none;
-            }
-
-            ul{
-                display: flex;
-                flex-direction: column;
-                list-style: none;
-                flex-wrap: wrap;
-                width: 100%;
-                padding-bottom: 32px;
-
-                @include breakpointUp(lg){
-                    flex-direction: row;
-                    column-gap: 24px;
-                    width: auto;
-                    padding: 0;
-                }
-
-                @include breakpointDown(lg){
-                    li:first-of-type{
-                        a{
-                            padding-top: 32px;
-                        }
-                    }
-                }
-            }
-
-            &--open{
-                display: flex;
-            }
-
-            &-item{
-                display: block;
-                padding: 16px 0;
-                width: 100%;
-                text-decoration: none;
-                @include p-large($primaryColor);
-
-                @include breakpointUp(lg){
-                    padding: 0;
-                    width: auto;
-                    color: $baseWhite;
-                }
-
-                &:hover, &:focus{
-                    color: $baseWhite;
-                    text-decoration: underline;
-                }
-            }
-        }
+    @include breakpoint-md {
+      padding-top: toRem(20px);
+      padding-bottom: toRem(20px);
     }
+
+    @include breakpoint-lg {
+      padding-top: toRem(24px);
+      padding-bottom: toRem(24px);
+    }
+
+    &-logo {
+      display: flex;
+      align-items: center;
+
+      img {
+        height: toRem(72px);
+        width: auto;
+      }
+    }
+
+    #main-menu-toggle {
+      position: relative;
+      width: 50px;
+      height: 50px;
+      cursor: pointer;
+      background: none;
+      border: none;
+
+      .toggle-btn {
+        margin: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        width: 22px;
+        height: 12px;
+
+        span {
+          position: absolute;
+          display: block;
+          width: 100%;
+          height: 2px;
+          background-color: $baseBlack;
+          border-radius: 1px;
+          transition: all 0.2s cubic-bezier(0.1, 0.82, 0.76, 0.965);
+
+          &:first-of-type {
+            top: 0;
+            width: 26px;
+          }
+
+          &:last-of-type {
+            bottom: 0;
+            width: 12px;
+          }
+        }
+      }
+
+      &[aria-expanded="true"] {
+        .toggle-btn {
+          span {
+            width: 22px;
+
+            &:first-of-type {
+              transform: rotate(45deg);
+              top: 5px;
+            }
+
+            &:last-of-type {
+              transform: rotate(-45deg);
+              bottom: 5px;
+            }
+          }
+        }
+      }
+    }
+
+    &-main {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      height: 100vh;
+      height: calc(100vh - 100%);
+      width: 100%;
+      flex-direction: row;
+      align-items: flex-start;
+      background-color: $baseWhite;
+
+      @include breakpoint-lg {
+        position: static;
+        display: flex;
+        align-items: center;
+        width: auto;
+        height: auto;
+        background: none;
+      }
+
+      > ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 32px;
+
+        @include breakpoint-lg {
+          flex-direction: row;
+          column-gap: 24px;
+          width: auto;
+          padding: 0;
+        }
+      }
+
+      .p-btn{
+        margin-left: 0;
+
+        @include breakpoint-lg{
+          margin-left: 40px;
+        }
+
+        @include breakpoint-xl{
+          margin-left: 70px;
+        }
+      }
+
+      &--open {
+        display: flex;
+      }
+
+      &-item {
+        position: relative;
+        display: block;
+        padding: toRem(16px) 0;
+        width: 100%;
+        text-decoration: none;
+        @include p-large;
+
+        &-bubble{
+          position: absolute;
+          display: block;
+          opacity: 0;
+
+          &--1{
+            right: 6px;
+            top: 6px;
+            width: 5px;
+            height: 5px;
+            border-radius: $border-radius-full;
+            background-color: $primaryColor;
+            transition: ease-out 300ms;
+            transition-delay: 200ms;
+          }
+
+          &--2{
+            right: 12px;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            border-radius: $border-radius-full;
+            background-color: $primaryColor;
+            transition: ease-out 300ms;
+            transition-delay: 100ms;
+          }
+
+          &--3{
+            right: 0;
+            top: 26px;
+            width: 8px;
+            height: 8px;
+            border-radius: $border-radius-full;
+            background-color: $primaryColor;
+            transition: ease-out 300ms;
+          }
+        }
+
+        &:before{
+          content: "";
+          position: absolute;
+          bottom: 12px;
+          left: 0;
+          display: block;
+          height: 2px;
+          width: 0;
+          background-color: transparent;
+          transition: ease-out 300ms;
+          border-radius: $border-radius-lg;
+        }
+
+        @include breakpoint-lg {
+          padding: toRem(24px) toRem(8px);
+          width: auto;
+          color: $baseBlack;
+        }
+
+        &:hover, &:focus {
+          color: $baseBlack;
+          &:before{
+            width: 100%;
+            background-color: $baseBlack;
+          }
+
+          .g-nav-content-main-item-bubble{
+            opacity: 1;
+          }
+        }
+      }
+
+      &-dropdown {
+        &-toggle {
+          &:after {
+            content: '';
+            position: relative;
+            top: 4px;
+            display: inline-block;
+            height: 20px;
+            width: 24px;
+            margin-left: 8px;
+            @include pseudoSVG("../images/chevron-icon.svg", $baseBlack)
+          }
+        }
+
+        &-menu {
+          display: none;
+          padding: toRem(10px) toRem(20px);
+          border-radius: $border-radius-md;
+          background: $baseWhite;
+          list-style: none;
+          animation: growDown 300ms ease-in-out forwards;
+          transform-origin: top center;
+
+          @keyframes growDown {
+            0% {
+              transform: scaleY(0)
+            }
+            80% {
+              transform: scaleY(1.1)
+            }
+            100% {
+              transform: scaleY(1)
+            }
+          }
+
+          @include breakpoint-lg{
+            position: absolute;
+            box-shadow: $box-shadow;
+          }
+
+          a{
+            display: block;
+            padding: 12px;
+            text-decoration: none;
+            @include p-large();
+
+            &:hover, &:focus{
+              text-decoration: underline;
+            }
+          }
+
+          &.active {
+            display: block;
+          }
+        }
+      }
+    }
+  }
 }

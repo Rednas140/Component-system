@@ -1,17 +1,41 @@
 @use "../../abstracts" as *;
 
 .p-btn{
-  padding: 8px 16px;
-  border-radius: $border-radius-xl;
-  color: $baseWhite;
-  background-color: $primaryColor;
-  text-decoration: none;
+  @include p-large($baseWhite);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  padding: 8px 20px;
+  border-radius: $border-radius-sm;
+  background-color: $secondaryColor;
 
-  @include breakpointUp(lg){
+  &:before{
+    content: "";
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: $baseWhite;
+    border-radius: $border-radius-full;
   }
 
   &:hover, &:focus{
     color: $baseWhite;
-    background-color: $primaryColorHover;
+    background-color: $secondaryColorHover;
+
+    &:before{
+      animation: bounce 0.3s;
+      animation-direction: alternate;
+      animation-iteration-count: infinite;
+    }
+
+    @keyframes bounce {
+      0% {
+        transform: translateY(0);
+      }
+      100% {
+        transform: translateY(-10px);
+      }
+    }
   }
 }

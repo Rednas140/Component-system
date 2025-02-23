@@ -3,11 +3,11 @@
 section{
   padding: toRem(24px) 0;
 
-  @include breakpointUp(md){
+  @include breakpoint-md{
     padding: toRem(32px) 0;
   }
 
-  @include breakpointUp(lg){
+  @include breakpoint-lg{
     padding: toRem(48px) 0;
   }
 }
@@ -26,4 +26,8 @@ a {
       color: $secondaryColorHover;
     }
   }
+}
+
+.no-scroll {
+  overflow: hidden;
 }
