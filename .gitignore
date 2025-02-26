@@ -1,7 +1,8 @@
 /.env
 /.idea
-/web/assets
 /vendor
 .DS_Store
 /node_modules/
 ${APPDATA}\\npm/
+/web/assets/css/
+/web/assets/js/
