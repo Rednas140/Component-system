@@ -1,7 +1,8 @@
-function mobileNavigation() {
+function navigation() {
     const menu = document.getElementById("main-menu");
     const menuToggle = document.getElementById("main-menu-toggle");
     const menuNav = document.getElementById("main-menu-nav");
+    const modalBackdrop = document.querySelector(".modalBackdrop");
     const body = document.body;
 
     // Function to open the menu
@@ -9,23 +10,32 @@ function mobileNavigation() {
         trapFocus(menu)
         menuNav.setAttribute("aria-hidden", "false");
         menuToggle.setAttribute("aria-expanded", "true");
+        modalBackdrop.style.display = "block";
         menuNav.classList.add("g-nav-content-main--open");
+        setTimeout(() => {
+            menuNav.classList.add("g-nav-content-main--opening");
+        }, 10);
         body.classList.add("no-scroll");
     };
 
     // Function to close the menu
     const closeMenu = () => {
         menuNav.setAttribute("aria-hidden", "true");
-        menuToggle.setAttribute("aria-expanded", "false");
         menuNav.classList.remove("g-nav-content-main--open");
+        menuNav.classList.remove("g-nav-content-main--opening");
+        menuNav.classList.remove("g-nav-content-main--closing");
         body.classList.remove("no-scroll");
+        modalBackdrop.style.display = "none";
+        menuNav.removeEventListener("transitionend" , closeMenu)
     };
 
     // Toggle menu visibility on button click
     menuToggle.addEventListener("click", () => {
         const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
         if (isExpanded) {
-            closeMenu();
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuNav.addEventListener("transitionend" , closeMenu)
+            menuNav.classList.add("g-nav-content-main--closing")
         } else {
             openMenu();
         }
@@ -34,17 +44,21 @@ function mobileNavigation() {
     // Close menu when clicking outside of it
     document.addEventListener("click", (event) => {
         if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
-            closeMenu();
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuNav.addEventListener("transitionend" , closeMenu)
+            menuNav.classList.add("g-nav-content-main--closing")
+            // closeMenu();
         }
     });
 
     // Close menu with Escape key
     document.addEventListener("keydown", (event) => {
         if (event.key === "Escape") {
-            closeMenu();
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuNav.addEventListener("transitionend" , closeMenu)
+            menuNav.classList.add("g-nav-content-main--closing")
         }
     });
-
 }
 
 function trapFocus(container) {
@@ -128,5 +142,5 @@ function dropdownNavigation() {
     });
 }
 
-mobileNavigation();
+navigation();
 dropdownNavigation();

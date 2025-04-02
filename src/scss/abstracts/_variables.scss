@@ -1,19 +1,3 @@
-// Colors
-$balanced: #C80D0F;
-$energy: #831441;
-$success: #118823;
-$btnGreen: #018601;
-$spirit: #ffdcdc;
-$flow: #EFEFEF;
-$soft: #ffe8e3;
-
-$epic: #FFD6D8;
-$future: #FFE8E3;
-$past: #FFF6E3;
-$calm: #E3FFF8;
-$motion: #E3E6FF;
-$still: #E3F4FF;
-
 // Neutral color swatch
 $neutral-950: #161616;
 $neutral-900: #2d2d2d;
@@ -28,18 +12,32 @@ $neutral-100: #e8e8e8;
 $neutral-50: #fefefe;
 $neutral-0: #ffffff;
 
-// Bubblefish Red color swatch
-$bubblefishRed-950: #170202;
-$bubblefishRed-900: #2F0404;
-$bubblefishRed-800: #5F0707;
-$bubblefishRed-700: #8E0B0B;
-$bubblefishRed-600: #C80D0F;
-$bubblefishRed-500: #F00F13;
-$bubblefishRed-400: #F33F42;
-$bubblefishRed-300: #F66F71;
-$bubblefishRed-200: #F99FA1;
-$bubblefishRed-100: #FCCFD0;
-$bubblefishRed-50: #FDE7E7;
+// Red color swatch
+$red-950: #170202;
+$red-900: #2F0404;
+$red-800: #5F0707;
+$red-700: #8E0B0B;
+$red-600: #C80D0F;
+$red-500: #F00F13;
+$red-400: #F33F42;
+$red-300: #F66F71;
+$red-200: #F99FA1;
+$red-100: #FCCFD0;
+$red-50: #FDE7E7;
+
+// Accessible Minds Blue
+$blue-950: #090316;
+$blue-900: #12062d;
+$blue-800: #250C5A;
+$blue-700: #371287;
+$blue-700: #3F1497;
+$blue-600: #5C37A6;
+$blue-500: #5C37A6;
+$blue-400:  #967EC6;
+$blue-400:  #a995d0;
+$blue-200:  #CFC4E5;
+$blue-100:  #e2dcef;
+$blue-50:  #F5F3FA;
 
 // green color swatch
 $green-950: #011901;
@@ -59,16 +57,15 @@ $baseBlack: $neutral-950;
 $baseWhite: $neutral-0;
 
 // primary colors
-$primaryColor: $bubblefishRed-600;
-$primaryColorHover: $bubblefishRed-700;
+$primaryColor: $blue-800;
+$primaryColorHover: $blue-900;
 
 // secondary colors
 $secondaryColor: $green-700;
 $secondaryColorHover: $green-800;
 
 // font setting
-$bodyFont: 'Rubik', sans-serif;
-$titleFont: 'Playfair Display', sans-serif;
+$baseFont: 'Sora', sans-serif;
 
 $seeThrough: rgba(51, 51, 51, .25);
 
@@ -81,4 +78,18 @@ $border-radius-xl: 24px;
 $border-radius-full: 50%;
 
 // box-shadow
-$box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.2);
+$box-shadow: 0px 7px 8px #250C5A26;
+
+//feedback colors
+$feedbackOk: #73C64C;
+$feedbackAlert: #FE8025;
+$feedbackError: #ff4f4f;
+$feedbackError-1: #CC3F3F;
+$feedbackError-2: #A63333;
+
+// Fonts
+$primaryFont: 'Sora bold', sans-serif;
+$secondaryFont: 'Sora regular', sans-serif;
+$tertiaryFont: 'Sora medium', 'Sora regular', sans-serif;
+$quaternaryFont: 'Sora semibold', sans-serif;
+

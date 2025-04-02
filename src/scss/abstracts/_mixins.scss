@@ -57,7 +57,7 @@ Breakpoints
 
 
 // setting the standard typography styling
-@mixin h1($color: $baseBlack, $font: $titleFont){
+@mixin h1($color: $baseBlack, $font: $baseFont){
     font-size: toRem(32px);
     margin-bottom: toRem(16px);
     line-height: 1.2;
@@ -76,7 +76,7 @@ Breakpoints
     }
 }
 
-@mixin h2($color: $baseBlack, $font: $bodyFont){
+@mixin h2($color: $baseBlack, $font: $baseFont){
     font-size: toRem(28px);
     margin-bottom: toRem(14px);
     line-height: 1.2;
@@ -94,7 +94,7 @@ Breakpoints
     }
 }
 
-@mixin h3($color: $baseBlack, $font: $bodyFont){
+@mixin h3($color: $baseBlack, $font: $baseFont){
     font-size: toRem(24px);
     margin-bottom: toRem(12px);
     line-height: 1.4;
@@ -112,7 +112,7 @@ Breakpoints
     }
 }
 
-@mixin h4($color: $baseBlack, $font: $bodyFont){
+@mixin h4($color: $baseBlack, $font: $baseFont){
     font-size: toRem(20px);
     margin-bottom: toRem(10px);
     line-height: 1.4;
@@ -130,7 +130,7 @@ Breakpoints
     }
 }
 
-@mixin h5($color: $baseBlack, $font: $bodyFont){
+@mixin h5($color: $baseBlack, $font: $baseFont){
     font-size: toRem(18px);
     margin-bottom: toRem(9px);
     line-height: 1.4;
@@ -150,7 +150,7 @@ Breakpoints
     }
 }
 
-@mixin h6($color: $baseBlack, $font: $bodyFont){
+@mixin h6($color: $baseBlack, $font: $baseFont){
     font-size: toRem(16px);
     margin-bottom: toRem(8px);
     line-height: 1.4;
@@ -169,7 +169,7 @@ Breakpoints
     }
 }
 
-@mixin p-large($color: $baseBlack, $font: $bodyFont) {
+@mixin p-large($color: $baseBlack, $font: $baseFont) {
     font-size: toRem(18px);
     font-family: $font;
     line-height: 1.5;
@@ -181,14 +181,14 @@ Breakpoints
     }
 }
 
-@mixin p-body($color: $baseBlack, $font: $bodyFont){
+@mixin p-body($color: $baseBlack, $font: $baseFont){
     font-size: toRem(16px);
     font-family: $font;
     line-height: 1.5;
     color: $color;
 }
 
-@mixin p-small($color: $baseBlack, $font: $bodyFont){
+@mixin p-small($color: $baseBlack, $font: $baseFont){
     font-size: toRem(12px);
     font-family: $font;
     line-height: 1.5;

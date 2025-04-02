@@ -3,6 +3,7 @@
 .g-nav {
   position: relative;
   background-color: $baseWhite;
+  z-index: 99;
 
   &-content {
     display: flex;
@@ -101,47 +102,40 @@
       flex-direction: row;
       align-items: flex-start;
       background-color: $baseWhite;
+      transition: ease 1s;
 
-      @include breakpoint-lg {
-        position: static;
-        display: flex;
-        align-items: center;
-        width: auto;
-        height: auto;
-        background: none;
+      @include breakpoint-lg{
+        width: 50%;
+        right: 0;
+        left: auto;
       }
 
       > ul {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         list-style: none;
         flex-wrap: wrap;
         width: 100%;
         padding: 0 32px;
 
         @include breakpoint-lg {
-          flex-direction: row;
           column-gap: 24px;
-          width: auto;
-          padding: 0;
-        }
-      }
-
-      .p-btn{
-        margin-left: 0;
-
-        @include breakpoint-lg{
-          margin-left: 40px;
-        }
-
-        @include breakpoint-xl{
-          margin-left: 70px;
         }
       }
 
       &--open {
         display: flex;
+        transition: ease 1s;
+        transform: translateX(100%);
+      }
+
+      &--opening{
+        transform: translateX(0%);
+      }
+
+      &--closing{
+        transform: translateX(100%);
       }
 
       &-item {
@@ -151,44 +145,6 @@
         width: 100%;
         text-decoration: none;
         @include p-large;
-
-        &-bubble{
-          position: absolute;
-          display: block;
-          opacity: 0;
-
-          &--1{
-            right: 6px;
-            top: 6px;
-            width: 5px;
-            height: 5px;
-            border-radius: $border-radius-full;
-            background-color: $primaryColor;
-            transition: ease-out 300ms;
-            transition-delay: 200ms;
-          }
-
-          &--2{
-            right: 12px;
-            top: 16px;
-            width: 6px;
-            height: 6px;
-            border-radius: $border-radius-full;
-            background-color: $primaryColor;
-            transition: ease-out 300ms;
-            transition-delay: 100ms;
-          }
-
-          &--3{
-            right: 0;
-            top: 26px;
-            width: 8px;
-            height: 8px;
-            border-radius: $border-radius-full;
-            background-color: $primaryColor;
-            transition: ease-out 300ms;
-          }
-        }
 
         &:before{
           content: "";
