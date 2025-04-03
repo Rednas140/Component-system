@@ -128,10 +128,12 @@
         display: flex;
         transition: ease 1s;
         transform: translateX(100%);
+        will-change: transform;
       }
 
       &--opening{
         transform: translateX(0%);
+        will-change: transform;
       }
 
       &--closing{

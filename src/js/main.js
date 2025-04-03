@@ -4,59 +4,76 @@ function navigation() {
     const menuNav = document.getElementById("main-menu-nav");
     const modalBackdrop = document.querySelector(".modalBackdrop");
     const body = document.body;
+    let transitionOngoing = false;
 
     // Function to open the menu
     const openMenu = () => {
         trapFocus(menu)
         menuNav.setAttribute("aria-hidden", "false");
         menuToggle.setAttribute("aria-expanded", "true");
-        modalBackdrop.style.display = "block";
+        body.classList.add("no-scroll");
+
         menuNav.classList.add("g-nav-content-main--open");
         setTimeout(() => {
             menuNav.classList.add("g-nav-content-main--opening");
         }, 10);
-        body.classList.add("no-scroll");
+
+        modalBackdrop.style.display = "block";
+        setTimeout(() => {
+            modalBackdrop.classList.add("modalBackdrop-opening");
+        }, 10);
     };
 
     // Function to close the menu
     const closeMenu = () => {
-        menuNav.setAttribute("aria-hidden", "true");
-        menuNav.classList.remove("g-nav-content-main--open");
-        menuNav.classList.remove("g-nav-content-main--opening");
-        menuNav.classList.remove("g-nav-content-main--closing");
-        body.classList.remove("no-scroll");
-        modalBackdrop.style.display = "none";
         menuNav.removeEventListener("transitionend" , closeMenu)
+        transitionOngoing = false;
+        menuNav.setAttribute("aria-hidden", "true");
+        menuNav.classList.remove("g-nav-content-main--open", "g-nav-content-main--opening", "g-nav-content-main--closing");
+        modalBackdrop.style.display = "none";
+        modalBackdrop.classList.remove("modalBackdrop-opening", "modalBackdrop-closing");
+        body.classList.remove("no-scroll");
     };
 
     // Toggle menu visibility on button click
     menuToggle.addEventListener("click", () => {
-        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-        if (isExpanded) {
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuNav.addEventListener("transitionend" , closeMenu)
-            menuNav.classList.add("g-nav-content-main--closing")
-        } else {
-            openMenu();
+        if (!transitionOngoing) {
+            const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+            if (isExpanded) {
+                menuToggle.setAttribute("aria-expanded", "false");
+                transitionOngoing = true;
+                menuNav.addEventListener("transitionend", closeMenu);
+                menuNav.classList.add("g-nav-content-main--closing");
+                modalBackdrop.classList.add("modalBackdrop-closing");
+            } else {
+                openMenu();
+            }
         }
     });
 
     // Close menu when clicking outside of it
     document.addEventListener("click", (event) => {
-        if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuNav.addEventListener("transitionend" , closeMenu)
-            menuNav.classList.add("g-nav-content-main--closing")
-            // closeMenu();
+        if (!transitionOngoing) {
+            if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
+                menuToggle.setAttribute("aria-expanded", "false");
+                transitionOngoing = true;
+                menuNav.addEventListener("transitionend", closeMenu);
+                menuNav.classList.add("g-nav-content-main--closing");
+                modalBackdrop.classList.add("modalBackdrop-closing");
+            }
         }
     });
 
     // Close menu with Escape key
     document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape") {
-            menuToggle.setAttribute("aria-expanded", "false");
-            menuNav.addEventListener("transitionend" , closeMenu)
-            menuNav.classList.add("g-nav-content-main--closing")
+        if (!transitionOngoing) {
+            if (event.key === "Escape") {
+                menuToggle.setAttribute("aria-expanded", "false");
+                transitionOngoing = true;
+                menuNav.addEventListener("transitionend", closeMenu);
+                menuNav.classList.add("g-nav-content-main--closing");
+                modalBackdrop.classList.add("modalBackdrop-closing");
+            }
         }
     });
 }
