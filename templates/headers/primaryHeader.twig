@@ -18,12 +18,11 @@
 <header class="c-header">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col">
+            <div class="col-8">
                 <div class="c-header-content">
                     {% if title is not empty %}
                         {% tag headingLevel %}
-                            {{ title }}
-                        {% endtag %}
+                            {{ title }}{% endtag %}
                     {% endif %}
                     {% if description is not empty %}
                         <p>{{ description }}</p>
@@ -37,13 +36,6 @@
                     {% endif %}
                 </div>
             </div>
-            {% if image is not empty %}
-                <div class="col-lg-6">
-                    <div class="c-header-img">
-                        {{ image.one().getImg() }}
-                    </div>
-                </div>
-            {% endif %}
         </div>
     </div>
 </header>

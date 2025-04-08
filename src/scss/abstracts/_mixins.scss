@@ -76,7 +76,7 @@ Breakpoints
     }
 
     @include breakpoint-xl{
-        font-size: 60px;
+        font-size: toRem(72px)
     }
 }
 
