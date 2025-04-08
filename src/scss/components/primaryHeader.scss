@@ -1,6 +1,9 @@
 @use "../abstracts" as *;
 
 .c-header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: $blue-100;
   padding: toRem(24px) 0;
 
@@ -10,6 +13,7 @@
 
   @include breakpoint-lg{
     padding: toRem(48px) 0;
+    min-height: calc(100vh - 120px);
   }
 
   &-content{
