@@ -74,6 +74,10 @@ Breakpoints
         font-size: toRem(48px);
         margin-bottom: toRem(24px);
     }
+
+    @include breakpoint-xl{
+        font-size: 60px;
+    }
 }
 
 @mixin h2($color: $baseBlack, $font: $baseFont){
@@ -179,6 +183,13 @@ Breakpoints
     @include breakpoint-md {
         font-size: toRem(20px);
     }
+}
+
+@mixin p-large($color: $baseBlack, $font: $baseFont){
+    font-size: toRem(20px);
+    font-family: $font;
+    line-height: 2;
+    color: $color;
 }
 
 @mixin p-body($color: $baseBlack, $font: $baseFont){

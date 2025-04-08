@@ -19,7 +19,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col">
-                <div class="g-content c-header-content">
+                <div class="c-header-content">
                     {% if title is not empty %}
                         {% tag headingLevel %}
                             {{ title }}
@@ -29,7 +29,7 @@
                         <p>{{ description }}</p>
                     {% endif %}
                     {% if button is not empty %}
-                        {% include 'components/partials/_button.twig' with {
+                        {% include '/components/partials/_button.twig' with {
                             buttonLabel: button.label,
                             buttonTarget: button.target,
                             buttonLink: button.value

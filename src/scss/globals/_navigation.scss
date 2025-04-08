@@ -103,6 +103,7 @@
       align-items: flex-start;
       background-color: $baseWhite;
       transition: ease 1s;
+      overflow: auto;
 
       @include breakpoint-lg{
         width: 50%;
@@ -213,11 +214,6 @@
             100% {
               transform: scaleY(1)
             }
-          }
-
-          @include breakpoint-lg{
-            position: absolute;
-            box-shadow: $box-shadow;
           }
 
           a{

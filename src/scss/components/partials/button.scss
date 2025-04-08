@@ -9,8 +9,9 @@
   padding: 8px 20px;
   border-radius: $border-radius-sm;
   background-color: $secondaryColor;
+  text-decoration: none;
 
-  &:before{
+  &:after{
     content: "";
     display: inline-block;
     width: 8px;
@@ -23,7 +24,7 @@
     color: $baseWhite;
     background-color: $secondaryColorHover;
 
-    &:before{
+    &:after{
       animation: bounce 0.3s;
       animation-direction: alternate;
       animation-iteration-count: infinite;

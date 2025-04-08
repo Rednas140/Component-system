@@ -1,24 +1,19 @@
 columnSuffix: null
-handle: components
+handle: headers
 instructions: null
-name: Components
+name: Headers
 searchable: false
 settings:
-  createButtonLabel: 'Add a new component'
+  createButtonLabel: 'New header'
   defaultIndexViewMode: cards
   entryTypes:
     -
       __assoc__:
         -
           - uid
-          - d226be6d-c259-45eb-9677-5e17bc4fd573 # Content
-    -
-      __assoc__:
-        -
-          - uid
-          - 94a6983b-461a-4a98-adbd-50bbe596cef3 # Slider Component
+          - d966c555-3b5e-4954-8210-b70f5eedb9e4 # Primary header
   includeTableView: false
-  maxEntries: null
+  maxEntries: 1
   minEntries: null
   pageSize: null
   propagationKeyFormat: null

@@ -11,6 +11,21 @@
     padding: toRem(48px) 0;
   }
 
+  &-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    p {
+      @include p-large;
+      margin-bottom: 24px;
+
+      @include breakpoint-lg{
+        margin-bottom: 32px;
+      }
+    }
+  }
+
   &-img{
     display: flex;
     justify-content: center;
