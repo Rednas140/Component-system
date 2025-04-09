@@ -1,6 +1,7 @@
 @use "../abstracts" as *;
 
 .c-header{
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -17,6 +18,8 @@
   }
 
   &-content{
+    position: relative;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -53,6 +56,95 @@
       max-height: 480px;
       width: auto;
       border-radius: $border-radius-lg;
+    }
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(360deg);
+    }
+
+    75% {
+      transform: rotate(-90deg);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
+  }
+
+  @keyframes bounce {
+    0% {
+      transform: scale(0%);
+    }
+
+    75%{
+      transform: scale(110%);
+    }
+
+    100% {
+      transform: scale(100%);
+    }
+  }
+
+  @keyframes scale {
+    0% {
+      transform: scale(110%);
+    }
+
+    75%{
+      transform: scale(75%);
+    }
+
+    100% {
+      transform: scale(100%);
+    }
+  }
+
+  @keyframes opacity {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  &-icon{
+    z-index: 1;
+    position: absolute;
+
+    &--target{
+      top: 20%;
+      left: 10%;
+      animation: 0.5s ease-out 0s 1 bounce;
+    }
+
+    &--bean{
+      top: 10%;
+      right: 20%;
+      animation: 1s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 rotate;
+    }
+
+    &--scribble{
+      bottom: 20%;
+      right: 15%;
+      animation: 1s ease-out 0s 1 opacity;
+      fill: $primaryColor !important;
+
+      * {
+        fill: $primaryColor !important;
+      }
+    }
+
+    &--donut{
+      animation: 0.5s ease-out 0s 1 scale;
+      fill: $primaryColor !important;
+
+      * {
+        fill: $primaryColor !important;
+      }
     }
   }
 }

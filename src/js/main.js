@@ -106,7 +106,6 @@ function dropdownNavigation() {
         const menu = dropdown.querySelector('.g-nav-content-main-dropdown-menu');
 
         function openMenu() {
-            trapFocus(menu)
             menu.classList.add('active');
             toggle.setAttribute('aria-expanded', 'true');
         }

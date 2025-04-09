@@ -2,7 +2,7 @@
 {{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
 
 
-{# Setting the variables#}
+{# Setting the variables #}
 {% set title = block.title %}
 {% set description = block.description %}
 {% set image = block.headerImage %}
@@ -35,6 +35,10 @@
                         } only %}
                     {% endif %}
                 </div>
+                {{ svg('@webroot/assets/images/target-icon.svg')|attr({ class: 'c-header-icon c-header-icon--target'}) }}
+                {{ svg('@webroot/assets/images/bean-icon.svg')|attr({ class: 'c-header-icon c-header-icon--bean'}) }}
+                {{ svg('@webroot/assets/images/donut-icon.svg')|attr({ class: 'c-header-icon c-header-icon--donut'}) }}
+                {{ svg('@webroot/assets/images/scribble-icon.svg')|attr({ class: 'c-header-icon c-header-icon--scribble'}) }}
             </div>
         </div>
     </div>
