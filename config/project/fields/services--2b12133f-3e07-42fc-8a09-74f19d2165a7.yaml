@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: services
+instructions: 'Max 4 items'
+name: Services
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: 4
+  minRelations: null
+  selectionLabel: null
+  showCardsInGrid: false
+  showSiteMenu: true
+  sources:
+    - 'section:512a23f5-c303-4943-bfea-dc243b26ddeb' # Services
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

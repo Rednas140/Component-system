@@ -6,9 +6,20 @@ function navigation() {
     const body = document.body;
     let transitionOngoing = false;
 
-    // Function to open the menu
+    const onDocumentClick = (event) => {
+        if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
+            closeWithTransition();
+        }
+    };
+
+    const onEscapeKey = (event) => {
+        if (event.key === "Escape") {
+            closeWithTransition();
+        }
+    };
+
     const openMenu = () => {
-        trapFocus(menu)
+        trapFocus(menu);
         menuNav.setAttribute("aria-hidden", "false");
         menuToggle.setAttribute("aria-expanded", "true");
         body.classList.add("no-scroll");
@@ -22,17 +33,32 @@ function navigation() {
         setTimeout(() => {
             modalBackdrop.classList.add("modalBackdrop-opening");
         }, 10);
+
+        document.addEventListener("click", onDocumentClick);
+        document.addEventListener("keydown", onEscapeKey);
     };
 
-    // Function to close the menu
     const closeMenu = () => {
-        menuNav.removeEventListener("transitionend" , closeMenu)
+        menuNav.removeEventListener("transitionend", closeMenu);
         transitionOngoing = false;
         menuNav.setAttribute("aria-hidden", "true");
         menuNav.classList.remove("g-nav-content-main--open", "g-nav-content-main--opening", "g-nav-content-main--closing");
         modalBackdrop.style.display = "none";
         modalBackdrop.classList.remove("modalBackdrop-opening", "modalBackdrop-closing");
         body.classList.remove("no-scroll");
+
+        document.removeEventListener("click", onDocumentClick);
+        document.removeEventListener("keydown", onEscapeKey);
+    };
+
+    const closeWithTransition = () => {
+        if (!transitionOngoing) {
+            menuToggle.setAttribute("aria-expanded", "false");
+            transitionOngoing = true;
+            menuNav.addEventListener("transitionend", closeMenu);
+            menuNav.classList.add("g-nav-content-main--closing");
+            modalBackdrop.classList.add("modalBackdrop-closing");
+        }
     };
 
     // Toggle menu visibility on button click
@@ -40,43 +66,14 @@ function navigation() {
         if (!transitionOngoing) {
             const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
             if (isExpanded) {
-                menuToggle.setAttribute("aria-expanded", "false");
-                transitionOngoing = true;
-                menuNav.addEventListener("transitionend", closeMenu);
-                menuNav.classList.add("g-nav-content-main--closing");
-                modalBackdrop.classList.add("modalBackdrop-closing");
+                closeWithTransition();
             } else {
                 openMenu();
             }
         }
     });
-
-    // Close menu when clicking outside of it
-    document.addEventListener("click", (event) => {
-        if (!transitionOngoing) {
-            if (!menuNav.contains(event.target) && !menuToggle.contains(event.target)) {
-                menuToggle.setAttribute("aria-expanded", "false");
-                transitionOngoing = true;
-                menuNav.addEventListener("transitionend", closeMenu);
-                menuNav.classList.add("g-nav-content-main--closing");
-                modalBackdrop.classList.add("modalBackdrop-closing");
-            }
-        }
-    });
-
-    // Close menu with Escape key
-    document.addEventListener("keydown", (event) => {
-        if (!transitionOngoing) {
-            if (event.key === "Escape") {
-                menuToggle.setAttribute("aria-expanded", "false");
-                transitionOngoing = true;
-                menuNav.addEventListener("transitionend", closeMenu);
-                menuNav.classList.add("g-nav-content-main--closing");
-                modalBackdrop.classList.add("modalBackdrop-closing");
-            }
-        }
-    });
 }
+
 
 function trapFocus(container) {
     const focusableSelectors = 'a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])';
@@ -109,7 +106,6 @@ function dropdownNavigation() {
         const menu = dropdown.querySelector('.g-nav-content-main-dropdown-menu');
 
         function openMenu() {
-            trapFocus(menu)
             menu.classList.add('active');
             toggle.setAttribute('aria-expanded', 'true');
         }

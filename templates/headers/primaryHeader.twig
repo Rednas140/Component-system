@@ -2,7 +2,7 @@
 {{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
 
 
-{# Setting the variables#}
+{# Setting the variables #}
 {% set title = block.title %}
 {% set description = block.description %}
 {% set image = block.headerImage %}
@@ -18,12 +18,11 @@
 <header class="c-header">
     <div class="container">
         <div class="row justify-content-center">
-            <div class="col">
+            <div class="col col-lg-10 col-xl-8">
                 <div class="c-header-content">
                     {% if title is not empty %}
                         {% tag headingLevel %}
-                            {{ title }}
-                        {% endtag %}
+                            {{ title }}{% endtag %}
                     {% endif %}
                     {% if description is not empty %}
                         <p>{{ description }}</p>
@@ -36,14 +35,11 @@
                         } only %}
                     {% endif %}
                 </div>
+                {{ svg('@webroot/assets/images/target-icon.svg')|attr({ class: 'c-header-icon c-header-icon--target'}) }}
+                {{ svg('@webroot/assets/images/bean-icon.svg')|attr({ class: 'c-header-icon c-header-icon--bean'}) }}
+                {{ svg('@webroot/assets/images/donut-icon.svg')|attr({ class: 'c-header-icon c-header-icon--donut'}) }}
+                {{ svg('@webroot/assets/images/scribble-icon.svg')|attr({ class: 'c-header-icon c-header-icon--scribble'}) }}
             </div>
-            {% if image is not empty %}
-                <div class="col-lg-6">
-                    <div class="c-header-img">
-                        {{ image.one().getImg() }}
-                    </div>
-                </div>
-            {% endif %}
         </div>
     </div>
 </header>

@@ -76,7 +76,7 @@ Breakpoints
     }
 
     @include breakpoint-xl{
-        font-size: 60px;
+        font-size: toRem(72px)
     }
 }
 
@@ -85,6 +85,7 @@ Breakpoints
     margin-bottom: toRem(14px);
     line-height: 1.2;
     font-family: $font;
+    font-weight: 800;
     color: $color;
 
     @include breakpoint-md{
@@ -103,6 +104,7 @@ Breakpoints
     margin-bottom: toRem(12px);
     line-height: 1.4;
     font-family: $font;
+    font-weight: 600;
     color: $color;
 
     @include breakpoint-md{
@@ -121,6 +123,7 @@ Breakpoints
     margin-bottom: toRem(10px);
     line-height: 1.4;
     font-family: $font;
+    font-weight: 600;
     color: $color;
 
     @include breakpoint-md{
@@ -139,6 +142,7 @@ Breakpoints
     margin-bottom: toRem(9px);
     line-height: 1.4;
     font-family: $font;
+    font-weight: 600;
     color: $color;
 
     @include breakpoint-md{
@@ -159,7 +163,7 @@ Breakpoints
     margin-bottom: toRem(8px);
     line-height: 1.4;
     font-family: $font;
-    font-weight: bold;
+    font-weight: 600;
     color: $color;
 
     @include breakpoint-md{
