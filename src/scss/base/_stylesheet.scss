@@ -10,6 +10,10 @@ section{
   @include breakpoint-lg{
     padding: toRem(48px) 0;
   }
+
+  @include breakpoint-xl{
+    padding: toRem(72px);
+  }
 }
 
 a {

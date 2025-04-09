@@ -17,6 +17,11 @@ settings:
         -
           - uid
           - 94a6983b-461a-4a98-adbd-50bbe596cef3 # Slider Component
+    -
+      __assoc__:
+        -
+          - uid
+          - 2b967b17-d1b2-46d2-b865-4c8abf2e2c73 # Our Services
   includeTableView: false
   maxEntries: null
   minEntries: null

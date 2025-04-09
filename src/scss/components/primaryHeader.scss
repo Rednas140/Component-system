@@ -30,7 +30,21 @@
       height: 100%;
     }
 
+    @keyframes textUp {
+      from {
+        opacity: 0;
+        transform: translateY(100px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+
     h1{
+      animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 textUp;
+      animation-fill-mode: forwards;
       text-align: center;
       line-height: 1.5;
     }
@@ -40,10 +54,21 @@
       @include p-large;
       text-align: center;
       margin-bottom: 24px;
+      opacity: 0;
+      animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 textUp;
+      animation-fill-mode: forwards;
+      animation-delay: 0.25s;
 
       @include breakpoint-lg{
         margin-bottom: 32px;
       }
+    }
+
+    .p-btn{
+      opacity: 0;
+      animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 textUp;
+      animation-fill-mode: forwards;
+      animation-delay: 0.5s;
     }
   }
 
@@ -59,79 +84,62 @@
     }
   }
 
-  @keyframes rotate {
-    0% {
-      transform: rotate(360deg);
-    }
-
-    75% {
-      transform: rotate(-90deg);
-    }
-
-    100% {
-      transform: rotate(0deg);
-    }
-  }
-
-  @keyframes bounce {
-    0% {
+  @keyframes scaleOpacityDesk {
+    from{
+      opacity: 0;
       transform: scale(0%);
     }
 
-    75%{
-      transform: scale(110%);
-    }
-
-    100% {
-      transform: scale(100%);
-    }
-  }
-
-  @keyframes scale {
-    0% {
-      transform: scale(110%);
-    }
-
-    75%{
-      transform: scale(75%);
-    }
-
-    100% {
-      transform: scale(100%);
-    }
-  }
-
-  @keyframes opacity {
-    0% {
-      opacity: 0;
-    }
-
-    100% {
+    to {
       opacity: 1;
+      transform: scale(100%);
+    }
+  }
+
+  @keyframes scaleOpacityMob {
+    from {
+      opacity: 0;
+      transform: scale(0%);
+    }
+
+    to {
+      opacity: 0.3;
+      transform: scale(100%);
     }
   }
 
   &-icon{
     z-index: 1;
     position: absolute;
+    opacity: 0;
+    animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 scaleOpacityMob;
+    animation-fill-mode: forwards;
+    width: 160px;
+    height: 160px;
+
+    @include breakpoint-lg{
+      animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 scaleOpacityDesk;
+      animation-fill-mode: forwards;
+    }
 
     &--target{
       top: 20%;
       left: 10%;
-      animation: 0.5s ease-out 0s 1 bounce;
     }
 
     &--bean{
       top: 10%;
-      right: 20%;
-      animation: 1s cubic-bezier(0.22, 1, 0.36, 1) 0s 1 rotate;
+      right: 15%;
+      width: 100px;
+      height: 100px;
+      animation-delay: 0.2s;
     }
 
     &--scribble{
       bottom: 20%;
       right: 15%;
-      animation: 1s ease-out 0s 1 opacity;
       fill: $primaryColor !important;
+      animation-delay: 0.6s;
 
       * {
         fill: $primaryColor !important;
@@ -139,12 +147,11 @@
     }
 
     &--donut{
-      animation: 0.5s ease-out 0s 1 scale;
-      fill: $primaryColor !important;
-
-      * {
-        fill: $primaryColor !important;
-      }
+      bottom: 10%;
+      left: 20%;
+      width: 120px;
+      height: 120px;
+      animation-delay: 0.4s;
     }
   }
 }

@@ -1,4 +1,4 @@
-dateModified: 1743973398
+dateModified: 1744233648
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -15,6 +15,8 @@ meta:
   __names__:
     00f08d20-e207-4959-a41a-d024f6321e4b: Projects # Projects
     1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
+    2b967b17-d1b2-46d2-b865-4c8abf2e2c73: 'Our Services' # Our Services
+    2b12133f-3e07-42fc-8a09-74f19d2165a7: Services # Services
     3c68136a-3e05-4392-9e63-23236680201f: 'Dropdown items' # Dropdown items
     3d6a182b-ed5a-4f35-acaf-b3198a90b978: Homepage # Homepage
     4bdb03d2-eaa1-424b-a4c4-ba9cce470fee: Content # Content
@@ -32,6 +34,7 @@ meta:
     82c6d396-89e5-4844-8742-535861bfab2f: 'Section | Default' # Section | Default
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
     94a6983b-461a-4a98-adbd-50bbe596cef3: 'Slider Component' # Slider Component
+    512a23f5-c303-4943-bfea-dc243b26ddeb: Services # Services
     2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
     4692c9e7-d943-495a-bc3e-fc25a9b7562b: 'Pagina''s' # Pagina's
     5598c2b6-4544-4e71-a91a-309f14feb2b4: 'Public Schema' # Public Schema

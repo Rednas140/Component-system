@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.c-ourServices {
+  &-heading {
+    margin-bottom: toRem(48px);
+  }
+
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: toRem(40px);
+  }
+
+  &-item {
+    padding: toRem(56px);
+    background-color: $blue-100;
+    border: solid 2px $primaryColor;
+    border-radius: $border-radius-md;
+    text-decoration: none;
+
+    &:hover, &:focus{
+      h3{
+        text-decoration: underline;
+      }
+    }
+  }
+}

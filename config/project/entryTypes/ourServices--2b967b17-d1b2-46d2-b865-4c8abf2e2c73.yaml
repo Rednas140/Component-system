@@ -1,0 +1,67 @@
+color: null
+fieldLayouts:
+  6f30f81d-0c16-447b-8415-950256a1699c:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-09T20:45:16+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 7323bf78-58f0-487d-8398-c75357d2f6ba
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-09T20:53:41+00:00'
+            elementCondition: null
+            fieldUid: 2b12133f-3e07-42fc-8a09-74f19d2165a7 # Services
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ae29afc1-be36-46f4-8246-ec25b44cd6bf
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: adc59631-b0c6-469d-ba2d-cb79dfccc6fb
+        userCondition: null
+handle: ourServices
+hasTitleField: true
+icon: arrow-trend-up
+name: 'Our Services'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site
