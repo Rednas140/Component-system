@@ -12,7 +12,7 @@
 		</main>
     {% include "globals/_footer" %}
 
-	{{ craft.app.view.registerJsFile('@web/assets/js/main.min.js') }}
+	{{ craft.app.view.registerJsFile('@web/assets/js/main.min.js', {type: 'module'}) }}
     {{ endBody() }}
 	</body>
 </html>

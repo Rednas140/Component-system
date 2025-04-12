@@ -7,21 +7,60 @@
 
   &-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: toRem(40px);
+    grid-template-columns: repeat(1, 1fr);
+    gap: toRem(16px);
+
+    @include breakpoint-lg{
+      grid-template-columns: repeat(2, 1fr);
+      gap: toRem(40px);
+    }
   }
 
   &-item {
-    padding: toRem(56px);
-    background-color: $blue-100;
+    position: relative;
+    display: block;
+    padding: toRem(24px) toRem(48px) toRem(24px) toRem(24px);
     border: solid 2px $primaryColor;
     border-radius: $border-radius-md;
     text-decoration: none;
+    overflow: hidden;
+    word-break: break-word;
 
-    &:hover, &:focus{
-      h3{
+    @include breakpoint-lg{
+      padding: toRem(56px) toRem(112px) toRem(56px) toRem(56px);
+    }
+
+    &:hover, &:focus {
+      h3 {
         text-decoration: underline;
       }
+    }
+
+    &--active {
+      .c-ourServices-icon {
+        right: -20px;
+        opacity: 0.4;
+      }
+    }
+  }
+
+  &-icon {
+    position: absolute;
+    bottom: 20px;
+    right: -100px;
+    max-width: 90px;
+    width: auto;
+    height: 80px;
+    opacity: 0;
+    transition: all ease 1s;
+    fill: $baseBlack !important;
+
+    @include breakpoint-lg{
+      max-width: unset;
+    }
+
+    * {
+      fill: $baseBlack !important;
     }
   }
 }

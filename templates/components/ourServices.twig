@@ -4,6 +4,7 @@
 {# Setting the variables #}
 {% set title = block.title %}
 {% set services = block.services %}
+{% set image = "" %}
 
 <section class="c-ourServices">
     <div class="container">
@@ -14,10 +15,16 @@
         </div>
         <div class="c-ourServices-grid">
             {% for service in services %}
-                <a href="{{ service.url }}" class="c-ourServices-item">
+                <a href="{{ service.url }}" class="c-ourServices-item" data-animate="c-ourServices-item--active">
                     <h3>{{ service.title }}</h3>
                     {% if service.description is not empty %}
                         <p>{{ service.description }}</p>
+                    {% endif %}
+                    {% if service.serviceIcon %}
+                        {% set image = service.serviceIcon.one() %}
+                    {% endif %}
+                    {% if image and image.extension == 'svg' %}
+                        {{ svg(image)|attr({class: 'c-ourServices-icon'}) }}
                     {% endif %}
                 </a>
             {% endfor %}

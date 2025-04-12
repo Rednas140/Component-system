@@ -1,4 +1,4 @@
-dateModified: 1744233648
+dateModified: 1744459707
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -51,6 +51,7 @@ meta:
     d226be6d-c259-45eb-9677-5e17bc4fd573: Content # Content
     d966c555-3b5e-4954-8210-b70f5eedb9e4: 'Primary header' # Primary header
     d41991e3-1d36-435e-8954-7cb343967f11: Text # Text
+    e4c65bcd-096c-4a93-969d-bf2338cb005f: 'Section | Services' # Section | Services
     e41bd20a-b255-451f-b938-8365c8d59b5a: Quote # Quote
     e85b9150-15ea-4f7f-bb34-676ca47a09b4: WYSIWYG # WYSIWYG
     ebcb3ddb-d136-47be-974b-87155e593ce2: 'Component system' # Component system
@@ -68,7 +69,7 @@ system:
   edition: solo
   live: true
   name: 'Component system'
-  schemaVersion: 5.5.0.0
+  schemaVersion: 5.6.0.2
   timeZone: America/Los_Angeles
 users:
   allowPublicRegistration: false

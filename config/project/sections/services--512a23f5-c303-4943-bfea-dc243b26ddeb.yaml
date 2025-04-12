@@ -2,7 +2,7 @@ defaultPlacement: end
 enableVersioning: true
 entryTypes:
   -
-    uid: 82c6d396-89e5-4844-8742-535861bfab2f # Section | Default
+    uid: e4c65bcd-096c-4a93-969d-bf2338cb005f # Section | Services
 handle: services
 maxAuthors: 1
 name: Services

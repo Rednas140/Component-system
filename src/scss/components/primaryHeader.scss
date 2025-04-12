@@ -7,6 +7,7 @@
   justify-content: center;
   background-color: $blue-100;
   padding: toRem(24px) 0;
+  min-height: calc(100vh - 104px);
 
   @include breakpoint-md{
     padding: toRem(32px) 0;
@@ -114,17 +115,23 @@
     opacity: 0;
     animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 scaleOpacityMob;
     animation-fill-mode: forwards;
-    width: 160px;
-    height: 160px;
+    width: 120px;
+    height: 120px;
 
     @include breakpoint-lg{
       animation: 1s cubic-bezier(0.61, 1, 0.88, 1) 0s 1 scaleOpacityDesk;
       animation-fill-mode: forwards;
+      width: 160px;
+      height: 160px;
     }
 
     &--target{
-      top: 20%;
+      top: 10%;
       left: 10%;
+
+      @include breakpoint-lg{
+        top: 20%;
+      }
     }
 
     &--bean{

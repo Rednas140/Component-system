@@ -1,3 +1,5 @@
+import './onScroll.min.js';
+
 function navigation() {
     const menu = document.getElementById("main-menu");
     const menuToggle = document.getElementById("main-menu-toggle");
