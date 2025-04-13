@@ -22,6 +22,11 @@ settings:
         -
           - uid
           - 2b967b17-d1b2-46d2-b865-4c8abf2e2c73 # Our Services
+    -
+      __assoc__:
+        -
+          - uid
+          - 0db0d3bc-0553-4ecd-a22d-f5e0f17fc799 # Our Cases
   includeTableView: false
   maxEntries: null
   minEntries: null

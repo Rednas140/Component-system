@@ -1,11 +1,11 @@
 @use "../../abstracts" as *;
 
 .p-quote{
-  border-left: 4px solid $red-100;
+  border-left: 4px solid $secondaryColor;
   margin: 1em 0;
   padding: 0.5em 1em;
   min-width: 100%;
-  background-color: $red-50;
+  background-color: $secondaryColorHover;
   border-radius: 4px;
 
   @include breakpoint-sm{

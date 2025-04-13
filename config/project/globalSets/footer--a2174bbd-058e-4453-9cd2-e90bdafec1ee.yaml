@@ -1,0 +1,204 @@
+fieldLayouts:
+  94f0e393-1379-4a2d-a903-0dbb56b7c7ca:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-12T15:14:14+00:00'
+            elementCondition: null
+            fieldUid: ff9d2595-7e12-499c-ab83-9eb1af4a6414 # Short text (64 char)
+            handle: titleColumnOne
+            includeInCards: false
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: fb219dc6-6aa8-459e-991e-6a90d6b2e96c
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-12T15:40:25+00:00'
+            elementCondition: null
+            fieldUid: 59b22318-0a5b-415b-9acd-02b2ec30e362 # Footer content
+            handle: footerContentOne
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 79428649-b80b-4465-95ae-c61edba2605d
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-12T20:10:42+00:00'
+            elementCondition:
+              class: craft\elements\conditions\ElementCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 59b22318-0a5b-415b-9acd-02b2ec30e362 # Footer content
+                  layoutElementUid: 79428649-b80b-4465-95ae-c61edba2605d
+                  operator: in
+                  uid: 692b7373-11a5-400f-95e0-f66c74253839
+                  values:
+                    - linkList
+              elementType: craft\elements\GlobalSet
+              fieldContext: global
+            fieldUid: 0a93d579-cb24-4fbc-98a8-cfce0584575a # List of links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: dc2887ec-d54c-48d5-9bbc-25385c1180eb
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'First Column'
+        uid: 3b2573c1-748f-4070-8e5e-5717a4c7bf40
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-12T15:14:14+00:00'
+            elementCondition: null
+            fieldUid: ff9d2595-7e12-499c-ab83-9eb1af4a6414 # Short text (64 char)
+            handle: titleColumnTwo
+            includeInCards: false
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: bbd4f929-9873-4963-90ec-ec4f544b36fb
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-12T15:45:08+00:00'
+            elementCondition: null
+            fieldUid: 59b22318-0a5b-415b-9acd-02b2ec30e362 # Footer content
+            handle: footerContentTwo
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: ca119718-3d23-494a-bb87-54aad89b1477
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-12T20:13:11+00:00'
+            elementCondition:
+              class: craft\elements\conditions\ElementCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 59b22318-0a5b-415b-9acd-02b2ec30e362 # Footer content
+                  layoutElementUid: ca119718-3d23-494a-bb87-54aad89b1477
+                  operator: in
+                  uid: 47312bf4-7f7c-4841-a562-e120c0910fc5
+                  values:
+                    - linkList
+              elementType: craft\elements\GlobalSet
+              fieldContext: global
+            fieldUid: de54d3eb-a177-408c-8d13-38eecfd5344e # List of links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47fd660b-6c2c-40de-bde0-48352f1e7336
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Second Column'
+        uid: 697573c8-b5a3-4a0c-9e42-23dfceb407a8
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2025-04-12T15:14:14+00:00'
+            elementCondition: null
+            fieldUid: ff9d2595-7e12-499c-ab83-9eb1af4a6414 # Short text (64 char)
+            handle: titleColumnThree
+            includeInCards: false
+            instructions: null
+            label: Titel
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 175080f1-4526-4fc3-b840-b9170eb14d52
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-12T15:45:08+00:00'
+            elementCondition: null
+            fieldUid: 59b22318-0a5b-415b-9acd-02b2ec30e362 # Footer content
+            handle: footerContentThree
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: cb1ac903-b9be-4985-9c12-39eccd4da7ce
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2025-04-12T20:13:11+00:00'
+            elementCondition:
+              class: craft\elements\conditions\ElementCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: 59b22318-0a5b-415b-9acd-02b2ec30e362 # Footer content
+                  layoutElementUid: cb1ac903-b9be-4985-9c12-39eccd4da7ce
+                  operator: in
+                  uid: 399f119c-5c2d-422e-86fe-ee7d53d473eb
+                  values:
+                    - linkList
+              elementType: craft\elements\GlobalSet
+              fieldContext: global
+            fieldUid: 89d1cafe-caf3-4458-8e58-872b194fbda9 # List of links
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22df8fec-930a-4ddb-a058-044882fc7f8e
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Third Column'
+        uid: 5093155b-a86d-4843-8ceb-b318d888d086
+        userCondition: null
+handle: footer
+name: Footer
+sortOrder: 4

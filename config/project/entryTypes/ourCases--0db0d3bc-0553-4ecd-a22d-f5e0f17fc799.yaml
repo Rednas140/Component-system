@@ -1,0 +1,51 @@
+color: null
+fieldLayouts:
+  094501fc-d6d8-44d2-b8e7-698944373652:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2025-04-13T08:49:47+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            required: true
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: c6ca34ff-e137-4b9f-a1ad-2bbfe2a552e6
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 250f2898-3a42-400f-93ca-e986d3938c90
+        userCondition: null
+handle: ourCases
+hasTitleField: true
+icon: treasure-chest
+name: 'Our Cases'
+showSlugField: true
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: null
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

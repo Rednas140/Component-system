@@ -6,9 +6,10 @@
   justify-content: center;
   align-items: center;
   gap: 16px;
+  width: fit-content;
   padding: 8px 24px;
   border-radius: $border-radius-xxl;
-  background-color: $secondaryColor;
+  background-color: $primaryColor;
   text-decoration: none;
 
   &:after{
@@ -22,7 +23,7 @@
 
   &:hover, &:focus{
     color: $baseWhite;
-    background-color: $secondaryColorHover;
+    background-color: $primaryColorHover;
 
     &:after{
       animation: bounce 0.3s;
@@ -37,6 +38,20 @@
       100% {
         transform: translateY(-10px);
       }
+    }
+  }
+
+  &--onDark{
+    color: $baseBlack;
+    background-color: $secondaryColor;
+
+    &:after{
+      background-color: $baseBlack;
+    }
+
+    &:hover, &:focus{
+      color: $baseBlack;
+      background-color: $secondaryColorHover;
     }
   }
 }

@@ -1,0 +1,25 @@
+columnSuffix: null
+handle: listOfLinks
+instructions: null
+name: 'List of links'
+searchable: false
+settings:
+  createButtonLabel: 'New link'
+  defaultIndexViewMode: cards
+  entryTypes:
+    -
+      __assoc__:
+        -
+          - uid
+          - c710e4a3-2e0a-4810-bb7c-574fbfd32991 # Link
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: null
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: blocks
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

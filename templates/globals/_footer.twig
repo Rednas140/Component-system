@@ -1,11 +1,123 @@
-<footer>
+{% set titleColumnOne = footer.titleColumnOne %}
+{% set titleColumnTwo = footer.titleColumnTwo %}
+{% set titleColumnThree= footer.titleColumnThree %}
+ {% set image = siteInfo.siteIconAlt %}
+
+<footer class="g-footer">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col">
-                <p class="description">{{ siteInfo.siteDescription }}</p>
-                <p class="copyright">&copy;{{ now | date('Y') }} {{ siteName }}</p>
-                <p class="colophon">Built with <a href="https://craftcms.com/" target="_blank">Craft CMS</a>
-                </p>
+        <div class="row">
+            <div class="col-lg">
+                {% if image %}
+                    {% set image = image.one() %}
+                    {% if image.extension == 'svg' %}
+                        {{ svg(image)|attr({class: 'g-footer-icon'}) }}
+                    {% endif %}
+                {% endif %}
+            </div>
+            {% if titleColumnOne is not empty %}
+                <div class="col-lg">
+                    <div class="g-footer-content">
+                        <h2>{{ titleColumnOne }}</h2>
+                        {% if footer.footerContentOne is not empty %}
+                            {% if footer.footerContentOne.value == "address" %}
+                                {% if siteInfo.companyCity is not empty %}
+                                    <p>{{ siteInfo.companyCity }}</p>
+                                {% endif %}
+                                {% if siteInfo.companyAddress is not empty %}
+                                    <p>{{ siteInfo.companyAddress }}</p>
+                                {% endif %}
+
+                            {% elseif footer.footerContentOne.value == "linkList" %}
+                                {% if footer.listOfLinks is not empty %}
+                                    <nav aria-label="footer navigation first column">
+                                        <ul>
+                                            {% for linkItem in footer.listOfLinks %}
+                                                {% set link = linkItem.linkSimple %}
+                                                {% if link is not empty %}
+                                                    <li>
+                                                        <a href="{{ link.value }}"
+                                                           {% if link.target %}target="{{ link.target }}"{% endif %}>{{ link.label }}</a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+
+                                        </ul>
+                                    </nav>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if titleColumnTwo is not empty %}
+                <div class="col-lg">
+                    <div class="g-footer-content">
+                        <h2>{{ titleColumnTwo }}</h2>
+                        {% if footer.footerContentTwo is not empty %}
+                            {% if footer.footerContentTwo.value == "address" %}
+                                {% if siteInfo.companyCity is not empty %}
+                                    <p>{{ siteInfo.companyCity }}</p>
+                                {% endif %}
+                                {% if siteInfo.companyAddress is not empty %}
+                                    <p>{{ siteInfo.companyAddress }}</p>
+                                {% endif %}
+
+                            {% elseif footer.footerContentTwo.value == "linkList" %}
+                                {% if footer.listOfLinksTwo is not empty %}
+                                    <nav aria-label="footer navigation second column">
+                                        <ul>
+                                            {% for linkItem in footer.listOfLinksTwo %}
+                                                {% set link = linkItem.linkSimple %}
+                                                {% if link is not empty %}
+                                                    <li>
+                                                        <a href="{{ link.value }}"
+                                                           {% if link.target %}target="{{ link.target }}"{% endif %}>{{ link.label }}</a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </nav>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            {% if titleColumnThree is not empty %}
+                <div class="col-lg">
+                    <h2>{{ titleColumnThree }}</h2>
+                    <div class="g-footer-content">
+                        {% if footer.footerContentThree is not empty %}
+                            {% if footer.footerContentThree.value == "address" %}
+                                {% if siteInfo.companyCity is not empty %}
+                                    <p>{{ siteInfo.companyCity }}</p>
+                                {% endif %}
+                                {% if siteInfo.companyAddress is not empty %}
+                                    <p>{{ siteInfo.companyAddress }}</p>
+                                {% endif %}
+
+                            {% elseif footer.footerContentThree.value == "linkList" %}
+                                {% if footer.listOfLinksThree is not empty %}
+                                    <nav aria-label="footer navigation third column">
+                                        <ul>
+                                            {% for linkItem in footer.listOfLinksThree %}
+                                                {% set link = linkItem.linkSimple %}
+                                                {% if link is not empty %}
+                                                    <li>
+                                                        <a href="{{ link.value }}"
+                                                           {% if link.target %}target="{{ link.target }}"{% endif %}>{{ link.label }}</a>
+                                                    </li>
+                                                {% endif %}
+                                            {% endfor %}
+                                        </ul>
+                                    </nav>
+                                {% endif %}
+                            {% endif %}
+                        {% endif %}
+                    </div>
+                </div>
+            {% endif %}
+            <div>
             </div>
         </div>
     </div>

@@ -12,19 +12,6 @@ $neutral-100: #e8e8e8;
 $neutral-50: #fefefe;
 $neutral-0: #ffffff;
 
-// Red color swatch
-$red-950: #170202;
-$red-900: #2F0404;
-$red-800: #5F0707;
-$red-700: #8E0B0B;
-$red-600: #C80D0F;
-$red-500: #F00F13;
-$red-400: #F33F42;
-$red-300: #F66F71;
-$red-200: #F99FA1;
-$red-100: #FCCFD0;
-$red-50: #FDE7E7;
-
 // Accessible Minds Blue
 $blue-950: #090316;
 $blue-900: #12062d;
@@ -39,30 +26,30 @@ $blue-200:  #CFC4E5;
 $blue-100:  #e2dcef;
 $blue-50:  #F5F3FA;
 
-// green color swatch
-$green-950: #011901;
-$green-900: #013201;
-$green-800: #016501;
-$green-700: #018601;
-$green-600: #08C408;
-$green-500: #0AF50A;
-$green-400: #3BF73B;
-$green-300: #6CF96C;
-$green-200: #9DFB9D;
-$green-100: #CEFDCE;
-$green-50: #EBFEEB;
+// Accessible Minds coral (Warm Coral)
+$coral-950: #2e0a06;
+$coral-900: #50130c;
+$coral-800: #802011;
+$coral-700: #b02c17;
+$coral-600: #e13a1d;
+$coral-500: #f24c2e;
+$coral-400: #f86a50;
+$coral-300: #fb8d76;
+$coral-200: #fcc2b5;
+$coral-100: #fdded7;
+$coral-50:  #fff5f2;
 
 // base colors
 $baseBlack: $blue-800;
 $baseWhite: $neutral-0;
 
 // primary colors
-$primaryColor: $blue-800;
-$primaryColorHover: $blue-900;
+$primaryColor: $blue-700;
+$primaryColorHover: $blue-800;
 
 // secondary colors
-$secondaryColor: $blue-600;
-$secondaryColorHover: $blue-700;
+$secondaryColor: $coral-600;
+$secondaryColorHover: $coral-700;
 
 // font setting
 $baseFont: 'Sora', sans-serif;

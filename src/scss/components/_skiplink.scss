@@ -1,3 +1,5 @@
+@use "../abstracts" as *;
+
 .g-skiplink{
     display: inline-block;
     opacity: 0;
@@ -6,10 +8,10 @@
     top: 20px;
     z-index: -1;
     padding: 15px 25px;
-    border: 2px solid #f00;
+    border: 2px solid $baseBlack;
     border-radius: 0!important;
-    color: #fff;
-    background-color: #f00;
+    color: $baseBlack !important;
+    background-color: $baseWhite;
     font-weight: 400;
     text-decoration: none;
     cursor: pointer;

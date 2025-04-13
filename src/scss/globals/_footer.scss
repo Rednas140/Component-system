@@ -1,16 +1,42 @@
 @use "../abstracts" as *;
 
-footer{
-    display: flex;
-    flex-direction: column;
-    padding: 1.5em 1em;
-    background-color:  $baseBlack;
+.g-footer {
+  display: flex;
+  flex-direction: column;
+  padding: toRem(24px) toRem(12px);
+  background-color: $baseBlack;
+
+  @include breakpoint-lg {
+    flex-direction: row;
+    padding: toRem(56px);
+  }
+
+  h2, p {
+    color: $baseWhite;
+  }
+
+  h2 {
+    @include h5($baseWhite)
+  }
+
+  a {
+    color: $baseWhite;
+
+    &:hover, &:focus {
+      color: $baseWhite;
+      text-decoration: none;
+    }
+  }
+
+  &-content{
+    padding: toRem(8px) 0;
 
     @include breakpoint-lg{
-        flex-direction: row;
+      padding: 0;
     }
+  }
 
-    p{
-        color: $baseWhite;
-    }
+  &-icon {
+    max-width: 256px;
+  }
 }

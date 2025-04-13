@@ -1,4 +1,4 @@
-dateModified: 1744459707
+dateModified: 1744534302
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -13,8 +13,11 @@ fs:
     url: '@uploads'
 meta:
   __names__:
+    0a93d579-cb24-4fbc-98a8-cfce0584575a: 'List of links' # List of links
+    0db0d3bc-0553-4ecd-a22d-f5e0f17fc799: 'Our Cases' # Our Cases
     00f08d20-e207-4959-a41a-d024f6321e4b: Projects # Projects
     1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
+    2b2b0438-2bcc-441b-8a85-68322828987f: 'Footer Location' # Footer Location
     2b967b17-d1b2-46d2-b865-4c8abf2e2c73: 'Our Services' # Our Services
     2b12133f-3e07-42fc-8a09-74f19d2165a7: Services # Services
     3c68136a-3e05-4392-9e63-23236680201f: 'Dropdown items' # Dropdown items
@@ -27,12 +30,15 @@ meta:
     6a1751b0-f1f9-494a-977b-131a2591ac49: Adress # Adress
     6e9bde00-71b7-4291-bfde-4dd64b02d74a: Navigation # Navigation
     7ba054cd-05ba-42a7-8af3-c9e518519b9f: 'Component system' # Component system
+    8db04126-1013-4522-9e41-be8014aa6c87: Lightswitch # Lightswitch
     21a3aa8c-eb70-4ab1-ba66-1cb8ebe047f1: Components # Components
     50c0c964-8043-401d-9559-d368791c5b01: 'Navigation Items' # Navigation Items
     52b3db2e-4152-4686-a155-7d3c88321540: 'Single image' # Single image
+    59b22318-0a5b-415b-9acd-02b2ec30e362: 'Footer content' # Footer content
     60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f: Entries # Entries
     82c6d396-89e5-4844-8742-535861bfab2f: 'Section | Default' # Section | Default
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
+    89d1cafe-caf3-4458-8e58-872b194fbda9: 'List of links' # List of links
     94a6983b-461a-4a98-adbd-50bbe596cef3: 'Slider Component' # Slider Component
     512a23f5-c303-4943-bfea-dc243b26ddeb: Services # Services
     2756b662-d94c-4ff3-8181-1381adeda04e: 'Heading Select' # Heading Select
@@ -41,20 +47,24 @@ meta:
     59361b08-51c9-40f9-80b8-f7186c1983a7: Cards # Cards
     6592931d-6f2e-40dc-80c8-f296eb428e5f: Images # Images
     43958353-e7e6-4154-8fb0-787eebe8832c: 'Cover full width or contain image' # Cover full width or contain image
+    a2174bbd-058e-4453-9cd2-e90bdafec1ee: Footer # Footer
     ad8a61a7-42a4-4769-b526-6a5fca60ce28: Simple # Simple
     b01a70ef-5a76-405b-bf5f-b01a6da6e482: 'Navigation Item' # Navigation Item
     b6c6fdef-e6d2-4b8e-ae48-a7bab743c2cb: 'Dropdown Links' # Dropdown Links
     bf7362e6-3c1a-4896-a50f-df8a628fb09f: 'Multiple images' # Multiple images
     c7a1d56d-af64-4e45-bb5f-c20f732f24b8: Placeholders # Placeholders
+    c710e4a3-2e0a-4810-bb7c-574fbfd32991: Link # Link
     d1a92616-4ce6-4484-9adc-b2a0972434ec: Button # Button
     d88fb071-a241-4a66-b038-2bdf25155e17: 'Section | Projects' # Section | Projects
     d226be6d-c259-45eb-9677-5e17bc4fd573: Content # Content
     d966c555-3b5e-4954-8210-b70f5eedb9e4: 'Primary header' # Primary header
     d41991e3-1d36-435e-8954-7cb343967f11: Text # Text
+    de54d3eb-a177-408c-8d13-38eecfd5344e: 'List of links' # List of links
     e4c65bcd-096c-4a93-969d-bf2338cb005f: 'Section | Services' # Section | Services
     e41bd20a-b255-451f-b938-8365c8d59b5a: Quote # Quote
     e85b9150-15ea-4f7f-bb34-676ca47a09b4: WYSIWYG # WYSIWYG
     ebcb3ddb-d136-47be-974b-87155e593ce2: 'Component system' # Component system
+    f6a839a1-e280-4ed3-8293-804dc3ba08b8: Link # Link
     ff9d2595-7e12-499c-ab83-9eb1af4a6414: 'Short text (64 char)' # Short text (64 char)
 plugins:
   ckeditor:

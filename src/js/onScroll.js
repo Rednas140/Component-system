@@ -5,13 +5,17 @@ const observer = new IntersectionObserver((entries) => {
             const animateClass = el.dataset.animate;
             if (animateClass) {
                 el.classList.add(animateClass);
-                observer.unobserve(el);
+            }
+        } else{
+            const el = entry.target;
+            const animateClass = el.dataset.animate;
+            if (animateClass) {
+                el.classList.remove(animateClass);
             }
         }
     });
 }, {
-    threshold: 0,
-    rootMargin: '0px 0px -20% 0px'
+    threshold: 0.3,
 });
 
 document.querySelectorAll('[data-animate]').forEach(el => {

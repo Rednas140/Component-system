@@ -10,7 +10,7 @@
     grid-template-columns: repeat(1, 1fr);
     gap: toRem(16px);
 
-    @include breakpoint-lg{
+    @include breakpoint-lg {
       grid-template-columns: repeat(2, 1fr);
       gap: toRem(40px);
     }
@@ -25,14 +25,22 @@
     text-decoration: none;
     overflow: hidden;
     word-break: break-word;
+    transition: all ease 0.5s;
+    box-shadow: rgba(37, 12, 90, 0.4) -5px 5px, rgb(37, 12, 90, 0.2) -10px 10px, rgb(37, 12, 90, 0.1) -15px 15px;
 
-    @include breakpoint-lg{
+    @include breakpoint-lg {
       padding: toRem(56px) toRem(112px) toRem(56px) toRem(56px);
     }
 
     &:hover, &:focus {
+      box-shadow: rgba(37, 12, 90, 0.4) -3px 3px, rgb(37, 12, 90, 0.2) -6px 6px, rgb(37, 12, 90, 0.1) -9px 9px;
+
       h3 {
         text-decoration: underline;
+      }
+
+      .c-ourServices-icon {
+        opacity: 0.75;
       }
     }
 
@@ -54,10 +62,6 @@
     opacity: 0;
     transition: all ease 1s;
     fill: $baseBlack !important;
-
-    @include breakpoint-lg{
-      max-width: unset;
-    }
 
     * {
       fill: $baseBlack !important;

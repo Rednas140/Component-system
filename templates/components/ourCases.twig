@@ -1,0 +1,19 @@
+{# Registering the asset files to be used in head #}
+{{ craft.app.view.registerCssFile('@web/assets/css/components/' ~ block.type.handle ~ '.css') }}
+
+{# Setting the variables #}
+{% set title = block.title %}
+
+{% if title is not empty %}
+<section class="c-ourCases">
+    <div class="container">
+        <h2>{{ title }}</h2>
+        <div class="row">
+            <div class="col">
+
+            </div>
+        </div>
+    </div>
+</section>
+{% endif %}
+
