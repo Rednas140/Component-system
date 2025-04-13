@@ -3,17 +3,28 @@
 
 {# Setting the variables #}
 {% set title = block.title %}
+{% set cases = block.cases %}
 
 {% if title is not empty %}
-<section class="c-ourCases">
-    <div class="container">
-        <h2>{{ title }}</h2>
-        <div class="row">
-            <div class="col">
-
+    <section class="c-ourCases">
+        <div class="container">
+            <h2>{{ title }}</h2>
+            <div class="row">
+                {% for case in cases %}
+                    <div class="col-lg-6">
+                        <a class="c-ourCases-item" href="{{ case.url }}">
+                            <div class="c-ourCases-item-content">
+                                <h3>{{ case.title }}</h3>
+                                <span class="c-ourCases-item-category">Webdevelopment</span>
+                            </div>
+                            {% if case.productImage is not empty %}
+                                <img src="{{ case.productImage.one().url }}" alt="">
+                            {% endif %}
+                        </a>
+                    </div>
+                {% endfor %}
             </div>
         </div>
-    </div>
-</section>
+    </section>
 {% endif %}
 

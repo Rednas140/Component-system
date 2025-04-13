@@ -23,6 +23,7 @@
     border: solid 2px $primaryColor;
     border-radius: $border-radius-md;
     text-decoration: none;
+    outline-offset: 6px;
     overflow: hidden;
     word-break: break-word;
     transition: all ease 0.5s;

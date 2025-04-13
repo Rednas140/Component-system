@@ -1,10 +1,11 @@
 defaultPlacement: end
 enableVersioning: true
 entryTypes:
-  - d88fb071-a241-4a66-b038-2bdf25155e17 # Section | Projects
-handle: projects
+  -
+    uid: d88fb071-a241-4a66-b038-2bdf25155e17 # Section | Projects
+handle: cases
 maxAuthors: 1
-name: Projects
+name: Cases
 previewTargets:
   -
     __assoc__:
@@ -23,5 +24,5 @@ siteSettings:
     enabledByDefault: true
     hasUrls: true
     template: null
-    uriFormat: 'projecten/{slug}'
+    uriFormat: 'cases/{slug}'
 type: channel

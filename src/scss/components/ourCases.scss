@@ -1,5 +1,49 @@
 @use "../abstracts" as *;
 
-.c-ourCases{
-  background-color: $blue-400;
+.c-ourCases {
+  &-item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border-radius: $border-radius-lg;
+    overflow: hidden;
+    transition: 1s ease;
+
+    &:hover, &:focus{
+      img {
+        transform: scale(1.1);
+      }
+
+      &:before{
+        opacity: 0.2;
+      }
+    }
+
+    &-content{
+      padding: toRem(16px);
+      order: 2;
+    }
+
+    img {
+      order: 1;
+      aspect-ratio: 1 / 1;
+      width: 100%;
+      height: auto;
+      transition: 1s ease;
+    }
+
+    &-category{}
+
+    &:before {
+      z-index: 1;
+      content: "";
+      display: block;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background-color: $blue-400;
+      opacity: 0.2;
+      transition: 1s ease;
+    }
+  }
 }

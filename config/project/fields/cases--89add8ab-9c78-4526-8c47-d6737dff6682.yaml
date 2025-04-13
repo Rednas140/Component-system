@@ -1,0 +1,22 @@
+columnSuffix: null
+handle: cases
+instructions: null
+name: Cases
+searchable: false
+settings:
+  allowSelfRelations: false
+  branchLimit: null
+  maintainHierarchy: false
+  maxRelations: null
+  minRelations: null
+  selectionLabel: 'Add a case'
+  showCardsInGrid: false
+  showSiteMenu: false
+  sources:
+    - 'section:00f08d20-e207-4959-a41a-d024f6321e4b' # Cases
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: list
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Entries

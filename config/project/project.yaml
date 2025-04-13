@@ -1,4 +1,4 @@
-dateModified: 1744534302
+dateModified: 1744555468
 email:
   fromEmail: sanderjverhoeven@gmail.com
   fromName: 'Component system'
@@ -15,7 +15,7 @@ meta:
   __names__:
     0a93d579-cb24-4fbc-98a8-cfce0584575a: 'List of links' # List of links
     0db0d3bc-0553-4ecd-a22d-f5e0f17fc799: 'Our Cases' # Our Cases
-    00f08d20-e207-4959-a41a-d024f6321e4b: Projects # Projects
+    00f08d20-e207-4959-a41a-d024f6321e4b: Cases # Cases
     1c9f361d-ab73-429f-be7c-a1b9c8df83d9: 'Placement Select' # Placement Select
     2b2b0438-2bcc-441b-8a85-68322828987f: 'Footer Location' # Footer Location
     2b967b17-d1b2-46d2-b865-4c8abf2e2c73: 'Our Services' # Our Services
@@ -38,6 +38,7 @@ meta:
     60ce7e3d-2bce-4b9a-89a3-0b0c1494ac5f: Entries # Entries
     82c6d396-89e5-4844-8742-535861bfab2f: 'Section | Default' # Section | Default
     83efbabb-609e-4d20-8fd6-17ee0c5bfce6: Text # Text
+    89add8ab-9c78-4526-8c47-d6737dff6682: Cases # Cases
     89d1cafe-caf3-4458-8e58-872b194fbda9: 'List of links' # List of links
     94a6983b-461a-4a98-adbd-50bbe596cef3: 'Slider Component' # Slider Component
     512a23f5-c303-4943-bfea-dc243b26ddeb: Services # Services

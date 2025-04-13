@@ -67,6 +67,22 @@ fieldLayouts:
             userCondition: null
             warning: null
             width: 100
+          -
+            dateAdded: '2025-04-13T14:43:23+00:00'
+            elementCondition: null
+            fieldUid: 52b3db2e-4152-4686-a155-7d3c88321540 # Single image
+            handle: productImage
+            includeInCards: false
+            instructions: null
+            label: 'Product Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 65513f2d-29d0-4031-951e-53e0e2fb5fcd
+            userCondition: null
+            warning: null
+            width: 100
         name: Meta
         uid: 432448a2-efec-4f2b-88e3-370e7ced7be1
         userCondition: null
